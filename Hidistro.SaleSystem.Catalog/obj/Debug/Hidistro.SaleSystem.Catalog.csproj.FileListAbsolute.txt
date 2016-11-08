@@ -1,0 +1,132 @@
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\obj\Debug\ResolveAssemblyReference.cache
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Hishop.Components.Validation.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.dll
+C:\Hidistro2.2\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hishop.Components.Validation.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\obj\Debug\ResolveAssemblyReference.cache
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hishop.Components.Validation.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\obj\Debug\ResolveAssemblyReference.cache
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hishop.Components.Validation.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.csprojResolveAssemblyReference.cache
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hishop.Components.Validation.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.pdb
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.pdb
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.pdb
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.pdb
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.csprojResolveAssemblyReference.cache
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hishop.Components.Validation.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\ResolveAssemblyReference.cache
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hishop.Components.Validation.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hishop.Components.Validation.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Core.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Entities.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Context.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\bin\Debug\Hidistro.Membership.Core.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.SaleSystem.Catalog\obj\Debug\Hidistro.SaleSystem.Catalog.pdb

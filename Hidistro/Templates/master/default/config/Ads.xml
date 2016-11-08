@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Ad Id="1" Type="slide" Image1="/templates/master/default/UploadImage/advertimg/20130911162839_9256.jpg" Image2="/templates/master/default/UploadImage/advertimg/20130911163017_0502.jpg" Image3="/templates/master/default/UploadImage/advertimg/20130911163039_7395.jpg" Image4="" Image5="" Image6="" Image7="" Image8="" Image9="" Image10="" Url1="" Url2="" Url3="" Url4="" Url5="" Url6="" Url7="" Url8="" Url9="" Url10="" AdImageSize="564*239" />
+  <Ad Id="2" Type="image" Image="/templates/master/default/UploadImage/advertimg/2.jpg" Url="" AdImageSize="210*93" />
+  <Ad Id="3" Type="image" Image="/templates/master/default/UploadImage/advertimg/20130911162418_5837.jpg" Url="" AdImageSize="210*88" />
+  <Ad Id="4" Type="image" Image="/templates/master/default/UploadImage/advertimg/20130911162615_7794.jpg" Url="" AdImageSize="158*151" />
+  <Ad Id="5" Type="image" Image="/templates/master/default/UploadImage/advertimg/index_160.jpg" Url="" AdImageSize="200*152" />
+  <Ad Id="6" Type="image" Image="/templates/master/default/UploadImage/advertimg/index_160.jpg" Url="" AdImageSize="200*152" />
+  <Ad Id="7" Type="image" Image="/templates/master/default/UploadImage/advertimg/20130911162752_6589.jpg" Url="" AdImageSize="150*98" />
+  <Ad Id="8" Type="image" Image="/templates/master/default/UploadImage/advertimg/index_272.jpg" Url="" AdImageSize="1000*87" />
+  <Ad Id="9" Type="image" Image="/templates/master/default/UploadImage/advertimg/index_188.jpg" Url="" AdImageSize="212*155" />
+  <Ad Id="10" Type="image" Image="/templates/master/default/UploadImage/advertimg/20131025114524_1318.jpg" Url="" AdImageSize="158*151" />
+  <Ad Id="11" Type="custom" Html="&amp;lt;p&amp;gt;&amp;lt;img title=&amp;quot;index_42&amp;quot; border=&amp;quot;0&amp;quot; alt=&amp;quot;index_42&amp;quot; src=&amp;quot;/templates/master/default/UploadImage/AdvertImg/20130916154316_9461.jpg&amp;quot; /&amp;gt; &amp;lt;img title=&amp;quot;index_42_1&amp;quot; border=&amp;quot;0&amp;quot; alt=&amp;quot;index_42_1&amp;quot; src=&amp;quot;/templates/master/default/UploadImage/AdvertImg/20130916154340_5164.jpg&amp;quot; /&amp;gt; &amp;lt;img title=&amp;quot;index_42_2&amp;quot; border=&amp;quot;0&amp;quot; alt=&amp;quot;index_42_2&amp;quot; src=&amp;quot;/templates/master/default/UploadImage/AdvertImg/20130916154349_1689.jpg&amp;quot; /&amp;gt;&amp;lt;/p&amp;gt;&#xA;&amp;lt;p&amp;gt;&amp;lt;img title=&amp;quot;index_42&amp;quot; border=&amp;quot;0&amp;quot; alt=&amp;quot;index_42&amp;quot; src=&amp;quot;/templates/master/default/UploadImage/AdvertImg/20130916154316_9461.jpg&amp;quot; /&amp;gt; &amp;lt;img title=&amp;quot;index_42_1&amp;quot; border=&amp;quot;0&amp;quot; alt=&amp;quot;index_42_1&amp;quot; src=&amp;quot;/templates/master/default/UploadImage/AdvertImg/20130916154340_5164.jpg&amp;quot; /&amp;gt; &amp;lt;img title=&amp;quot;index_42_2&amp;quot; border=&amp;quot;0&amp;quot; alt=&amp;quot;index_42_2&amp;quot; src=&amp;quot;/templates/master/default/UploadImage/AdvertImg/20130916154349_1689.jpg&amp;quot; /&amp;gt;&amp;lt;/p&amp;gt;" />
+  <Ad Id="12" Type="image" Image="/templates/master/default/UploadImage/advertimg/index_282.jpg" Url="" AdImageSize="229*143" />
+  <Ad Id="13" Type="image" Image="/templates/master/default/UploadImage/advertimg/20131008152902_6219.jpg" Url="" AdImageSize="628*430" />
+  <Ad Id="14" Type="image" Image="/templates/master/default/UploadImage/advertimg/1.jpg" Url="" AdImageSize="210*300" />
+  <Ad Id="15" Type="image" Image="/templates/master/default/UploadImage/advertimg/2.jpg" Url="" AdImageSize="210*90" />
+  <Ad Id="16" Type="image" Image="/templates/master/default/UploadImage/advertimg/2.jpg" Url="" AdImageSize="210*90" />
+</root>

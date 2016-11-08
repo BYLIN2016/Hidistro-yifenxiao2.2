@@ -1,0 +1,115 @@
+﻿
+/****顶部****/
+.tool_inner{ height:35px; line-height:35px; background:#333 url(../images/toolback.jpg); color:#fff;}
+.tool_innercon{ width:1000px; margin:0 auto; text-align:right;}
+.tool_innercon a{ color:#fff; margin-right:15px;}
+.tool_innercon a.button{ background:url(../images/innerbuttom.png); width:51px;padding: 5px 14px; height:24px; line-height:24px; border:0; color:#fff}
+
+/****阴影层效果****/
+.assistdiv {position: absolute;z-index: 1001;cursor: move;  }
+.edit_div {z-index: 1000;position: absolute;border: 2px dashed red;display: none;}
+.edit_div .cover {height: 100%;filter: alpha(opacity=50);-moz-opacity: .5;opacity: .5;cursor: move;background: #136cb0;}
+.edit_bar {position: absolute;z-index: 100;display: none;cursor: move;z-index: 1100;}
+.edit_bar #a_design_Edit {background-position: 0 -61px;width: 43px;}
+.edit_bar #a_design_delete {background-position: 0 -34px;width: 43px;}
+.edit_bar a {background: url(../images/edit-ico.png) no-repeat;height: 26px;text-indent: -9999px;margin-left: 5px;display: block;float: right;}
+.edit_bar a.updisable {background-position: 0 -115px;cursor: default;}
+.edit_bar a.downdisable {background-position: -26px -115px;cursor: default;}
+.edit_bar a.up, .edit_bar a.down, .edit_bar a.updisable, .edit_bar a.downdisable {width: 25px;}
+.edit_bar a.controlinfo {background: #000 url(../images/16_001a.png) 1px 3px no-repeat;width: 18px;height: 22px;text-indent: -9999px;display: none;}
+.apple_overlay {display: none;background-image: url(../images/white.png);padding: 35px;font-size: 12px;}
+.apple_overlay .close {background-image: url(../images/close.png);_background-image: url(../images/close.gif);
+	position: absolute;right: 5px;top: 5px;cursor: pointer;height: 35px;width: 35px;}
+.design_lockscreen {font-size: 12px;color: #000;position: absolute;top: 50%;left: 50%;margin: -70px 0 0 -55px;
+	width: 140px;height: 110px;text-align: center;z-index: 9992;display: none;position: fixed!important;}
+.design_img_msg {background: url(images/005.gif) no-repeat;width: 100px;height: 100px;margin-left: 10px;}
+#div_sys_msg {font-weight: bold;font-size: 14px;}
+.design_coverbg {position: fixed;top: 0;left: 0;z-index: 9991;width: 100%;height: 100%;background: #999;
+	filter: alpha(opacity=50);opacity: .5;display: none;}
+.controlnamediv {background: #000 url(../images/16_001a.png) 10px center no-repeat;height: 25px;width: 150px;
+	filter: alpha(opacity=80);-moz-opacity: .8;opacity: .8;position: absolute;left: 50%;top: 50%;z-index: 998;
+	text-align: center;padding: 0 10px;padding-left: 10px;font-size: 12px;color: #fff;line-height: 25px;display: none;} 
+
+.tempedit_div{filter:alpha(opacity=50);-moz-opacity:.5;opacity:.5;cursor:move;background:#136cb0}
+.tempedit_div .cover{border:2px dotted #333;height:96%}
+
+
+/*****弹出页面****/
+.tableform {background: none repeat scroll 0 0 #F4F4F4; border: 1px solid #D9D9D9;border-radius: 5px 5px 5px 5px;margin: 5px 10px;padding: 10px;height:400px;width:660px;overflow-y:auto;}
+.tableform table {margin:0;padding: 0;width:100%;cellspacing:0px;cellpadding:0px;}
+
+.tableform .selectmult{width:200px;height:140px; }
+.tableform select option{border-bottom:1px solid #cccccc;}
+
+  
+
+.tableform th { padding-right:10px; text-align:right; vertical-align:top; border:0px; font-size:14px; white-space: nowrap;}
+.tableform th,.tableform td {  padding-bottom:10px;  font-weight:normal;  vertical-align: top; font-family:"Microsoft yahei";}
+.tableform td { line-height:30px;}
+.tableform tr{ }
+
+
+.tableform .ratetab{margin: 20px auto 0;padding-left: 10px;overflow:hidden;}
+.ratetab ul .selected {
+    background: url("../images/lb_tab1.png") no-repeat scroll 0 0 transparent;
+    color: #CA0000;
+    position: relative;
+    z-index: 6;
+}
+.tableform .ratetab ul li {
+    background: url("../images/lb_tab_h.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    display: block;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 5px;
+    text-align: center;
+    width: 75px;
+}
+.ratetab ul .selected a { color: #CA0000;}
+.ratetab ul li a {color: #6F6F6F;display: block;text-decoration: none;}
+.ratebox {
+    border-top: 1px solid #C9C9C9;
+    margin: 0 auto;
+    padding-top: 20px;
+    z-index: 5;
+}
+.show_img{ width:640px; overflow:hidden; }
+.show_img ul{overflow:hidden; margin:0 auto;}
+.show_img li{width:60px;padding:5px 0px; margin:0px 2px; list-style:none;overflow:hidden;height:auto;float:left;position:relative;}
+.show_img li a{border:1px solid #cccccc;width:auto;height:auto;overflow:hidden;display:block; text-decoration:none;}
+.show_img li a:hover{border-color: #85BCE7;}
+.show_img li a:hover i{display:block;}
+.show_img li i{display:none;position:absolute; right:0px; top:0px; width:15px; height:14px; background: url("../images/cancel_01.png") no-repeat scroll 0 0 transparent; overflow:hidden;}
+
+.tableform .tr_header{ font-weight: 700;height: 16px;line-height:16px;}
+ 
+.tr_header td{ padding-bottom:0px}
+.tableform .input-text,.tableform .input-text190{padding:5px;}
+.tableform .input-text190{width:190px;}
+.input-select{width:143px;padding:5px;}
+
+
+.lunbo{margin:0 auto;border-top:1px dashed #cccccc;width:100%;}
+.lunbo_info{font-size:12px;}
+ 
+.lunbo_list ul{width:700px;list-style:none; padding:0px;}
+
+.banner_picture ul{list-style:none;}
+.banner_picture ul li{list-style:none;}
+.lunbo_list ul li{float:left;width:60px;padding:5px 0px;margin-right:4px;list-style:none;overflow:hidden;height:60px;position:relative;}
+.lunbo_list ul li a{border:1px solid #cccccc;width:auto;height:auto;overflow:hidden;display:block; text-decoration:none;}
+.lunbo_list ul li a:hover{border-color: #85BCE7;}
+.lunbo_list ul li img{border:0px;max-width:80px;max-width:80px;}
+.lunbo_list li a:hover i{display:block;}
+.lunbo_list li i{display:none;position:absolute; right:0px; top:0px; width:15px; height:14px;z-index:200px; background: url("../images/cancel_01.png") no-repeat scroll 0 0 transparent; overflow:hidden;}
+.a_del{clear:both;text-align:center;font-size:12px;border:0px; cursor:pointer;margin-top:5px;color:#85BCE7;}
+.select_pager{float:right;font-size:12px;margin:5px}
+.select_pager span{margin:0px 5px;color:#85BCE7;cursor:pointer;}
+.select_pager .disable{color:#cccccc;}
+.cancel{cursor: pointer;margin: -118px -85px 0 0;}
+
+.input100{width:120px;text-align:right;float:left;display:block;}
+.input80{width:80px;text-align:right;float:left;display:block;}
+

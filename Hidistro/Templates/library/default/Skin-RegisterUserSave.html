@@ -1,0 +1,149 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<form runat="server">
+<div class="main">
+    <script src="/utility/validate/pagevalidator.js" type="text/javascript"></script>
+	<%<Hi:SmallStatusMessage id="Status" runat="server" Visible="False" />%>
+	
+<div class="trationbj2">
+<div class="tration tration2">
+<h1 class="YaHei">新用户注册</h1>
+<div class="register_save_ts">1.请补充下列信息，您也可以选择  <a href="url:home">以后再补充</a>      2.本商店将最大限度保护您的隐私</div>
+<div class="fomeinput">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="fomeinput">
+  <tr>
+    <td width="16%" align="right" valign="middle">预付款帐户是否开启：</td>
+    <td width="55%" valign="middle">
+<input type="checkbox" id="showInputTradePassword" value="开启我的预付款帐户" onclick="ShowInputTradePassword();" />开启我的预付款帐户</td>
+    <td width="29%" rowspan="13" valign="top">
+    <ul>
+    <li class="dotted">已有会员帐号？可以<a href="url:login"> 直接登录</a></li>
+    <li class="dotted">其它登录方式</li>
+    <li><%<Hi:Common_Link_OpenId runat="server"  /> %> </li>
+    </ul>
+    </td>
+  </tr>
+        <tr id="trInputTradePassword" style="display:none;">
+        <td align="right"> 交易密码：</td>
+         <td><%<asp:TextBox ID="txtTradeKey" width="240"  runat="server" TextMode="Password"   CssClass="inputbj"/>%>
+         <span id="txtTradeKeyTip" runat="server"></span>
+         </td>
+        </tr>
+        
+        <tr id="trInputTradePassword2" style="display:none;">
+        <td align="right">确认密码：</td>
+        <td><%<asp:TextBox ID="txtTradeKey2" width="240" CssClass="inputbj" TextMode="Password"  runat="server" />%>
+        <span id="txtTradeKey2Tip" runat="server"></span>
+        </td>
+        
+        </tr>
+  <tr valign="middle">
+    <td align="right">密保问题： </td>
+    <td><%<asp:TextBox ID="txtQuestion"   width="240" CssClass="inputbj"   runat="server" />%>
+          <span id="txtQuestionTip" runat="server"></span></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">密保答案：</td>
+    <td><%<asp:TextBox ID="txtAnswer"  width="240" CssClass="inputbj"   runat="server" />%>
+          <span id="txtAnswerTip" runat="server"></span></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">姓名： </td>
+    <td><%<asp:TextBox ID="txtRealName"    width="240" CssClass="inputbj"  runat="server"   />%><span id="txtRealNameTip" runat="server"></span></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">用户住址： </td>
+    <td><%<Hi:RegionSelector runat="server" id="dropRegions" />%></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">详细地址： </td>
+    <td><%<asp:TextBox ID="txtAddress"    width="240" CssClass="inputbj"  runat="server" />%></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">QQ号码：</td>
+    <td><%<asp:TextBox ID="txtQQ"    width="240" CssClass="inputbj"  runat="server" />%><span id="txtQQTip" runat="server"></span></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">MSN：</td>
+    <td><%<asp:TextBox ID="txtMSN"    width="240" CssClass="inputbj"  runat="server"></asp:TextBox>%><span id="txtMSNTip" runat="server"></span></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">电话号码：</td>
+    <td><%<asp:TextBox ID="txtTel"    width="240" CssClass="inputbj"  runat="server" />%>
+	        
+	       <span id="txtTelTip" runat="server"></span></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">手机号码：</td>
+    <td><%<asp:TextBox ID="txtHandSet"    width="240" CssClass="inputbj"  runat="server" />%> <span id="txtHandSetTip" runat="server"></span>
+            </td>
+    </tr>
+	  
+
+  <tr>
+    <td align="right"></td>
+    <td valign="top">
+<%<asp:Button ID="btnSaveUser" CssClass="btncss register_btn2"  Text="确定"   runat="server" OnClientClick="return PageIsValid();" />%>
+</td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+ 
+	
+	
+	
+		
+	<div class="aClear"></div>
+	<script src="/utility/region.helper.js" type="text/javascript"></script>
+	<script type="text/javascript" language="javascript">
+	    function InitValidators() {
+	        initValid(new InputValidator('RegisterUserSave_txtTradeKey', 6, 20, true, null,  '交易密码必须在6-20个字符之间'))
+	        initValid(new InputValidator('RegisterUserSave_txtTradeKey2', 6, 20, true, null, '交易密码必须在6-20个字符之间'))
+	        appendValid(new CompareValidator('RegisterUserSave_txtTradeKey2', 'RegisterUserSave_txtTradeKey', '两次输入的密码不对'));
+	        initValid(new InputValidator('RegisterUserSave_txtQuestion', 3, 20, true, null,  '密保问题必须在3-20个字符之间'))
+	        initValid(new InputValidator('RegisterUserSave_txtAnswer', 3, 20, true, null, '密保答案必须在3-20个字符之间'))
+	        initValid(new InputValidator('RegisterUserSave_txtRealName', 2, 20, true, null,  '姓名必须在2-20个字符之间'))
+	        initValid(new InputValidator('RegisterUserSave_txtQQ', 3, 20, true, '^[0-9]*$', 'QQ号长度限制在3-20个字符之间，只能输入数字'))
+	        initValid(new InputValidator('RegisterUserSave_txtMSN', 1, 256, true, '([a-zA-Z\\.0-9_-])+@([a-zA-Z0-9_-])+((\\.[a-zA-Z0-9_-]{2,3}){1,2})', '请输入正确MSN帐号，长度在1-256个字符以内'))
+	        initValid(new InputValidator('RegisterUserSave_txtTel', 3, 20, true, '^[0-9-]*$', '电话号码长度限制在3-20个字符之间，只能输入数字和字符“-”'));
+	        initValid(new InputValidator('RegisterUserSave_txtHandSet', 3, 20, true, '^[0-9]*$', '手机号码长度限制在3-20个字符之间,只能输入数字'));
+	    }
+	    $(document).ready(function() { InitValidators(); });
+
+	    function ShowInputTradePassword() {
+	        var showInputTradePassword = document.getElementById("showInputTradePassword");
+	        var divInputTradePassword = document.getElementById("trInputTradePassword");
+	        var divInputTradePassword2 = document.getElementById("trInputTradePassword2");
+	        if (showInputTradePassword.checked) {
+	            divInputTradePassword.style.display = "";
+	            divInputTradePassword2.style.display = "";
+	        }
+	        else {
+	            divInputTradePassword.style.display = "none";
+	            divInputTradePassword2.style.display = "none";
+	        }
+	    }
+</script>
+	<!-- InstanceEndEditable --></div>
+</form>
+<%<Hi:Common_Footer runat="server"   />%>

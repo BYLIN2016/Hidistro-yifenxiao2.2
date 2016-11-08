@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE472BAB-BD11-44B6-B476-D5AFB48848DB}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Hidistro.UI.ControlPanel.Utility</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hidistro.UI.ControlPanel.Utility</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Hidistro.UI.ControlPanel.Utility/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hidistro.ControlPanel.Comments">
+      <Name>Hidistro.ControlPanel.Comments</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.ControlPanel.Comments.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.ControlPanel.Commodities">
+      <Name>Hidistro.ControlPanel.Commodities</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.ControlPanel.Commodities.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.ControlPanel.Distribution">
+      <Name>Hidistro.ControlPanel.Distribution</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.ControlPanel.Distribution.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.ControlPanel.Members">
+      <Name>Hidistro.ControlPanel.Members</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.ControlPanel.Members.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.ControlPanel.Sales">
+      <Name>Hidistro.ControlPanel.Sales</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.ControlPanel.Sales.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.ControlPanel.Store">
+      <Name>Hidistro.ControlPanel.Store</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.ControlPanel.Store.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Core">
+      <Name>Hidistro.Core</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Entities">
+      <Name>Hidistro.Entities</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Membership.Context">
+      <Name>Hidistro.Membership.Context</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Membership.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Membership.Core">
+      <Name>Hidistro.Membership.Core</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Membership.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.UI.Common.Controls">
+      <Name>Hidistro.UI.Common.Controls</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.UI.Common.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Hishop.Components.Validation">
+      <Name>Hishop.Components.Validation</Name>
+      <HintPath>..\Hidistro\bin\Hishop.Components.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="kindeditor.Net">
+      <Name>kindeditor.Net</Name>
+      <HintPath>..\Hidistro\bin\kindeditor.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <HintPath>System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <HintPath>System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+      <HintPath>System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllowLoginRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ArticleCategoriesListBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ArticleCategoryDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttributeUseageModeRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrandCategoriesCheckBoxList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClosePurchaseOrderReasonDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DistributorDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DistributorGradeDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DistributorPriceDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressCheckBoxList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressPrintButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GiftStatusRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Greeting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridSkuDistributorPriceTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridSkuMemberPriceTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GroupBuyProductDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelpCategoryDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HiControls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageDataGradeDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageTypeLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LogsUserNameDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MemberGradeCheckBoxList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MemberGradeDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MemberPriceDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MemberSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PaymentDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PenetrationStatusDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductCategoriesDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductCategoriesListBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductEditColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductLineCheckBoxList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductTypesCheckBoxList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PromoteView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrderItemUpdateHyperLink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegionArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RoleDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendMessageHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ShippersDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ShippingTemplatesDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SiteNameLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SKUImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UseAttributeImageRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

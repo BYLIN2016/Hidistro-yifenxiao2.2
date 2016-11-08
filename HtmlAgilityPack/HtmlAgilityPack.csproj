@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{6D75D6CF-94F3-4E40-B75B-458CDB699245}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>HtmlAgilityPack</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributeValueQuote.cs" />
+    <Compile Include="Crc32.cs" />
+    <Compile Include="EncodingFoundException.cs" />
+    <Compile Include="HtmlAttribute.cs" />
+    <Compile Include="HtmlAttributeCollection.cs" />
+    <Compile Include="HtmlCmdLine.cs" />
+    <Compile Include="HtmlCommentNode.cs" />
+    <Compile Include="HtmlConsoleListener.cs" />
+    <Compile Include="HtmlDocument.cs" />
+    <Compile Include="HtmlElementFlag.cs" />
+    <Compile Include="HtmlEntity.cs" />
+    <Compile Include="HtmlNameTable.cs" />
+    <Compile Include="HtmlNode.cs" />
+    <Compile Include="HtmlNodeCollection.cs" />
+    <Compile Include="HtmlNodeNavigator.cs" />
+    <Compile Include="HtmlNodeType.cs" />
+    <Compile Include="HtmlParseError.cs" />
+    <Compile Include="HtmlParseErrorCode.cs" />
+    <Compile Include="HtmlTextNode.cs" />
+    <Compile Include="HtmlWeb.cs" />
+    <Compile Include="HtmlWebException.cs" />
+    <Compile Include="IOLibrary.cs" />
+    <Compile Include="IPermissionHelper.cs" />
+    <Compile Include="MixedCodeDocument.cs" />
+    <Compile Include="MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="MixedCodeDocumentFragment.cs" />
+    <Compile Include="MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="NameValuePairList.cs" />
+    <Compile Include="PermissionHelper.cs" />
+    <Compile Include="Trace.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

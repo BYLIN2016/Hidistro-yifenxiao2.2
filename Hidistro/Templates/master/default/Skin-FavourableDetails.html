@@ -1,0 +1,39 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+
+<div class="main">
+<div class="tqj"></div>
+<div class="container articleshelp">
+  <div class="cssleft">
+  <h6><img src="/images/process/yhhd.gif" width="182" height="45" /></h6>
+  <div class="csslist">
+<h4><a href="url:Promotes(1)">商品直接打折</a></h4>
+<h4><a href="url:Promotes(2)">商品固定金额出售</a></h4>
+<h4><a href="url:Promotes(3)">商品减价优惠</a></h4>
+<h4><a href="url:Promotes(4)">批发打折</a></h4>
+<h4><a href="url:Promotes(5)">买商品赠送礼品</a></h4>
+<h4><a href="url:Promotes(6)">商品有买有送</a></h4>
+
+<h4><a href="url:Promotes(11)">订单满额打折</a></h4>
+<h4><a href="url:Promotes(12)">订单满额优惠金额</a></h4>
+<h4><a href="url:Promotes(13)">混合批发打折</a></h4>
+<h4><a href="url:Promotes(14)">混合批发优惠金额</a></h4>
+<h4><a href="url:Promotes(15)">订单满额送礼品</a></h4>
+<h4><a href="url:Promotes(16)">订单满额送倍数积分</a></h4>
+<h4><a href="url:Promotes(17)">订单满额免运费</a></h4>
+<h4><a href="url:Promotes">显示所有优惠活动</a></h4>
+  </div>
+  </div>
+  <div class="cssright">
+    <div class="cssright_h1"><a href="url:home">首页</a> > <%<asp:HyperLink ID="hlkLink" runat="server"  />%> > 活动详细 </div>
+    <div class="cssborder">
+      <h2 class="cssright_h2"><%<asp:Literal ID="litHelpTitle" runat="server"  />%></h2>
+      <div class="art_add_c"><%<asp:Literal ID="litHelpDescription" runat="server"  />%></div>
+    </div>
+    <div class="csspage_content">	  	<b><%<asp:Label ID="lblFront" runat="server" Text="上一个促销活动详细："></asp:Label>%><a target="_self" runat="server" id="front" ><%<asp:Label ID="lblFrontTitle" runat="server" ></asp:Label>%></a></b>
+        <div><%<asp:Label ID="lblNext" runat="server" Text="下一个促销活动详细："></asp:Label>%><a target="_self" runat="server" id="next" ><%<asp:Label ID="lblNextTitle" runat="server" ></asp:Label>%> </a></div></div>
+  </div>
+</div>
+<div class="tqj"></div>
+</div>
+
+<%<Hi:Common_Footer runat="server"   />%>

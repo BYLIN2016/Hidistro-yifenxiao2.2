@@ -1,0 +1,18 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+
+<div class="main">
+<div class="re_friend_tab">	 
+	  <h2 class="re_productreviews_h2">评论信息</h2>
+       <ul>
+	        <%<Hi:ThemedTemplatedRepeater ID="rptRecords" runat="server" TemplateFile="/ascx/tags/Common_ViewProduct/Skin-Common_ProductReview.ascx" />%> 
+        </ul>
+        <div class="product_reviews_pages">
+           <div class="pagination">
+                 <%<UI:Pager runat="server" ShowTotalPages="true" ID="pager"/>%>
+           </div>       
+　　　  </div>
+</div>
+</div>
+
+<%<Hi:Common_Footer runat="server"   />%>
+

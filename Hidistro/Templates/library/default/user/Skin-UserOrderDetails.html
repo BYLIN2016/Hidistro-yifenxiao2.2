@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/user.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<%<Hi:HeadContainer ID="HeadContainer1" runat="server" />%>
+<%<Hi:PageTitle runat="server" />%>
+<%<Hi:MetaTags runat="server" />%>
+<link href="/style/user.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/style/pagevalidator.css" type="text/css" media="screen" />
+<script src="/utility/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="/utility/validate/pagevalidator.js" type="text/javascript"></script>
+<script src="/utility/globals.js" type="text/javascript"></script>
+</head>
+<body>
+<form runat="server" id="form1">
+
+<%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Header.ascx" />%>
+
+<div class="member_guide"><!-- InstanceBeginEditable name="编辑区" -->
+		<ul class="User_nav">
+			<li class="User_navLeft"></li>
+			<li class="User_navM">
+				<div class="User_nav_icon">当前位置：<span><%<Hi:SiteUrl UrlName="home" runat="server">首页</Hi:SiteUrl>%></span>><span><%<Hi:SiteUrl UrlName="user_UserDefault" runat="server">会员中心</Hi:SiteUrl>%></span>><span><%<Hi:SiteUrl UrlName="user_UserOrders" runat="server">订单管理</Hi:SiteUrl>%></span>><span><a href="#">订单详细</a></span></div>
+			</li>
+			<li class="User_navRight"></li>
+		</ul>
+	<!-- InstanceEndEditable --></div>
+<div class="core_blank8"></div>
+<div class="core_userform">
+	<div class="core_newform">
+		<%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Menu.ascx" />%>
+		<div class="core_formright">
+   <!-- InstanceBeginEditable name="编辑2" -->
+			  <style>
+			  #spExpressData table{width:710px;}
+			  </style>
+			  	<div class="User_manage"><span class="User_manIcon"></span>订单详细</div>
+				<table width="100%" border="0" cellspacing="1" cellpadding="0" class="bTop_Margin10 OrderDetails_table1">
+				  <tr>
+					<th width="25%">订单号</th>
+				    <th width="25%">订单总金额</th>
+				    <th width="25%">订单状态</th>
+				    <th width="25%">下单时间</th>
+				  </tr>
+				  <tr>
+				    <td><%<asp:Literal ID="litOrderId" runat="server"></asp:Literal>%></td>
+				    <td><%<Hi:FormatedMoneyLabel ID="lbltotalPrice" runat="server" />%></td>
+				    <td>
+				        <%<Hi:OrderStatusLabel ID="lblOrderStatus" runat="server" />%> <br/>
+				        <%<asp:Literal ID="litCloseReason" runat="server" />%>
+                        <%<asp:label text="退款金额：" runat="server" id="lbRefundMoney"><Hi:FormatedMoneyLabel ID="lblRefundTotal" runat="server" /></asp:label> %>
+				    </td>
+				    <td><%<Hi:FormatedTimeLabel id="litAddDate" runat="server"></Hi:FormatedTimeLabel>%></td>
+			      </tr>
+			    </table>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bTop_Margin10">
+				  <tr>
+                    <td class="bPadding20 OrderDetails_bg">
+					<!--订单信息开始-->
+					<div style="width:730px; clear:both; overflow:hidden; ">
+                    <fieldset class="OrderDetails_line" style="width:330px;float:left;">
+                        <legend class="OrderDetails_tit">收货人信息</legend>
+                        <ul>
+                            <li style="height:30px">收货人姓名：<%<asp:Literal ID="litShipTo" runat="server" />%></li>
+                            <li style="height:50px; word-break:break-all">详细地址：<%<asp:Literal ID="litRegion" runat="server" />%><%<asp:Literal ID="litAddress" runat="server" />%></li>
+                            <li style="height:30px">邮政编码：<%<asp:Literal ID="litZipcode" runat="server" />%></li>
+                            <li style="height:30px">电子邮箱：<%<asp:Literal ID="litEmail" runat="server" />%></li>
+                            <li style="height:30px">电话号码：<%<asp:Literal ID="litTellPhone" runat="server" />%></li>
+                            <li style="height:30px">手机号码：<%<asp:Literal ID="litPhone" runat="server" />%></li>
+                            <li style="height:30px">送货上门时间：<%<asp:Literal ID="litShipToDate" runat="server" />%></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="OrderDetails_line" style="width:330px;float:right;">
+                        <legend class="OrderDetails_tit">购买人信息</legend>
+                        <ul>
+                            <li style="height:30px">购买人姓名：<%<asp:Literal ID="litUserName" runat="server" />%></li>
+                            <li style="height:50px;word-break:break-all">详细地址：<%<asp:Literal ID="litUserAddress" runat="server" />%></li>                            
+                            <li style="height:30px">电子邮箱：<%<asp:Literal ID="litUserEmail" runat="server" />%></li>
+                            <li style="height:30px">电话号码：<%<asp:Literal ID="litUserTellPhone" runat="server" />%></li>
+                            <li style="height:30px">手机号码：<%<asp:Literal ID="litUserPhone" runat="server" />%></li>
+                            <li style="height:30px">QQ：<%<asp:Literal ID="litUserQQ" runat="server" />%></li>
+                            <li style="height:30px">MSN：<%<asp:Literal ID="litUserMSN" runat="server" />%></li>
+                        </ul>
+                    </fieldset>
+                    </div>
+                  
+                        <!--物流信息-->
+                         <%<asp:Panel ID="plExpress" runat="server" Visible="false" style="widht:730px;margin-bottom:10px;"> %>
+     
+                         	<table width="100%" border="0" cellspacing="1" cellpadding="0" class="bTop_Margin10 OrderDetails_table2">
+                         	 <th >快递单物流信息</th>
+                             <tr>
+                                <td class="cGray"  ><div id="spExpressData" >正在加载中....</div></td>
+                             </tr>
+                              <tr>
+                               <td class="cGray">
+                                  <a href='http://www.kuaidi100.com' target='_blank' id="power" runat="server" visible="false" style="color:Red;">此物流信息由快递100提供</a>
+                              </td>
+                             </tr>
+                           </table>
+                       
+                        <%</asp:Panel>%>
+                      
+                      
+					<table width="100%" border="0" cellspacing="1" cellpadding="0" class="bTop_Margin10 OrderDetails_table2">
+                        <th colspan="2">支付配送信息</th>
+                        <tr>
+                          <td>配送方式：</td>
+                          <td class="cGray"><%<asp:Literal ID="litModeName" runat="server"  />%></td>
+                        </tr>
+                      <tr>
+                        <td width="15%">支付方式：</td>
+                        <td width="85%" class="cGray"><%<asp:Literal ID="litPaymentType" runat="server" />%></td>
+                      </tr>
+                    </table>
+                    <% <asp:Panel ID="plOrderSended" runat="server" Visible="false">
+                                <table width="100%" border="0" cellspacing="1" cellpadding="0" class="bTop_Margin10 OrderDetails_table2">
+                                    <th colspan="2">发货信息</th>
+                                    <tr>
+                                       <td>物流公司：</td>
+                                       <td class="cGray"><asp:Literal ID="litRealModeName" runat="server" /></td>
+                                    </tr>
+                                    <tr>
+                                       <td width="15%">发货单号：</td>
+                                       <td width="85%" class="cGray"><asp:Literal ID="litShippNumber" runat="server" /></td>
+                                    </tr>
+                                </table>
+                           </asp:Panel>%> 
+                    <%<asp:Panel Visible="false" runat="server" ID="plRefund">
+                              <table width="100%" border="0" cellspacing="1" cellpadding="0" class="bTop_Margin10 OrderDetails_table2">
+                                <th colspan="2">退款订单信息</th>
+                                <tr>
+                                  <td>退款总金额：</td>
+                                  <td class="cGray"><Hi:FormatedMoneyLabel ID="lblTotalBalance" runat="server" /></td>
+                                </tr>
+                              <tr>
+                                <td width="15%">退款说明：</td>
+                                <td width="85%" class="cGray"><asp:Literal ID="litRefundOrderRemark" runat="server" /></td>
+                              </tr>
+                            </table>
+                        </asp:Panel>%>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bTop_Margin10">
+					  <tr>
+					    <td><div class="OrderDetails_tit1"><span class="OrderDetails_Icon"></span>商品信息：</div></td>
+				      </tr>
+					  <tr>
+						<td>
+						    <%<Hi:Common_OrderManage_OrderItems runat="server" />%>
+						    <div class="OrderSubmit_7_bottom_Weight f14px fB"> 
+						        货物总重量：<span class="OrderSubmit_7_bottom_Title03"><%<asp:Literal ID="litWeight" runat="server" />%>克</span>
+			                </div>
+						    
+						    <% <asp:Panel ID="plOrderGift" runat="server" Visible = "false">
+			                <div style="padding:10px;text-align:left;">
+			                    <asp:GridView ID="grdOrderGift" runat="server" AutoGenerateColumns="false" ShowHeader="true" 
+                                    GridLines="None"  DataKeyNames="GiftId" Width="100%" HeaderStyle-CssClass="title_c1" CssClass="content_b">
+                                    <Columns>
+                                        <asp:BoundField HeaderText="礼品名称" DataField="GiftName" HeaderStyle-HorizontalAlign="Left" />
+                                        <asp:BoundField HeaderText="赠送数量" DataField="Quantity" ItemStyle-Width="50%" HeaderStyle-HorizontalAlign="Left" />
+                                    </Columns>
+                                </asp:GridView>
+                             </div>
+                            </asp:Panel>%>
+                       </td>
+					  </tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bTop_Margin10">
+					  <tr>
+					    <td><div class="OrderDetails_tit1"><span class="OrderDetails_Icon"></span>金额明细：</div></td>
+				      </tr>
+					  <tr>
+						<td><table width="100%" border="0" cellspacing="0" cellpadding="0" class="bTopMargin10">
+                          <tr>
+                            <td width="50%" valign="top">
+							<table width="350" border="0" cellspacing="1" cellpadding="0" class="OrderDetails_table5">
+                              <tr>
+                                <th width="40%">商品金额：</th>
+                                <td><%<Hi:FormatedMoneyLabel ID="lblCartMoney" runat="server" />%> <%<asp:Literal runat="server" ID="lblBundlingPrice" /> %></td>
+                              </tr>
+                              <tr>
+                                <th>打折活动：</th>
+                                <td>-<%<Hi:FormatedMoneyLabel ID="lblDiscount" runat="server" />%>&nbsp;<%<asp:HyperLink ID="litDiscountName" runat="server" /> %></td>
+                              </tr>
+                              <tr>
+                                <th width="40%">优惠劵抵扣金额：</th>
+                                <td><%<asp:Literal ID="litCouponValue" runat="server" />%></td>
+                              </tr>
+                              <tr>
+                                <th width="40%">订单涨价或减价金额：</th>
+                                <td><%<Hi:FormatedMoneyLabel ID="lblAdjustedDiscount" runat="server" />%></td>
+                              </tr>
+                            </table>	
+                            <table width="350px" border="0" cellspacing="1" cellpadding="0" class="bTop_Margin10 OrderDetails_table4" style="margin-left:0px">
+                              <tr>
+                                <th width="40%">订单金额总计：</th>
+                                <td class="cRed"><%<Hi:FormatedMoneyLabel ID="litTotalPrice" runat="server" />%></td>
+                              </tr>
+                              <tr>
+                                <th>订单可得积分：</th>
+                                <td class="cRed"><%<asp:Literal ID="litPoints" runat="server" />%>
+                                    <%<asp:HyperLink ID="litSentTimesPointPromotion" runat="server" /> %>
+                                </td>
+                              </tr>
+                            </table>
+							</td>
+                            <td width="50%" valign="top">
+							<table width="350" border="0" cellspacing="1" cellpadding="0" class="OrderDetails_table5">
+                              <tr>
+                                <th width="40%">运费：</th>
+                                <td class="OrderDetails_table5">
+                                    <%<Hi:FormatedMoneyLabel ID="lblFreight" runat="server" /> %>
+                                    <%<asp:HyperLink ID="litFreeName" runat="server" /> %>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>支付手续费：</th>
+                                <td class="OrderDetails_table5"><%<Hi:FormatedMoneyLabel ID="lblPayCharge" runat="server" />%></td>
+                              </tr>
+                              <tr>
+                                <th>税金：</th>
+                                <td class="OrderDetails_table5"><%<Hi:FormatedMoneyLabel ID="litTax" runat="server" />%></td>
+                              </tr>
+                              <tr>
+                                <th>发票抬头：</th>
+                                <td class="OrderDetails_table5"><%<asp:Literal ID="litInvoiceTitle" runat="server" />%></td>
+                              </tr>
+                            </table>
+                            </td>
+                          </tr>
+                          </table></td>
+					  </tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bTopMargin10">
+					  <tr>
+					    <td><div class="OrderDetails_tit1"><span class="OrderDetails_Icon"></span>买家备注：</div></td>
+				      </tr>
+					  <tr>
+						<td class="bPadding10 cGray"><%<asp:Literal ID="litRemark" runat="server"></asp:Literal>%></td>
+					  </tr>
+					</table>
+					<!--订单信息结束-->
+                    </td></tr>
+      </table>
+      <script type="text/javascript">
+          window.onload = function Init() {
+              var OrderId = window.location.search;
+              OrderId = OrderId.substring(OrderId.indexOf("=") + 1);
+              $.ajax({
+                  url: "ExpressData.aspx?OrderId=" + OrderId,
+                  type: 'POST', dataType: 'json',
+                  async: true,
+                  success: function(resultData) {
+                      $('#spExpressData').html(resultData.Express);
+                  }
+              });
+          }
+      </script>
+			  <!-- InstanceEndEditable -->
+		</div>
+	</div>
+</div>
+
+
+
+
+</form>
+</body>
+<!-- InstanceEnd --></html>

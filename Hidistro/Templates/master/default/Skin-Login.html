@@ -1,0 +1,42 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<form runat="server">
+<div class="main" id="main1">
+<%<Hi:SmallStatusMessage id="Status" runat="server" Visible="False" />%>
+<div class="logindiv">
+  <div class="loginimg"><Hi:Common_ImageAd runat="server" AdId="13" /></div>
+  <div class="logingbj">
+    <div class="logingfome">
+    <h1 class="YaHei">用户登录</h1>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="60" height="55" valign="bottom">用户名：</td>
+        <td colspan="2" valign="bottom">
+<%<asp:TextBox ID="txtUserName"  runat="server"   CssClass="inputbj" Width="240"/>%>
+        </td>
+      </tr>
+      <tr>
+        <td height="70">密&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+        <td colspan="2"><%<asp:TextBox Button="btnLogin" ID="txtPassword" runat="server" CssClass="inputbj"  Width="240"  TextMode="Password"/>%></td>
+      </tr>
+      <tr>
+        <td height="55">&nbsp;</td>
+        <td width="100" valign="top">
+		<%<asp:Button ID="btnLogin" CssClass="btncss"  runat="server" Text="立即登录"  />%>
+		 </td>
+        <td width="143" align="left" valign="top"><a href="url:ForgotPassword"  >忘记密码?</a></td>
+      </tr>
+    </table>
+    <div class="regis">
+    <span class="YaHei">还不是商城用户？</span>
+    一分钟轻松注册，就可以方便购物！ <a href="Register.aspx">免费注册</a>
+    </div>
+    <div class="qqalipay">
+    <span>其它登录方式</span>
+<%<Hi:Common_Link_OpenId runat="server"  /> %>  </div>
+    </div>
+  </div>
+</div>
+</div>
+</form>
+<%<Hi:Common_Footer runat="server"   />%>
+

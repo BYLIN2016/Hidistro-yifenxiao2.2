@@ -1,0 +1,37 @@
+C:\Hidistro2.2\Hidistro.Membership.ASPNETProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Hidistro2.2\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.dll
+C:\Hidistro2.2\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.pdb
+C:\Hidistro2.2\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.dll
+C:\Hidistro2.2\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\obj\Debug\ResolveAssemblyReference.cache
+E:\web\源码研究\Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\obj\Debug\ResolveAssemblyReference.cache
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.pdb
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.pdb
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\ResolveAssemblyReference.cache
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.Membership.ASPNETProvider\bin\Debug\Hidistro.Membership.ASPNETProvider.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hidistro.Membership.ASPNETProvider\obj\Debug\Hidistro.Membership.ASPNETProvider.pdb

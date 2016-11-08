@@ -1,0 +1,19 @@
+﻿body{margin:0px; padding:0px;font-size:12px;line-height:24px;font-family:"宋体"; font-family:Arial, Helvetica, sans-serif; background:url(../images/login_02.gif) repeat-x;}
+form,ul,li,ol,li,dl,dt,dd,img,p,h1,h2,h3,h4,h5,h6{ margin:0;padding:0; border:0; list-style:none;}
+
+.login{ width:1000px; margin:0 auto;}
+.login .logo{ width:570px; height:112px; background:url(../images/login_02.jpg) no-repeat center; padding-left:30px;}
+.login .loginput{ height:330px;}
+
+.loginput .icon{ width:183px; height:330px; background:url(../images/login_14.jpg) no-repeat bottom; float:left;}
+.loginput .imgbg{ width:484px; float:left; padding-top:15px;}
+.loginput .imgbg span{ display:block;}
+.loginput .topimg{ background:url(../images/login_15.jpg) no-repeat; height:72px;}
+.loginput .cenimg{ background:url(../images/login_17.jpg) no-repeat; height:103px;}
+.loginput .botimg{ background:url(../images/login_19.jpg) no-repeat; height:140px;}
+.loginput .inputbg{ background:url(../images/inputbg.gif) no-repeat #f7f7f7; width:252px; overflow:hidden; height:330px; float:right; padding:0px 53px 0 28px;}
+.loginput .inputbg table td{ padding-top:15px; font-size:14px;}
+.loginput .inputbg .span{float:left;}
+.loginput .inputcs{ border:1px #9ac6e9 solid; height:20px; line-height:20px;}
+.loginput .btn{ width:102px; height:38px;  background:url(../images/login_25.gif) no-repeat; font-size:14px; color:#FFF; font-weight:700; border:0px;}
+.loginput .tsg{ border:1px #ff7575 solid; background:url(../images/login_29.gif) no-repeat left #fff0f0; font-size:12px; padding-left:25px;}

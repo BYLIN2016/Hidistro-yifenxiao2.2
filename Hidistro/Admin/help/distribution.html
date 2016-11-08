@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="style/layout.css" />
+<script src="../../Utility/jquery-1.6.4.min.js"></script>
+<script src="../../Utility/jquery.artDialog.js"></script>
+<script src="../../Utility/iframeTools.js"></script>
+<script>
+    function ShowSecondMenuLeft(firstnode, secondurl, threeurl) {
+        window.parent.ShowMenuLeft(firstnode, secondurl, threeurl);
+        art.dialog.close();
+    }
+</script>
+</head>
+
+<body>
+
+<div class="guide_close"><img src="images/pic/close.jpg" /></div>
+<div class="guide_tit"><img src="images/pic/index_tit2.jpg" /></div> 
+<div class="ready_meun">
+<ul>
+<li>开始准备</li>
+<li>录入数据</li>
+<li>营销推广</li>
+<li id="ready_pitch">开展分销</li>
+<li>业务管理</li>
+<li>完成</li>
+</ul>
+</div> 
+ 
+<div class="ready_con">
+<h2>淘宝代销业务管理</h2>
+<h3>仅需三步，完美实现淘宝分销</h3>
+<p>第一步：供应商可在线制作完美淘宝数据。<a id="delete_a" href="javascript:ShowSecondMenuLeft('分销管理','product/maketaobaoproducts.aspx',null)">制作淘宝数据</a></p>
+<p>第二步：分销商通过“订单处理精灵”将制作好的淘宝数据直接铺货至淘宝店铺。省去了繁琐的先下载数据包再上传至淘宝店铺的过程。<a id="delete_a" href="javascript:ShowSecondMenuLeft('分销管理','product/taobaonote.aspx',null)">查看订单处理精灵</a></p>
+<p>第三步：通过“订单处理精灵”轻松实现将淘宝店铺的订单同步至易分销同时将发货信息同步回淘宝。淘宝卖家再也不用手
+        工向供应商二次下采购单，人工获取发货信息了。<a id="delete_a" href="javascript:ShowSecondMenuLeft('分销管理','product/taobaonote.aspx',null)">查看订单处理精灵</a></p>
+<h2>连锁加盟业务管理</h2>
+<p>通过此版块，你可以一键<a id="delete_a" href="javascript:ShowSecondMenuLeft('分销管理','distribution/siterequests.aspx',null)">开通</a>连锁加盟商城，并进行店铺<a id="delete_a" href="javascript:ShowSecondMenuLeft('分销管理','distribution/managesites.aspx',null)">域名管理</a>和<a id="delete_a" href="javascript:ShowSecondMenuLeft('分销管理','distribution/managesites.aspx',null)">模板管理</a>，此外也可以管理旗下连锁加盟商城通<a id="delete_a" href="javascript:ShowSecondMenuLeft('分销管理','distribution/manageetao.aspx',null)">一淘”</a></p>
+<h2>分销商等级管理</h2>
+<p>使用分销等级区分分销商的级别，不同级别的分销商可以享受不同的折扣率。<a href="javascript:ShowSecondMenuLeft('分销管理','distribution/distributorgrades.aspx',null)">开始设置</a></p>
+
+</div> 
+ 
+<div class="guide_buttom2">
+<span><a href="promote.html">上一步</a></span><em><a href="operation.html">下一步</a></em>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<div class="main">
+    <div class="tqj">
+    </div>
+    <div class="container articleshelp">
+        <div class="cssleft">
+            <h6>
+                <img src="/images/process/wzzx.gif" width="182" height="45" /></h6>
+            <div class="csslist">
+                <%<Hi:Common_ArticleCategoryList runat="server" TemplateFile="/ascx/tags/Common_Comment/Skin-Common_ArticleCategoryList.ascx" />%>
+            </div>
+        </div>
+        <div class="cssright">
+            <div class="cssright_h1">
+                <a href="url:home">首页</a> > 文章详细
+            </div>
+            <div class="cssborder">
+                <h2 class="cssright_h2">
+                    <%<asp:Literal runat="server" ID="litArticleTitle" />%></h2>
+                <div class="art_add_date">
+                    发布日期：<span class="cORed"><%<Hi:FormatedTimeLabel ID="litArticleAddedDate" runat="server" />%></span>
+                    <strong class="spanB" style="cursor: pointer;" onclick="window.close();">【关闭】 </strong>
+                </div>
+                <div style="display: none;">
+                    摘要：<%<asp:Literal runat="server" ID="litArticleDescription" />%></div>
+                <div class="art_add_c">
+                    <%<asp:Literal runat="server" ID="litArticleContent" />%></div>
+            </div>
+            <div class="csspage_content">
+                <b>
+                    <%<asp:Label ID="lblFront" runat="server" Text="上一篇文章："></asp:Label>%><a target="_self"
+                        runat="server" id="front"><%<asp:Label ID="lblFrontTitle" runat="server" ></asp:Label>%></a></b>
+                <div>
+                    <%<asp:Label ID="lblNext" runat="server" Text="下一篇文章："></asp:Label>%><a target="_self"
+                        runat="server" id="next"><%<asp:Label ID="lblNextTitle" runat="server" ></asp:Label>%>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tqj">
+    </div>
+    <div class="article_relative">
+        <ul>
+            <%<Hi:Common_ArticleRelative TemplateFile="/ascx/tags/Common_Comment/Skin-Common_ArticleRelative.ascx"  MaxNum="5" runat="server"/>%></ul>
+    </div>
+</div>
+<%<Hi:Common_Footer runat="server"   />%>

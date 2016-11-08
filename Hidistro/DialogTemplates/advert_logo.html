@@ -1,0 +1,78 @@
+﻿<style>
+.tableform td{padding-bottom:0px;}
+</style>
+<div class="tableform" style="height:420px;">
+     <table>
+        <tr>
+            <td style=" padding-bottom:0px;">
+                <div class="show_img">
+                    <ul>
+                        <li>
+                             <a><img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/><i></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+         <tr><td><iframe id="imageframe" name="slideframe" scrolling="no" frameborder="0" style="display: inline; height: 300px;width:655px"  scrolling="no" frameborder="0" style="display: inline; height: 300px;"></iframe></td></tr>
+     </table>
+</div>
+
+<script>
+    function loadEditDialogData() {
+        Hidistro_Dialog.dialogContent = $(taboverlaycontent).html();
+        Hidistro_Dialog.dialogShow();
+        Hidistro_Dialog.dialogTitle($(ctrnamediv).html());
+        BindImageEvent();
+
+        $(".show_img i").bind("click", function () {
+            RemovetempImg(this);
+        });
+    }
+
+    function BindImageEvent() {
+        if (Hidistro_designer.ElementValues != null) {
+
+            if (Hidistro_designer.ElementValues.LogoUrl != null && Hidistro_designer.ElementValues.LogoUrl != "") {
+                $(".show_img img:eq(0)").attr("src", Hidistro_designer.ElementValues.LogoUrl);
+            }
+           $("#imageframe").attr("src", "DialogTemplates/SelectImage.aspx?size=177*39&type=advertimg");
+        }
+    }
+    //删除图片
+    function RemovetempImg(currentobj) {
+        if ($(currentobj).prev("img").attr("src") != "http://images.net.92hidc.net/Storage/none.gif")
+            $(currentobj).prev("img").attr("src", "http://images.net.92hidc.net/Storage/none.gif");
+    }
+
+    //保存值
+    function SaveElmentValue() {
+        if ($(".show_img img:eq(0)").attr("src") == "http://images.net.92hidc.net/Storage/none.gif") {
+            Hidistro_Dialog.dialogTip('error', '请选择广告图片');
+            return false;
+        }
+
+        $.ajax({
+            url: "Handler/DesigAdvert.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "editelogo",
+                Param: "{\"Id\":\"" + Hidistro_designer.CurrentContentID +
+                         "\",\"LogoUrl\":\"" + $(".show_img img:eq(0)").attr("src")+ "\"}"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    $("#" + Hidistro_designer.CurrentContentID).replaceWith(msg.Result.LogoUrl);
+                    Hidistro_Dialog.dialogTip("succeed", "Logo更新成功");
+                } else {
+                    Hidistro_Dialog.dialogTip("error", msg.Result);
+                }
+            },
+            complete: function () {
+                Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+            }
+        });
+    }
+</script>

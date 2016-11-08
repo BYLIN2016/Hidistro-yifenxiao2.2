@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/user.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<%<Hi:HeadContainer ID="HeadContainer1" runat="server" />%>
+<%<Hi:PageTitle runat="server" />%>
+<%<Hi:MetaTags runat="server" />%>
+<link href="/style/user.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/style/pagevalidator.css" type="text/css" media="screen" />
+<script src="/utility/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="/utility/validate/pagevalidator.js" type="text/javascript"></script>
+<script src="/utility/globals.js" type="text/javascript"></script>
+</head>
+<body>
+<form runat="server" id="form1">
+
+<%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Header.ascx" />%>
+
+<div class="member_guide"><!-- InstanceBeginEditable name="编辑区" -->
+		<ul class="User_nav">
+			<li class="User_navLeft"></li>
+			<li class="User_navM">
+				<div class="User_nav_icon">当前位置：<span><a href="url:home">首页</a></span>><span><a href="url:user_UserDefault">会员中心</a></span>><span><a href="#">咨询/回复</a></span></div>
+			</li>
+			<li class="User_navRight"></li>
+		</ul>
+	<!-- InstanceEndEditable --></div>
+<div class="core_blank8"></div>
+<div class="core_userform">
+	<div class="core_newform">
+		<%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Menu.ascx" />%>
+		<div class="core_formright">
+   <!-- InstanceBeginEditable name="编辑2" -->
+			  <div class="User_manage"><span class="User_manIcon"></span>咨询/回复</div>
+			<div class="bTop_BomPadding10">
+			<div class="Menubox"><ul>
+   <li id="one1" class="hover" >未回复</li>
+   <li id="one2" ><a href="url:user_UserConsultations">已回复</a></li>
+   </ul>
+   </div>
+<table class="classlistindex" style="margin:0;" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="yourpostion">&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="padding-right:0; padding-top:8px; background:url(images/bg-userpannel.jpg) top repeat-x;">
+          <!--<div class="userPanels">   -->         
+                        <%<Hi:ThemedTemplatedList ID="dlstPtConsultationReply" TemplateFile="/ascx/tags/Common_Comment/Skin-Common_ReferAndRevert_Refer.ascx" runat="server" /> %>
+                          
+                        <div class="pagination">
+                           <%<UI:Pager runat="server" ShowTotalPages="true" ID="pagerConsultationReply"/>%>
+                </div>
+          <!--</div>-->        </td>
+    </tr>
+</table>
+			</div>
+			<!-- InstanceEndEditable -->
+		</div>
+	</div>
+</div>
+
+
+
+
+</form>
+</body>
+<!-- InstanceEnd --></html>

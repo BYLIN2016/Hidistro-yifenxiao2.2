@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/user.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<%<Hi:HeadContainer ID="HeadContainer1" runat="server" />%>
+<%<Hi:PageTitle runat="server" />%>
+<%<Hi:MetaTags runat="server" />%>
+<link href="/style/user.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/style/pagevalidator.css" type="text/css" media="screen" />
+<script src="/utility/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="/utility/validate/pagevalidator.js" type="text/javascript"></script>
+<script src="/utility/globals.js" type="text/javascript"></script>
+</head>
+<body>
+<form runat="server" id="form1">
+
+<%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Header.ascx" />%>
+
+<div class="member_guide"><!-- InstanceBeginEditable name="编辑区" -->
+		<ul class="User_nav">
+			<li class="User_navLeft"></li>
+			<li class="User_navM">
+				<div class="User_nav_icon">当前位置：<span><a href="url:home">首页</a></span>><span><a href="url:user_UserDefault">会员中心</a></span>><span><a href="#">商品批量购买</a></span></div>
+			</li>
+			<li class="User_navRight"></li>
+		</ul>
+	<!-- InstanceEndEditable --></div>
+<div class="core_blank8"></div>
+<div class="core_userform">
+	<div class="core_newform">
+		<%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Menu.ascx" />%>
+		<div class="core_formright">
+   <!-- InstanceBeginEditable name="编辑2" -->
+			  <script>
+			  
+//***********会员批量购买商品，对商品数量进行验证***********************//
+function CheckProductNum(obj){
+    var stocks=$(obj).parent("td").parent("tr").find("td:eq(5)").text();
+    obj.value=obj.value.replace(/[^0-9_]/g,'');
+    var pronum=obj.value.replace(/\s/g,"");
+    if(pronum==""||parseInt(pronum)<=0){
+        obj.value="1";
+        return false;
+    }
+    if(parseInt(pronum)>parseInt(stocks)){
+        obj.value=stocks;
+        return false;
+    }
+}
+
+function CheckBatchBuy(){
+    var tag=false;
+    var ckstr=$(".User_manForm input:checkbox");
+    for(var a=0;a<ckstr.length;a++){
+        if(ckstr[a].checked){
+            tag=true;
+            break;
+        }
+    }
+    if(!tag){
+        alert("请先选择要购买的商品！");
+        return false;
+    }
+}
+			  </script>
+			 
+			  <div class="User_manage"><span class="User_manIcon"></span>商品批量购买</div>
+			  <div class="bTop_BomPadding10">
+			                                    <%<Hi:SmallStatusMessage id="Status" runat="server" Visible="False" width="577px" />%>
+
+                            <div class="contentarea" style="margin-top:10px;">
+            <div class="Cblock bar">
+                商品名称：<%<asp:TextBox runat="server" ID="txtProductName" CssClass="UserInput" /> %>                 
+                货号：<%<asp:TextBox runat="server" ID="txtProductCode" CssClass="UserInput" /> %>     
+                <%<Hi:Common_CategoriesDropDownList ID="ddlCategories" runat="server" NullToDisplay="--请选择分类--" /> %>
+                <%<Hi:BrandCategoriesDropDownList runat="server" ID="dropBrandCategories" NullToDisplay="--请选择品牌--" />%>
+                <%<asp:Button ID="btnSearch" Text="查询" runat="server" class="btn_style_bar" /> %>                
+            </div>
+             <a href="javascript:void(0);" onclick="CheckClickAll()">全选</a>
+             <a href="javascript:void(0);" onclick="CheckReverse()">反选</a>
+             <%<asp:Button ID="btnBatchBuy" Text="批量购买" runat="server" class="btn_style_bar" OnClientClick="return CheckBatchBuy()"/>%>
+             <div class="bTop_Margin10"><%<Hi:Common_BatchBuy_ProductList ID="Common_BatchBuy_ProductList1" runat="server"  />%></div>
+            <div class="bTop_BomPadding10">
+			    <div class="pagination">
+                     <%<UI:Pager runat="server" ShowTotalPages="true" ID="pager" />%>
+                </div>
+            </div>
+
+        </div>
+			</div>
+			<!-- InstanceEndEditable -->
+		</div>
+	</div>
+</div>
+
+
+
+
+</form>
+</body>
+<!-- InstanceEnd --></html>

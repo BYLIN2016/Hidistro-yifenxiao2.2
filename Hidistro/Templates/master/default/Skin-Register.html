@@ -1,0 +1,124 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<form runat="server">
+<div class="main">	
+<script src="/utility/validate/pagevalidator.js" type="text/javascript"></script>
+	<%<Hi:SmallStatusMessage id="Status" runat="server" Visible="False" />%>
+<div class="trationbj">
+<div class="tration">
+<h1 class="YaHei">新用户注册</h1>
+<div class="fomeinput">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="fomeinput">
+  <tr>
+    <td width="8%" align="right" valign="middle">用户名： </td>
+    <td width="69%" valign="middle">
+<%<asp:TextBox ID="txtUserName" CssClass="inputbj" runat="server"  width="240" />%>
+            <span id="txtUserNameTip" runat="server" style="color:#cc0000; font-size:12px;"></span>
+</td>
+    <td width="23%" rowspan="7" valign="top">
+    <ul>
+    <li class="dotted">已有会员帐号？可以<a href="url:login"> 直接登录</a></li>
+    <li class="dotted">其它登录方式</li>
+    <li><%<Hi:Common_Link_OpenId runat="server"  /> %> </li>
+    </ul>
+    </td>
+  </tr>
+  <tr valign="middle">
+    <td align="right">电子信箱： </td>
+    <td><%<asp:TextBox ID="txtEmail"   CssClass="inputbj"    runat="server"   width="240" />%>	
+             <span id="txtEmailTip" runat="server" style="color:#cc0000; font-size:12px;"></span></td>
+    </tr>
+    <tr valign="middle">
+    <td align="right">手机号码： </td>
+    <td><%<asp:TextBox ID="txtCellPhone"   CssClass="inputbj"    runat="server"   width="240" />%>	
+             <span id="txtCellPhoneTip" runat="server" style="color:#cc0000; font-size:12px;"></span></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">密码： </td>
+    <td><%<asp:TextBox ID="txtPassword" runat="server"  CssClass="inputbj"  TextMode="Password"   width="240" />%><span id="txtPasswordTip" runat="server" style="color:#cc0000; font-size:12px;"></span></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">确认密码：</td>
+    <td><%<asp:TextBox ID="txtPassword2"   CssClass="inputbj"  runat="server" TextMode="Password"  width="240"/>%>
+            <span id="txtPassword2Tip" runat="server" style="color:#cc0000; font-size:12px;"></span></td>
+    </tr>
+  <tr valign="middle">
+    <td align="right">验证码：</td>
+    <td><%<asp:TextBox ID="txtNumber"   CssClass="inputbj"   style="vertical-align:middle;"   runat="server" Width="60px"  MaxLength="4"/>%>&nbsp;<img id="img_txtNumber" src="" alt="" /> <a href="javascript:refreshCode();"><img id="imgVerifyCode" src=''    style="vertical-align:middle;border-style:none;" alt=""/></a>
+            </td>
+    </tr>
+	          <script language="javascript" type="text/javascript">
+                          document.getElementById('imgVerifyCode').src = applicationPath + "/VerifyCodeImage.aspx";
+                          function refreshCode() {
+                              var img = document.getElementById("imgVerifyCode");
+
+                              if (img != null) {
+                                  var currentDate = new Date();
+                                  img.src = applicationPath + "/VerifyCodeImage.aspx?t=" + currentDate.getTime();
+                              }
+                          }
+                      </script>
+  <tr valign="middle">
+    <td align="center"></td>
+    <td > <span style="font-size:12px;"><%<asp:CheckBox ID="chkAgree" runat="server" Checked="true" Text="本人已阅读、理解并同意本站的"/>%></span>  <a href="RegisterAgreement.aspx" class="cORed" target="_blank">会员注册协议</a></td>
+    </tr>
+  <tr>
+    <td align="right"></td>
+    <td valign="top">
+ <%<asp:Button ID="btnRegister"  runat="server"  Text="同意以上协议并注册"  CssClass="btncss register_btn" OnClientClick="return PageIsValid();"  />%>
+</td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+
+
+
+
+	<script type="text/javascript" language="javascript">
+	    function InitValidators() {
+	        initValid(new InputValidator('register_txtUserName', 2, 20, false, null, '用户名不能为空，且在2-20个字符之间'))
+	        initValid(new InputValidator('register_txtEmail', 3, 255, false, '[\\w-]+(\\.[\\w-]+)*@[\\w-]+(\.[\\w-]+)+', '电子信箱不能为空，在3-255个字符之间,且格式不能错'))
+	        initValid(new InputValidator('register_txtPassword', 6, 20, false, null, '密码不能为空，且在6-20个字符之间'))
+	        initValid(new InputValidator('register_txtPassword2', 6, 20, false, null, '确认密码不能为空，且在6-20个字符之间'))
+	        appendValid(new CompareValidator('register_txtPassword2', 'register_txtPassword', '两次输入的密码不对'));
+	    }
+	    $(document).ready(function() {
+	    InitValidators();
+	    $("#img_txtNumber").hide();
+	    $("#register_txtNumber").keyup(function() {
+	        var value = $(this).val();
+	        if (value.length < 4) {
+	            $("#img_txtNumber").hide();
+	            temp = "";
+	        }
+	        else if (value.length == 4) {
+	            if (temp != value) {
+	                $("#img_txtNumber").show();
+	                $.ajax({
+	                    url: "Register.aspx",
+	                    type: 'post', dataType: 'json', timeout: 10000,
+	                    data: {
+	                        isCallback: "true",
+	                        code: $("#register_txtNumber").val()
+	                    },
+	                    async: false,
+	                    success: function(resultData) {
+	                        var flag = resultData.flag;
+	                        if (flag == "1") {
+	                            $("#img_txtNumber").attr("src", "/images/true.gif");
+	                        }
+	                        else if (flag == "0") {
+	                            $("#img_txtNumber").attr("src", "/images/false.gif");
+	                        }
+	                    }
+	                });
+	            }
+	            temp = value;
+	        }
+	    });
+	    });
+</script>
+</div>
+</form>
+<%<Hi:Common_Footer runat="server"   />%>

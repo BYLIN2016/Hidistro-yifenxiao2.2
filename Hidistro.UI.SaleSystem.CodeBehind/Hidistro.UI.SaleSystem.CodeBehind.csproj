@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFB204EC-D6E9-422A-82D5-9B0F9D6C3DDD}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Hidistro.UI.SaleSystem.CodeBehind</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hidistro.UI.SaleSystem.CodeBehind</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Hidistro.UI.SaleSystem.CodeBehind/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ASPNET.WebControls">
+      <Name>ASPNET.WebControls</Name>
+      <HintPath>..\Hidistro\bin\ASPNET.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.AccountCenter.Business">
+      <Name>Hidistro.AccountCenter.Business</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.AccountCenter.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.AccountCenter.Profile">
+      <Name>Hidistro.AccountCenter.Profile</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.AccountCenter.Profile.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Core">
+      <Name>Hidistro.Core</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Entities">
+      <Name>Hidistro.Entities</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Membership.Context">
+      <Name>Hidistro.Membership.Context</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Membership.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Membership.Core">
+      <Name>Hidistro.Membership.Core</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Membership.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Messages">
+      <Name>Hidistro.Messages</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.SaleSystem.Catalog">
+      <Name>Hidistro.SaleSystem.Catalog</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.SaleSystem.Catalog.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.SaleSystem.Comments">
+      <Name>Hidistro.SaleSystem.Comments</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.SaleSystem.Comments.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.SaleSystem.Member">
+      <Name>Hidistro.SaleSystem.Member</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.SaleSystem.Member.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.SaleSystem.Shopping">
+      <Name>Hidistro.SaleSystem.Shopping</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.SaleSystem.Shopping.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.UI.Common.Controls">
+      <Name>Hidistro.UI.Common.Controls</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.UI.Common.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.UI.SaleSystem.Tags">
+      <Name>Hidistro.UI.SaleSystem.Tags</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.UI.SaleSystem.Tags.dll</HintPath>
+    </Reference>
+    <Reference Include="Hishop.Components.Validation">
+      <Name>Hishop.Components.Validation</Name>
+      <HintPath>..\Hidistro\bin\Hishop.Components.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Hishop.Plugins">
+      <Name>Hishop.Plugins</Name>
+      <HintPath>..\Hidistro\bin\Hishop.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <HintPath>System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+      <HintPath>System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <HintPath>System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+      <HintPath>System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Name>System.Web.ApplicationServices</Name>
+      <HintPath>..\Hidistro\bin\System.Web.ApplicationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Affiches.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AffichesDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AliPayNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ArticleDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Articles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BlogIt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Brand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrandDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BundlingProducts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Category.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CountDownProducts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CountDownProductsDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Default.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Desig_Templete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FavourableDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FinishOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordSuccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GiftDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GroupBuyProductDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GroupBuyProducts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelpDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InpourNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InpourReturn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InpourTemplatedWebControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IntroducedToFriend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LeaveComments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logout.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LookLineItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LookProductReviews.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OnlineGifts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenIdFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderReturn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PaymentTemplatedWebControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductConsultations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductConsultationsAndReplay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductReviews.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductUnSales.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegisterAgreement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegisterUserSave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SaleSyetemResourceNotFound.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ShoppingHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SubCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SubmmitOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SubmmitOrderHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnProductDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VoteResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

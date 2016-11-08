@@ -1,0 +1,8 @@
+﻿.layerArea{background:#f2f2f2;height:380px;border:1px solid #ccc;width:580px;z-index:1001;position:absolute;left:50%; top:50%;margin-left:-200px;margin-top:-220px;}
+.layerArea .closeBotton{text-align:right;clear:both;padding-right:10px}
+.layerArea .areaItems{width:520px;clear:both;height:50px;padding-left:10px;}
+.layerArea .areaItems ul li{float:left;width:70px;}
+.layerArea .lines{border-bottom:1px solid #ccc;margin:10px 10px;height:2px;}
+.layerArea .mainCheckBoxList{padding-left:10px;}
+.layerArea .mainCheckBoxList ul li{float:left;width:142px;}
+.layerArea .submitTj{clear:both;padding:12px 10px 10px 10px;width:520px;text-align:right;margin:0px auto;}

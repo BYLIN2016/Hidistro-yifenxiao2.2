@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+
+<script src="../Utility/jquery-1.6.4.min.js"></script>
+<script src="../Utility/jquery.cookie.js"></script>
+<script src="../Utility/jquery.artDialog.js"></script>
+<script src="../Utility/iframeTools.js"></script>
+<script src="js/Frame.js"></script>
+<link rel="stylesheet" type="text/css" href="css/frame.css">
+<link rel="stylesheet" type="text/css" href="../Utility/skins/blue.css">
+<title>无标题文档</title>
+    <script>
+        //IFrame弹出
+        function DialogFrame(url, title_tip, w_width, h_height) {
+            var tmpwidth = 900;
+            var tmpheight = 520;
+            if (w_width != null) {
+                tmpwidth = w_width;
+            }
+            if (h_height != null) {
+                tmpheight = h_height;
+            }
+            if (tmpwidth != 0) {
+                if (tmpheight != 0) {
+                    art.dialog.open(url, { title: title_tip, width: tmpwidth, height: tmpheight }, true);
+                } else {
+                    art.dialog.open(url, { title: title_tip, width: tmpwidth }, true);
+                }
+            } else {
+                if (tmpheight != 0) {
+                    art.dialog.open(url, { title: title_tip, height: tmpheight }, true);
+                } else {
+                    art.dialog.open(url, { title: title_tip }, true);
+                }
+            }
+           
+        }
+
+    </script>
+</head>
+<body>
+
+<div class="hishop_head">
+	<div class="hishop_logo"><img src="images/logogo.png" class="pngFix" /></div>
+	<div class="hishop_banner">
+    	<div class="hishop_con2"> 
+			<div class="hishop_banneritem">
+				<p>
+					<img src="images/ren.png" /> <a>shop</a>,欢迎回来　<a><font color="#FBD711">admin</font></a>　<a href="LoginExit.aspx"><strong>[安全退出]</strong></a>
+					<a target="_blank" href="../Default.aspx"><img src="images/font.png" />浏览前台</a><span><img src="images/split.jpg" /></span>
+					<a href="Default.aspx"><img src="images/zm.png" />桌面</a><span><img src="images/split.jpg" /></span>
+					<a href="javascript:DialogFrame('help/index.html','新手向导',750,null)"><img src="images/flag.png" />新手向导</a><span><img src="images/split.jpg" /></span>
+					<a href="javascript:DialogFrame('help/about.html','关于易分销',550,345)"><img src="images/about.png" />关于</a>
+				</p>
+			</div>
+			<div class="hishop_menu">
+				<a onclick="ShowMenuLeft('店铺配置',null,null)" class="hishop_curent">店铺配置</a>
+				<a onclick="ShowMenuLeft('页面管理',null,null)">页面管理</a>
+				<a onclick="ShowMenuLeft('商 品',null,null)">商 品</a>
+				<a onclick="ShowMenuLeft('订 单',null,null)">订 单</a>
+				<a onclick="ShowMenuLeft('采购单',null,null)">采购单</a>
+                <a onclick="ShowMenuLeft('会 员',null,null)">会 员</a>
+				<a onclick="ShowMenuLeft('分销管理',null,null)">分销管理</a>
+				<a onclick="ShowMenuLeft('CRM管理',null,null)">CRM管理</a>
+				<a onclick="ShowMenuLeft('营销推广',null,null)">营销推广</a>
+				<a onclick="ShowMenuLeft('财务管理',null,null)">财务管理</a>
+				<a onclick="ShowMenuLeft('统计报表',null,null)">统计报表</a>
+			</div>
+        </div>
+	</div>
+</div>
+
+<div class="hishop_content">
+	<div class="hishop_menu_scroll">
+		<div id="menu_left">
+
+		</div>
+	</div>
+	<div id="menu_arrow" class="close_arrow" onclick="javascript:ExpendMenuLeft()" style="display:none"></div>
+	<div class="hishop_content_r">
+		<iframe id="frammain" name="frammain" class="framecontent" runat="server" src="Default.aspx" frameborder="no" border="0" scrolling="auto"></iframe>
+	</div>
+</div>
+
+</body>
+</html>

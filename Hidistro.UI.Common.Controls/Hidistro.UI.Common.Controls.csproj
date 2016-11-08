@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5966381-1FF5-4D94-8AF4-BF4E61F8C982}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Hidistro.UI.Common.Controls</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hidistro.UI.Common.Controls</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Hidistro.UI.Common.Controls/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ASPNET.WebControls">
+      <Name>ASPNET.WebControls</Name>
+      <HintPath>..\Hidistro\bin\ASPNET.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Core">
+      <Name>Hidistro.Core</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Entities">
+      <Name>Hidistro.Entities</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Membership.Context">
+      <Name>Hidistro.Membership.Context</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Membership.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Membership.Core">
+      <Name>Hidistro.Membership.Core</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Membership.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <HintPath>System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <HintPath>System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <HintPath>System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+      <HintPath>System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+      <HintPath>System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovedDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AscxTemplatedWebControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrandCategoriesDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrandCategoriesList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ButtonManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ButtonWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassShowOnDataLitl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CloseTranReasonDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CnzzShow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common_DesignScriptCss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common_UserLogin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ControlProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomChart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DecimalLengthDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DisplayThemesImages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExportFieldsCheckBoxList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExportFormatRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormatedMoneyLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormatedSiteUrl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormatedTimeLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormFixerHtml32TextWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormFixerHtmlTextWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenderRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GroupBuyStatusLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HeadContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HeaderMenuTypeRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HiImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HiImageButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HiImageButtonWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HiLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HiLiteral.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HiPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HourDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDecodeTextBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlTemplatedWebControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageLinkButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageLinkButtonWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageOrderDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImagePosition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageUploader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LabelWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LeaveListTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LinkButtonWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListRadioButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LiteralWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MailPriorityRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageStatusDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MetaTags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MoneyColumnForAdmin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MonthDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OperationDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderAdminRemark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderRemarkImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderRemarkImageRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderStatusLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderStautsDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderUserRemark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageHolder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageSizeDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageTitle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductDetailsLink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductLineDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductTagsCheckBoxList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductTagsDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductTagsLiteral.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProductTypeDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PromoteTypeRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PuchaseStatusLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RefundOrderModeRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegionAllName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegionSelector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SaleStatisticsTypeRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SaleStatusDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Script.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ShippingModeDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ShippingModeRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SiteUrl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkinNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkuContentLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SmallStatusMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StatusMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Style.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SubStringLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemPageDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TemplatedWebControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextControlHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThemedTemplatedList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThemedTemplatedRepeater.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThemeImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TradeTypeDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TradeTypeNameLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrimTextBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UploadHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UploadType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserStatisticeChart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WangWangConversations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="YearDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="YesNoRadioButtonList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Hidistro.UI.Common.Controls.ImageUploader.css.style.css" />
+    <EmbeddedResource Include="Hidistro.UI.Common.Controls.ImageUploader.images.upload.png" />
+    <EmbeddedResource Include="Hidistro.UI.Common.Controls.ImageUploader.script.upload.js" />
+    <EmbeddedResource Include="Hidistro.UI.Common.Controls.region.helper.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

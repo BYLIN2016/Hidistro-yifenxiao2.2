@@ -1,0 +1,48 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<div class="main">
+<div class="message_nav"><a href="url:home">首页</a> > 分销商注册协议</div>
+
+
+	<div class="registeragreement_fx">
+		<ul class="bPadding30">
+			<li>
+			  <div id="registerAgreement_div_Common_Register_Clause">
+			    <div>
+					<h4  class="martb">1、申请说明：</h4> 
+					<div class="agreement_bd">
+					<asp:Literal ID="litRequestInstruction" runat="server" />
+					</div>
+					<h4 class="martb">2、分销商注册协议：</h4>
+					<div class="agreement_bd">
+                    <asp:Literal ID="litRequestProtocols" runat="server" />
+					</div>
+		        </div>
+		      </div>
+			  <div class="agreebox"  style="text-align:center; border-top:1px solid #eee; padding-top:5px; margin-top:5px;"><input type="checkbox" id="agree" checked="true" onchange="isAgree(this)">同意以上条款</div>
+			  <div style="text-align:center;">
+				<ul class="Skin_Register_Btn2" style="width:183px;">
+					<li class="Skin_Register_Btn2Left"></li>
+					<li class="bTopPadding5"><a id="next" class="btncss_next" href="DistributorsRegister.aspx">同意提交</a></li>
+					<li class="Skin_Register_Btn2Right"></li>
+				</ul>
+			 </div>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	    function isAgree(chkAgree) {
+	        var btnNext = document.getElementById("next");
+	        if (chkAgree.checked) {
+	            btnNext.href = "DistributorsRegister.aspx";
+	        }
+	        else {
+	            btnNext.href = "#";
+	            alert("您没有同意分销商注册协议,不能注册成为分销商!")
+	        }
+	        
+	    }
+	</script>
+</div>
+
+<%<Hi:Common_Footer runat="server"   />%>
+

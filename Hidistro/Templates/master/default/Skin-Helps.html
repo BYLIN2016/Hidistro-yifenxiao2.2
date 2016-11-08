@@ -1,0 +1,24 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<div class="main">
+<div class="tqj"></div>
+<div class="container articleshelp">
+  <div class="cssleft">
+  <h6><img src="/images/process/bzzx.gif" width="182" height="45" /></h6>
+  <div class="csslist">
+<%<Hi:Common_HelpCategory TemplateFile="/ascx/tags/Common_Comment/Skin-Common_HelpCenter_Category.ascx" runat="server"  />%>
+  </div>
+  </div>
+  <div class="cssright">
+      <div class="cssright_h1"><a href="url:home">首页</a> > 帮助中心 </div>
+    <ul class="cssborder">
+      	<%<Hi:ThemedTemplatedRepeater ID="rptHelps" runat="server" TemplateFile="/ascx/tags/Common_Comment/Skin-Common_HelpCenter_Help.ascx"  />%>
+    </ul>
+    <div class="csspage">            <div class="page">
+                           <%<UI:Pager runat="server" ShowTotalPages="true" ID="pager" />%>
+                </div></div>
+  </div>
+</div>
+</div>
+
+<%<Hi:Common_Footer runat="server"   />%>
+

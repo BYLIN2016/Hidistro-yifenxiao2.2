@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/user.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <%<Hi:HeadContainer ID="HeadContainer1" runat="server" />%>
+    <%<Hi:PageTitle runat="server" />%>
+    <%<Hi:MetaTags runat="server" />%>
+    <link href="/style/user.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/style/pagevalidator.css" type="text/css" media="screen" />
+    <script src="/utility/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script src="/utility/validate/pagevalidator.js" type="text/javascript"></script>
+    <script src="/utility/globals.js" type="text/javascript"></script>
+</head>
+<body>
+    <form runat="server" id="form1">
+    <%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Header.ascx" />%>
+    <div class="member_guide">
+        <!-- InstanceBeginEditable name="编辑区" -->
+        <script src="/utility/globals.js" type="text/javascript"></script>
+        <script src="/utility/jquery.artDialog.js" type="text/javascript"></script>
+        <script src="/utility/iframeTools.js" type="text/javascript"></script>
+        <script src="/utility/Window.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="/utility/skins/blue.css" />
+        <ul class="User_nav">
+            <li class="User_navLeft"></li>
+            <li class="User_navM">
+                <div class="User_nav_icon">
+                    当前位置：<span><%<Hi:SiteUrl UrlName="home" runat="server">首页</Hi:SiteUrl>%></span>><span><%<Hi:SiteUrl UrlName="user_UserDefault" runat="server">会员中心</Hi:SiteUrl>%></span>><span><a
+                        href="#">订单管理</a></span></div>
+            </li>
+            <li class="User_navRight"></li>
+        </ul>
+        <!-- InstanceEndEditable -->
+    </div>
+    <div class="core_blank8">
+    </div>
+    <div class="core_userform">
+        <div class="core_newform">
+            <%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Menu.ascx" />%>
+            <div class="core_formright">
+                <!-- InstanceBeginEditable name="编辑2" -->
+                <%<Hi:SmallStatusMessage id="Status" runat="server" Width="200" Visible="False" />%>
+                <div class="User_manage">
+                    <span class="User_manIcon"></span>订单管理</div>
+                <div class="User_link bTop_Margin10">                    
+                    <label>
+                        订单编号：
+                        <%<asp:TextBox ID="txtOrderId" runat="server" CssClass="UserInput" Width="120px" />%>
+                    </label>   
+                    <label>
+                        物流单号：
+                        <%<asp:TextBox ID="txtShipId" runat="server" CssClass="UserInput" Width="120px" />%>
+                    </label>                     
+                    <label>
+                         收货人：
+                        <%<asp:TextBox ID="txtShipTo" runat="server" CssClass="UserInput" Width="120px" />%>
+                    </label>
+                    <label>
+                        状态：
+                        <%<%<Hi:OrderStautsDropDownList ID="dropOrderStatus" runat="server" />%>
+                    </label>
+                    <br />
+                    <label>
+                        下单时间：
+                        <%<UI:WebCalendar CalendarType="StartDate" runat="server" ID="calendarStartDate" Width="120px" CssClass="UserInput" />%>
+                    </label>
+                    <label>
+                        -----至----：
+                        <%<UI:WebCalendar CalendarType="EndDate" runat="server" ID="calendarEndDate" Width="120px" CssClass="UserInput" />%>
+                    </label>
+                    <label>
+                        <%<asp:Button ID="btnSearch" class="User_btn_cx" runat="server" />%>
+                    </label>
+                    <%<asp:Literal runat="server" ID="litOrderTotal" />%>
+                    <%<asp:Literal ID="litOrderStatus" runat="server"></asp:Literal>%>
+                </div>
+                <div class="bTop_Margin10">
+                    <%<Hi:Common_OrderManage_OrderList runat="server" />%>
+                </div>
+                <div class="bTop_BomPadding10">
+                    <div class="pagination">
+                        <%<UI:Pager runat="server" ShowTotalPages="true" ID="pager" />%>
+                    </div>
+                </div>
+
+                <div id="pay_div" style="display: none">
+                    <div class="frame-content" style="width:300px; overflow:hidden;">
+                        <p>
+                            1.再次确认您选择的支付方式，您也可以重新选择。</p>
+                        <p style="color:#cc0000">
+                            <span class="frame-span frame-input130"><em>*</em>&nbsp;确认支付方式：</span> <span>
+                                <abbr class="formselect">
+                                    <%<asp:DropDownList id="dropPayType" runat="server"/>%></abbr></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div id="refund_div" style="display: none">
+                    <div class="frame-content" style="width:300px; overflow:hidden;">
+                        <p>
+                            1.您需要选择我们如何将退款返回给您，如果选择预存款，金额将退到预存款，如果选择银行转账，请填写银行账号的相关信息。</p>
+                        <p style="color:#cc0000">
+                            <span class="frame-span frame-input130"><em>*</em>&nbsp;选择退款途径：</span> <span>
+                                <abbr class="formselect">
+                                    <%<asp:DropDownList id="dropRefundType" runat="server">
+      <asp:ListItem Value="1">退到预存款</asp:ListItem>
+      <asp:ListItem Value="2">银行转帐</asp:ListItem>
+      </asp:DropDownList>%></abbr></span>
+                        </p>
+                        <p style="color:#cc0000">
+                            <span class="frame-span frame-input130"><em>*</em>&nbsp;申请原因以及退款帐号：<br />
+                                （银行转账，请填写您的银行账号相关信息）</span> <span>
+                                    <%<asp:TextBox ID="txtRemark" runat="server" TextMode="MultiLine" 
+      CssClass="forminput" Width="300px" Height="70px" runat="server"></asp:TextBox>%></span>
+                        </p>
+                    </div>
+                </div>
+                <div id="return_div" style="display: none">
+                    <div class="frame-content" style="width:300px; overflow:hidden;">
+                        <p>
+                            1.请在退货前与客服确认退货，才将商品寄出。务必把物流单号和物流公司填写于备注里面。<br />
+                            2、您需要选择我们如何将退款返回给您，如果选择预存款，金额将退到预存款，如果选择银行转账，请填写银行账号的相关信息</p>
+                        <p style="color:#cc0000">
+                            <span class="frame-span frame-input130"><em>*</em>&nbsp;选择退款途径：</span> <span>
+                                <abbr class="formselect">
+                                    <%<asp:DropDownList id="dropReturnRefundType" runat="server">
+      <asp:ListItem Value="1">退到预存款</asp:ListItem>
+      <asp:ListItem Value="2">银行转帐</asp:ListItem>
+      </asp:DropDownList>%></abbr></span>
+                        </p>
+                        <p style="color:#cc0000">
+                            <span class="frame-span frame-input130"><em>*</em>&nbsp;申请原因，物流公司，物流单号，退款账号等：<br />
+                                （银行转账，请填写您的银行账号相关信息）</span> <span>
+                                    <%<asp:TextBox ID="txtReturnRemark" runat="server" TextMode="MultiLine" 
+      CssClass="forminput" Width="300px" Height="70px" runat="server"></asp:TextBox>%></span>
+                        </p>
+                    </div>
+                </div>
+                <div id="replace_div" style="display: none">
+                    <div class="frame-content" style="width:300px; overflow:hidden;">
+                        <p>
+                            1.请在换货前仔细阅读换货说明并与客服确认换货，才将商品寄出。务必把物流单号和物流公司填写于备注里面</p>
+                        <p  style="color:#cc0000">
+                            <span class="frame-span frame-input130"><em>*</em>&nbsp;换货备注：</span> <span>
+                                    <%<asp:TextBox ID="txtReplaceRemark" runat="server" TextMode="MultiLine" 
+      CssClass="forminput" Width="300px" Height="70px" runat="server"></asp:TextBox>%></span>
+                        </p>
+                    </div>
+                </div>
+                <div style="display: none">
+                    <input type="hidden" id="hdorderId" runat="server" />
+                    <%<asp:Button ID="btnReturn" runat="server" Text="确 定"  CssClass="submit_DAqueding" />%>
+                    <%<asp:Button ID="btnReplace" runat="server" Text="确 定"  CssClass="submit_DAqueding" />%>
+                    <%<asp:Button ID="btnOk" runat="server" Text="确 定"  CssClass="submit_DAqueding" />%>
+                     <%<asp:Button ID="btnPay" OnClientClick="this.form.target='_blank'" runat="server" Text="确 定"  CssClass="submit_DAqueding" />%>
+                </div>
+                <script type="text/javascript">
+                    var type = "";
+                    function validatorForm() {
+                        if (type == "refund") {
+                            if ($("#UserOrders_txtRemark").val().replace(/\s/g, "") == "") {
+                                alert("请输入申请原因以及退款帐号");
+                                return false;
+                            }
+                        }
+                        else if (type == "return") {
+                            if ($("#UserOrders_txtReturnRemark").val().replace(/\s/g, "") == "") {
+                                alert("请输入申请原因，物流公司，物流单号，退款账号等");
+                                return false;
+                            }
+                        }
+                        else if (type == "replace") {
+                            if ($("#UserOrders_txtReplaceRemark").val().replace(/\s/g, "") == "") {
+                                alert("请输入换货备注");
+                                return false;
+                            }
+                        }
+                        else if (type == "pay") {
+                            if ($("#UserOrders_dropPayType").val() == "") {
+                                alert("请选择支付方式");
+                                return false;
+                            }
+                        }
+                        return true;
+                    }
+                    function paySelect(obj) {
+                        type = "pay";
+                        setArryText('UserOrders_hdorderId', $(obj).attr("oId"));
+                        $("#UserOrders_dropPayType").val($(obj).attr("pId"));
+                        setArryText('UserOrders_dropPayType', $(obj).attr("pId"));
+                        DialogShow("确认支付方式", "payselect", "pay_div", "UserOrders_btnPay");
+                        return false;
+                    }
+                    function ApplyForRefund(orderId) {
+                        type = "refund";
+                        setArryText('UserOrders_hdorderId', orderId);
+                        setArryText('UserOrders_txtRemark', '');
+                        setArryText('UserOrders_dropRefundType', '');
+                        DialogShow("申请退款", "applyforrefund", "refund_div", "UserOrders_btnOk");
+                        return false;
+                    }
+                    function ApplyForReturn(orderId) {
+                        type = "return";
+                        setArryText('UserOrders_hdorderId', orderId);
+                        setArryText('UserOrders_txtReturnRemark', '');
+                        setArryText('UserOrders_dropReturnRefundType', '');
+                        DialogShow("申请退货", "applyforreturn", "return_div", "UserOrders_btnReturn");
+                        return false;
+                    }
+                    function ApplyForReplace(orderId) {
+                        type = "replace";
+                        setArryText('UserOrders_hdorderId', orderId);
+                        setArryText('UserOrders_txtReplaceRemark', '');
+                        DialogShow("申请换货", "applyforreplace", "replace_div", "UserOrders_btnReplace");
+                        return false;
+                    }
+                </script>
+                <!-- InstanceEndEditable -->
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+<!-- InstanceEnd -->
+</html>

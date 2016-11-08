@@ -1,0 +1,114 @@
+﻿ <%<Hi:Common_Header runat="server"  />%>
+
+<div class="main">
+   <div class="nav_info">&nbsp;<a  href="/">首页</a>>><%<Hi:Common_Location runat="server" />%>&nbsp;</div>
+   <div class="category">
+   <div class="category_ad"> <%<asp:Literal ID="litLeadBuy" runat="server"  />%></div>
+   <div class="category_l">
+      <div class="category_list">
+      <%<Hi:Common_ProductCategoryList TemplateFile="/ascx/tags/Skin-Common_ProductCategoryList.ascx" runat="server" />%>
+      </div>
+      
+      <div class="category_browse">
+          <h2>浏览过的商品</h2>
+          <ul>
+          <%<Hi:Common_GoodsList_Browsed MaxNum="4"  runat="server" />%>
+          </ul>
+      </div>
+      <Hi:Common_GoodsList_CurrentTop runat="server" MaxNum="6" ImageNum="6" IsShowPrice="true" IsShowSaleCounts="true" />
+
+      <div class="cate_ad">
+       <Hi:Common_ImageAd runat="server" AdId="14" />
+       <Hi:Common_ImageAd runat="server" AdId="15" />
+       <Hi:Common_ImageAd runat="server" AdId="16" />     
+      </div>
+      
+   </div>
+   <div class="category_r">
+     <div class="sub_category"> 
+        <h2>按子分类选择</h2>
+        <ul id="ul_subcategory" style="height:23px;overflow:hidden">
+        <%<Hi:Common_ProductCategoryList IsShowSubCategory="true" runat="server" TemplateFile="/ascx/tags/Skin-Common_ProductSubCategories.ascx" />%>
+        </ul>
+     </div>
+     <p class="sub_shrink" id="sp_subcategory"><span>展开搜索</span></p>
+     
+     <div style="height:20px; overflow:hidden;"></div>
+     
+     <div class="sub_property">
+       <h2>按品牌/属性选择</h2>
+          <Hi:Common_AttributeList runat="server" />
+     </div>
+     <p class="sub_shrink" id="sp_brand"><span>展开搜索</span></p>
+     <form runat="server">
+     <div class="category_search">
+     	<%<Hi:Common_CutDownSearch runat="server" />%>   
+
+       <div class="category_sequence">
+          <ul>
+             <li class="c_sel"><span><%<Hi:Common_Search_SortPrice ID="Common_Search_SortPrice1" DefaultImageUrl="/images/fixed/SortByPriceUpStop.gif" AscImageUrl="/images/fixed/SortByPriceUp.gif" DescImageUrl="/images/fixed/SortByPriceDown.gif" runat="server"  Alt="按价格排序" />%></span></li>
+             <li><span><%<Hi:Common_Search_SortSaleCounts ID="Common_Search_SortSaleCounts1" DefaultImageUrl="/images/fixed/xiao1.gif" AscImageUrl="/images/fixed/xiao2.gif" DescImageUrl="/images/fixed/xiao3.gif" runat="server" Alt="按销量排序"  />%></span></li>
+             <li><span><%<Hi:Common_Search_SortPopularity ID="Common_Search_SortPopularity1" DefaultImageUrl="/images/fixed/ren1.gif" AscImageUrl="/images/fixed/ren2.gif" DescImageUrl="/images/fixed/ren3.gif" runat="server" Alt="按人气排序"  />%></span></li>
+             <li><span><%<Hi:Common_Search_SortTime ID="Common_Search_SortTime1" DefaultImageUrl="/images/fixed/SortByTimeUpStop.gif" AscImageUrl="/images/fixed/SortByTimeUp.gif" DescImageUrl="/images/fixed/SortByTimeDown.gif" runat="server" Alt="按时间排序"  />%></span></li>
+          </ul>
+          <p><%<asp:Literal ID="litSearchResultPage" runat="server"  />%></p>
+       </div>
+     </div>
+     </form>
+     <script language="javascript">
+         $(function () {
+             $("#sp_subcategory").toggle(function () {
+                 $("#ul_subcategory").css({ height: 'auto' });
+             }, function () {
+                 $("#ul_subcategory").css({ height: '23px' });
+             });
+
+             if ($("#ul_subcategory li").size() <= 12) {
+                 $("#sp_subcategory").hide();
+             } else {
+                 $("#ul_subcategory li:gt(11)").hide();
+             }
+
+             if ($(".sub_property dl").size() <= 3) {
+                 $("#sp_brand").hide();
+             } else {
+                 $(".sub_property dl:gt(2)").hide();
+             }
+
+             $("#sp_brand").toggle(function () {
+                 $(".sub_property dl:gt(2)").show();
+                 $(this).find("span").text('收缩');
+             }, function () {
+                 $(".sub_property dl:gt(2)").hide();
+                 $(this).find("span").text('展开搜索');
+             });
+         });
+     </script>
+     <div class="category_pro_list">
+        <ul>
+        <%<Hi:ThemedTemplatedRepeater ID="rptProducts" TemplateFile="/ascx/Tags/Common_GoodsList/Skin-Common_GoodsList_SubClass.ascx" runat="server" />%>
+       </ul>
+     </div>
+     <script>
+         $(function () {
+             $(".category_pro_list li").hover(function () {
+                 if ($(".category_pro_list").index(this) != 0) {
+                     $(".category_pro_list li:first").removeClass("listhover");
+                 }
+                 $(this).addClass("listhover");
+             }, function () {
+                 $(this).removeClass("listhover");
+             });
+             $(".category_pro_list li:first").addClass("listhover");
+         });
+</script>
+     <div class="page">
+       <%<UI:Pager runat="server" ShowTotalPages="true" DefaultPageSize="21" ID="pager"/>%>
+     </div>
+     
+   </div>
+   </div>
+</div>
+
+ <%<Hi:Common_Footer runat="server"  />%>
+

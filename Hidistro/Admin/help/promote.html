@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="style/layout.css" />
+<script src="../../Utility/jquery-1.6.4.min.js"></script>
+<script src="../../Utility/jquery.artDialog.js"></script>
+<script src="../../Utility/iframeTools.js"></script>
+<script>
+    function ShowSecondMenuLeft(firstnode, secondurl, threeurl) {
+        window.parent.ShowMenuLeft(firstnode, secondurl, threeurl);
+        art.dialog.close();
+    }
+</script>
+</head>
+
+<body>
+
+<div class="guide_close"><img src="images/pic/close.jpg" /></div>
+<div class="guide_tit"><img src="images/pic/index_tit2.jpg" /></div> 
+<div class="ready_meun">
+<ul>
+<li>开始准备</li>
+<li>录入数据</li>
+<li id="ready_pitch">营销推广</li>
+<li>开展分销</li>
+<li>业务管理</li>
+<li>完成</li>
+</ul>
+</div> 
+ 
+<div class="ready_con">
+<h2>搜索引擎优化</h2>
+<p>通过搜索引擎优化，可以让店铺信息被搜索引擎收录得更多，在搜索结果中排名更靠前，从而免费引入更多精准流量获得更多客户得到更好推广。<a href="javascript:ShowSecondMenuLeft('营销推广','promotion/setseo.aspx',null)">现在添加</a></p>
+<h2>添加促销活动</h2>
+<p>如果你想提升销量，团购、限时抢购、优惠券、按金额或数量优惠等等多种活动内容可供您选择。<a href="javascript:ShowSecondMenuLeft('营销推广','promotion/productpromotions.aspx',null)">立即设置</a></p>
+<p>如果你想进行会员联盟推广，可以通过会员推荐提成来激励更多人给你做推广。<a href="javascript:ShowSecondMenuLeft('营销推广','member/deductsettings.aspx',null)">立即设置</a></p>
+<h2>信任登录</h2>
+<p>支持淘宝、QQ、支付宝、新浪微博四大体系会员零门槛购物。<a href="javascript:ShowSecondMenuLeft('会 员','member/openidservices.aspx',null)">现在设置</a></p>
+<h2>批发规则设置</h2>
+<p>批发规则用来针对单个商品的起批数量及优惠金额的设定。<a href="javascript:ShowSecondMenuLeft('营销推广','promotion/productpromotions.aspx?isWholesale=true',null)">现在设置</a></p>
+<h2>混批规则设置</h2>
+<p>混批是指针对不同商品设置批发规则及金额优惠。<a href="javascript:ShowSecondMenuLeft('营销推广','promotion/orderpromotions.aspx?isWholesale=true',null)">现在设置</a></p>
+</div> 
+ 
+<div class="guide_buttom2">
+<span><a href="data.html">上一步</a></span><em><a href="distribution.html">下一步</a></em>
+</div>
+
+
+</body>
+</html>

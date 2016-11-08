@@ -1,0 +1,9 @@
+C:\Hidistro2.2\Hidistro.Membership.Context\obj\Release\ResolveAssemblyReference.cache
+C:\Hidistro2.2\Hidistro.Membership.Context\bin\Release\Hidistro.Membership.Context.dll
+C:\Hidistro2.2\Hidistro.Membership.Context\bin\Release\Hidistro.Core.dll
+C:\Hidistro2.2\Hidistro.Membership.Context\bin\Release\Hidistro.Membership.Core.dll
+C:\Hidistro2.2\Hidistro.Membership.Context\bin\Release\Hishop.Components.Validation.dll
+C:\Hidistro2.2\Hidistro.Membership.Context\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Hidistro2.2\Hidistro.Membership.Context\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Hidistro2.2\Hidistro.Membership.Context\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+C:\Hidistro2.2\Hidistro.Membership.Context\obj\Release\Hidistro.Membership.Context.dll

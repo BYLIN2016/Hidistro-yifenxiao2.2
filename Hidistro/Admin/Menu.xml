@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+  <Module Title="店铺配置" Link="store/sitecontent.aspx">
+    <Item Title="基本设置" privilege="1001" Link="store/sitecontent.aspx">
+      <PageLink Title="基本设置" Link="store/sitecontent.aspx"/>
+	  <PageLink Title="邮件短信设置" privilege="1022" Link="tools/sendmessagetemplets.aspx"/>
+    </Item>
+	<Item Title="支付设置" privilege="5011" Link="sales/paymenttypes.aspx">
+	  <PageLink  Title="支付方式列表" Link="sales/paymenttypes.aspx"/>
+	  <PageLink  Title="添加新支付方式" Link="sales/addpaymenttype.aspx"/>
+	</Item>
+	<Item Title="配送设置" privilege="5012" Link="sales/shippingtypes.aspx">
+      <PageLink  Title="配送方式列表" Link="sales/shippingtypes.aspx"/>
+	  <PageLink  Title="运费模板" Link="sales/manageshippingtemplates.aspx"/>
+      <PageLink  Title="物流公司" privilege="5026" Link="sales/expresscomputerpes.aspx"/>
+	</Item>
+	<Item Title="安全中心"  Link="store/managers.aspx">
+      <PageLink  Title="部门管理" Link="store/roles.aspx"/>
+	  <PageLink  Title="管理员管理"  Link="store/managers.aspx"/>
+      <PageLink  Title="操作日志" Link="store/managelogs.aspx"/>
+	</Item>
+	<Item Title="数据库管理"  Link="tools/backup.aspx">
+      <PageLink  Title="数据库备份" Link="tools/backup.aspx"/>
+	  <PageLink  Title="数据库恢复"  Link="tools/restoredatabase.aspx"/>
+	</Item>
+	<Item Title="图库管理">
+      <PageLink  Title="图片库" Link="store/imagedata.aspx"/>
+	  <PageLink  Title="上传图片" Link="store/imageftp.aspx"/>
+	  <PageLink  Title="图片分类管理" Link="store/imagetype.aspx"/>
+	</Item>
+  </Module>
+  
+  <Module Title="页面管理" Link="store/managethemes.aspx">
+	  <Item Title="模板管理">
+      <PageLink  Title="模板列表" Link="store/managethemes.aspx"/>
+      <PageLink  Title="可视化编辑" Link="store/editethems.aspx"/>
+      <PageLink  Title="设置页头菜单" Link="store/setheadermenu.aspx"/>
+	  </Item>
+	  <Item Title="内容管理">
+	    <PageLink  Title="店铺公告" Link="comment/affichelist.aspx"/>
+		<PageLink  Title="帮助中心" Link="comment/helplist.aspx"/>
+		<PageLink  Title="文章管理" Link="comment/articlelist.aspx"/>
+		<PageLink  Title="友情链接" Link="store/friendlylinks.aspx"/>
+		<PageLink  Title="热门关键字" Link="store/managehotkeywords.aspx"/>
+		<PageLink  Title="投票调查" Link="store/votes.aspx"/>
+	  </Item>
+  </Module>
+  
+  <Module Title="商品" Link="product/productonsales.aspx">
+      <Item Title="商品管理">
+		<PageLink  Title="上架新商品" Link="product/selectcategory.aspx" privilege="3040"/>
+		<PageLink  Title="商品列表" Link="product/productonsales.aspx"/>
+    <PageLink  Title="商品扩展分类" Link="product/ProductUnclassified.aspx"/>
+    <PageLink  Title="商品回收站" Link="product/ProductOnDeleted.aspx"/>     
+		<PageLink  Title="批量上传商品" privilege="3041" Link="product/importfromtb.aspx"/>
+		<PageLink  Title="批量导出商品" privilege="3021" Link="product/exporttotb.aspx"/>
+		<PageLink  Title="商品标签" Link="product/producttags.aspx"/>
+	  </Item>
+	  <Item Title="商品配置">
+		<PageLink  Title="产品线" privilege="3001" Link="product/productlines.aspx"/>
+		<PageLink  Title="供货商" Link="product/managesuppliers.aspx"/>
+		<PageLink  Title="商品类型" privilege="3005" Link="product/producttypes.aspx"/>
+		<PageLink  Title="商品分类" privilege="3009" Link="product/managecategories.aspx"/>
+		<PageLink  Title="分类模板设置" Link="product/setcategorytemplate.aspx"/>
+		<PageLink  Title="品牌" Link="product/brandcategories.aspx"/>
+	  </Item>
+  </Module>
+  
+  <Module Title="订单" Link="sales/manageorder.aspx">
+    <Item Title="订单管理">
+		  <PageLink  Title="订单列表" privilege="5001" Link="sales/manageorder.aspx"/>		
+		  <PageLink  Title="订单设置" Link="sales/setorderoption.aspx"/>
+	  </Item>
+      <Item Title="退换货(款)">
+          <PageLink  Title="退款申请单" privilege="5011" Link="sales/refundapply.aspx"/>
+          <PageLink  Title="退货申请单" privilege="5012" Link="sales/returnsapply.aspx"/>
+          <PageLink  Title="换货申请单" privilege="5013" Link="sales/replaceapply.aspx"/>
+      </Item>
+	  <Item Title="单据管理">
+		<PageLink  Title="收款单" Link="sales/managedebitnote.aspx"/>
+		<PageLink  Title="退款单" Link="sales/managerefundnote.aspx"/>
+		<PageLink  Title="发货单" Link="sales/managesendnote.aspx"/>
+		<PageLink  Title="退货单" Link="sales/managereturnnote.aspx"/>
+	  </Item>
+	  <Item Title="快递单管理">
+		<PageLink  Title="快递单模板" Link="sales/expresstemplates.aspx"/>
+		<PageLink  Title="新增快递单模板" Link="sales/addexpresstemplate.aspx"/>
+		<PageLink Title="发货人信息管理" Link="sales/shippers.aspx"/>
+		<PageLink Title="添加发货人信息" Link="sales/addshipper.aspx"/>
+	  </Item>
+  </Module>
+
+  <Module Title="采购单" Link="purchaseorder/managepurchaseorder.aspx">
+    <Item Title="采购单管理">
+      <PageLink  Title="分销采购单列表" Link="purchaseorder/managepurchaseorder.aspx"/>
+      <PageLink  Title="采购单设置" Link="purchaseorder/setpurchaseorderoption.aspx"/>
+    </Item>
+    <Item Title="退换货(款)">
+      <PageLink  Title="退款申请单" privilege="5011" Link="purchaseorder/refundpurchaseorderapply.aspx"/>
+      <PageLink  Title="退货申请单" privilege="5012" Link="purchaseorder/returnspurchaseorderapply.aspx"/>
+      <PageLink  Title="换货申请单" privilege="5013" Link="purchaseorder/replacepurchaseorderapply.aspx"/>
+    </Item>
+    <Item Title="单据管理">
+      <PageLink  Title="收款单" Link="purchaseorder/managepurchaseorderdebitnote.aspx"/>
+      <PageLink  Title="退款单" Link="purchaseorder/managepurchaseorderrefundnote.aspx"/>
+      <PageLink  Title="发货单" Link="purchaseorder/managepurchaseordersendnote.aspx"/>
+      <PageLink  Title="退货单" Link="purchaseorder/managepurchaseorderreturnnote.aspx"/>
+    </Item>
+  </Module>
+  
+   <Module Title="会员" Link="member/managemembers.aspx">
+   <Item Title="会员管理" privilege="4005" Link="member/managemembers.aspx">
+      <PageLink Title="会员列表" Link="member/managemembers.aspx"/>
+      <PageLink Title="会员等级" Link="member/membergrades.aspx"/>
+      <PageLink Title="添加会员等级" Link="member/addmembergrade.aspx"/>
+    </Item>
+	<Item Title="信任登录" privilege="4018" Link="member/openidservices.aspx">
+      <PageLink Title="信任登录列表" Link="member/openidservices.aspx"/>
+      <PageLink Title="支付宝信任登录" Link="member/openidsettings.aspx?t=hishop.plugins.openid.alipay.alipayservice"/>
+	  <PageLink Title="QQ账号共享登录" Link="member/openidsettings.aspx?t=hishop.plugins.openid.qq.qqservice"/>
+	  <PageLink Title="淘宝账号信任登录" Link="member/openidsettings.aspx?t=hishop.plugins.openid.taobao.taobaoservice"/>
+	  <PageLink Title="新浪微博信任登录" Link="member/openidsettings.aspx?t=hishop.plugins.openid.sina.sinaservice"/>
+    </Item>
+  </Module> 
+   
+  <Module Title="分销管理" Link="distribution/managedistributor.aspx">
+    <Item Title="推广员管理" privilege="2005" Link="distribution/managedistributor.aspx">
+     <PageLink  Title="分销商申请" Link="distribution/distributorAdd.aspx"/>
+	  <PageLink  Title="推广员审核" Link="distribution/managedistributor.aspx"/>
+    <PageLink  Title="推广员列表" Link="distribution/distributorgrades.aspx"/>
+    </Item>      
+    <Item Title="分销商管理" privilege="2005" Link="distribution/managedistributor.aspx">
+	  <PageLink  Title="分销商列表" Link="distribution/managedistributor.aspx"/>
+    <PageLink  Title="分销商等级" Link="distribution/distributorgrades.aspx"/>
+
+    </Item>
+    <Item Title="分销商招募" privilege="2008" Link="distribution/distributorrequests.aspx">      
+      <PageLink  Title="待审核分销商" Link="distribution/distributorrequests.aspx"/>
+      <PageLink  Title="分销商招募说明" Link="distribution/distributorrequestinstruction.aspx"/>
+    </Item>
+  	<Item Title="连锁加盟业务管理" privilege="2008" Link="distribution/distributorrequests.aspx">      
+      <PageLink  Title="连锁加盟站点列表" Link="distribution/managesites.aspx"/>
+      <PageLink  Title="连锁加盟店开通申请" Link="distribution/siterequests.aspx"/>
+	  <PageLink  Title="连锁店通一淘管理" Link="distribution/manageetao.aspx"/>
+    </Item>
+	<Item Title="淘宝代销业务管理" privilege="2008" Link="distribution/distributorrequests.aspx">      
+      <PageLink  Title="制作淘宝数据" privilege="3021" Link="product/maketaobaoproducts.aspx"/>
+      <PageLink  Title="批量导入淘宝商品" Link="distribution/uploadtaobaocsv.aspx"/>
+	  <PageLink  Title="订单处理精灵介绍" Link="product/taobaonote.aspx"/>
+    </Item>
+	 <Item Title="分销站内信" privilege="2005" Link="comment/distributorreceivedmessages.aspx">
+      <PageLink  Title="收件箱" Link="comment/distributorreceivedmessages.aspx"/>
+      <PageLink Title="发件箱" Link="comment/distributorsendedmessages.aspx"/>
+      <PageLink  Title="发送站内信给分销商" Link="comment/sendmessagetodistributor.aspx"/>
+    </Item>
+  </Module>
+  
+  <Module Title="CRM管理" Link="member/clientset.aspx">
+	   <Item Title="会员深度营销">
+		  <PageLink  Title="客户分组" Link="member/clientset.aspx"/>
+		  <PageLink  Title="新客户" Link="member/membermarket.aspx?type=new"/>
+		  <PageLink  Title="活跃客户" Link="member/membermarket.aspx?type=activy"/>
+		  <PageLink  Title="休眠客户" Link="member/membermarket.aspx?type=sleep"/>
+		</Item>
+		<Item Title="邮件短信营销" privilege="2005" Link="distribution/managedistributor.aspx">
+		  <PageLink  Title="邮件短信设置" privilege="1022" Link="tools/sendmessagetemplets.aspx"/>
+		  <PageLink  Title="短信套餐购买" Link="http://sms.kuaidiantong.cn/SMSPackList.aspx"/>
+      <PageLink  Title="手机短信配置" Link="tools/smssettings.aspx"/>
+		  <PageLink  Title="邮件服务配置" Link="tools/emailsettings.aspx"/>
+		</Item>
+		<Item Title="客户反馈" privilege="2008" Link="distribution/distributorrequests.aspx">      
+		  <PageLink Title="商品咨询" Link="comment/productconsultations.aspx"/>
+		  <PageLink Title="商品评论" Link="comment/productreviews.aspx"/>
+		  <PageLink  Title="站内信" Link="comment/receivedmessages.aspx"/>
+		  <PageLink Title="客户留言" Link="comment/manageleavecomments.aspx"/>
+		</Item>
+  </Module>
+  
+  <Module Title="营销推广" Link="promotion/productpromotions.aspx">
+    <Item Title="积分商城">
+      <PageLink  Title="礼品列表" Link="promotion/gifts.aspx"/>
+      <PageLink  Title="添加礼品" Link="promotion/addgift.aspx"/>
+      <PageLink  Title="购物积分设置" Link="promotion/setShoppingScore.aspx"/>
+    </Item>
+    <Item Title="店铺促销活动" privilege="3005" Link="product/producttypes.aspx">
+      <PageLink Title="商品促销" privilege="6002" Link="promotion/productpromotions.aspx"/>
+      <PageLink Title="订单促销" privilege="6002" Link="promotion/orderpromotions.aspx"/>
+      <PageLink Title="捆绑促销" privilege="6006" Link="promotion/bundlingproducts.aspx"/>
+      <PageLink Title="团购" privilege="6004" Link="promotion/groupbuys.aspx"/>
+      <PageLink Title="限时抢购" privilege="6005" Link="promotion/countdowns.aspx"/>
+    </Item>
+    <Item Title="批发方案">
+      <PageLink  Title="混批规则" Link="promotion/orderpromotions.aspx?isWholesale=true"/>
+      <PageLink  Title="批发规则" Link="promotion/productpromotions.aspx?isWholesale=true"/>
+    </Item>
+    <Item Title="优惠券">
+      <PageLink  Title="优惠券列表" Link="promotion/newcoupons.aspx"/>
+      <PageLink  Title="优惠券活动效果" Link="promotion/usedcoupons.aspx"/>
+    </Item>
+    <Item Title="CPS推广">  
+      <PageLink  Title="会员推荐提成" Link="member/deductsettings.aspx"/>
+    </Item>
+    <Item  Title="SEO优化" privilege="3022" Link="product/selectcategory.aspx">
+      <PageLink  Title="SEO优化设置" Link="promotion/setseo.aspx"/>
+      <PageLink  Title="sitemap站点地图" Link="tools/sitemap.aspx"/>
+    </Item>
+  </Module>
+
+  <Module Title="财务管理" Link="member/accountsummarylist.aspx">
+    <Item Title="预付款管理">
+      <PageLink Title="会员预付款" privilege="4010" Link="member/accountsummarylist.aspx"/>
+      <PageLink Title="分销商预付款" privilege="2020" Link="distribution/distributoraccountquery.aspx"/>
+    </Item>
+    
+    <Item Title="提现申请">
+      <PageLink Title="会员提现申请" privilege="4011" Link="member/balancedrawrequest.aspx"/>
+      <PageLink Title="分销商提现申请" Link="distribution/distributorbalancedrawrequest.aspx"/>
+    </Item>
+
+    <Item Title="预付款报表">
+      <PageLink Title="会员预付款报表"  Link="member/balancestatistics.aspx"/>
+      <PageLink Title="分销商预付款报表" Link="distribution/distributionbalancestatistics.aspx"/>
+    </Item>
+    <Item Title="提现报表">
+      <PageLink Title="会员提现报表" Link="member/drawrequeststatistics.aspx"/>
+      <PageLink Title="分销商提现报表" Link="distribution/distributiondrawrequeststatistics.aspx"/>
+    </Item>
+  </Module>
+
+  <Module Title="统计报表" Link="sales/salereport.aspx">
+    <Item Title="网站流量统计">
+      <PageLink  Title="统计功能配置" Link="tools/cnzzstatisticsset.aspx"/>
+      <PageLink  Title="查看统计结果" Link="tools/cnzzstatistictotal.aspx"/>
+    </Item>
+    <Item Title="零售业务统计">
+      <PageLink  Title="零售生意报告" Link="sales/salereport.aspx"/>
+      <PageLink  Title="订单统计" Link="sales/orderstatistics.aspx"/>
+      <PageLink  Title="商品销售明细" Link="sales/saledetails.aspx"/>
+      <PageLink  Title="销售指标分析" Link="sales/saletargets.aspx"/>
+      <PageLink  Title="商品销售排行" Link="product/productsaleranking.aspx"/>
+      <PageLink  Title="商品访问与购买比" Link="product/productsalestatistics.aspx"/>
+      <PageLink  Title="会员消费排行" Link="member/memberranking.aspx"/>
+	  <PageLink  Title="会员地区分布" Link="member/userarealdistributionstatistics.aspx"/>
+	  <PageLink  Title="会员增长统计" Link="member/userincreasestatistics.aspx"/>
+    </Item>
+    <Item Title="分销业务统计">
+      <PageLink  Title="分销生意报告" privilege="2030" Link="distribution/distributionreport.aspx"/>
+      <PageLink  Title="采购单统计" Link="distribution/purchaseorderstatistics.aspx"/>
+      <PageLink  Title="商品销售排行" Link="distribution/distributionproductsaleranking.aspx"/>
+      <PageLink  Title="分销商业绩排行" Link="distribution/distributorachievementsranking.aspx"/>
+    </Item>
+  </Module>
+</Menu>

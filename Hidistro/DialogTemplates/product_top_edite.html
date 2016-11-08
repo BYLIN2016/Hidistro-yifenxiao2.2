@@ -1,0 +1,202 @@
+﻿<div class="tableform" style="width:400px;height:300px">
+    <table cellpadding="0" cellspacing="0" border="0" style=" padding-top:10px;">
+        <tr>
+            <td><span class="input100">商品分类：</span><select id="slscategory" size="5" style="width:140px"></select></td>
+        </tr>
+       <tr>
+             <td><span class="input100">图片规格：</span><select name="slsthumbil" id="slsthumbil" class="input-select">
+                                    <option value="60">60*60</option>
+                            </select></td>
+        </tr>
+        
+        <tr>
+             <td><span class="input100">显示数量：</span><input type="text" name="txttopmaxnum" id="txttopmaxnum" class="input-text" /></td>
+        </tr>
+        <tr>
+            <td><span class="input100">图片显示数量：</span><input type="text" name="txttopimagecount" id="txttopimagecount" class="input-text" /></td>
+        </tr>
+         
+        <tr>
+            <td>
+                <span class="input100" style="width:170px"><input type="checkbox" name="cktopprice" id="cktopprice" onclick="CheckboxValue(this,1)" />无图是否显示排行榜价格</span>
+                <span class="input100" style="width:180px"><input type="checkbox" name="cktopsalecount" id="cktopsalecount" onclick="CheckboxValue(this,2)" />无图是否显示排行销售数量</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="input100" style="width:180px;" style="width:170px;"><input type="checkbox" name="ckimgtopprice" id="ckimgtopprice" onclick="CheckboxValue(this,3)" />有图片是否显示排行榜价格</span>
+                <span class="input100" style="width:195px;" style="width:220px"><input type="checkbox" name="ckimgtopsalecount" id="ckimgtopsalecount" onclick="CheckboxValue(this,4)" />有图片是否显示排行榜销售数量</span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    var isshowprice = false; //是否显示销售价格
+    var isshowcount = false; //是否显示销售数量
+    var isimgshowprice = false; //图片存在是否显示销售价格
+    var isimgshowcount = false; //图片存在是否显示销售数量
+    function loadEditDialogData() {
+        Hidistro_Dialog.dialogContent = $(taboverlaycontent).html();
+        Hidistro_Dialog.dialogShow();
+        Hidistro_Dialog.dialogTitle($(ctrnamediv).html());
+
+        $.ajax({
+            url: "Handler/DesigProduct.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "producttopview"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    DataBindValue(msg.Result);
+                } else {
+                    art.dialog({ content: msg.Result, lock: true });
+                }
+            },
+            complete: function () {
+                BindProductTopEvent();
+            }
+        });
+
+    }
+
+    function DataBindValue(producttopjson) {
+        if (producttopjson.Categorys.length > 0) { //循环商品分类 
+            $("#slscategory").empty();
+            $.each(producttopjson.Categorys, function (index, item) {
+                $("#slscategory").append("<option value=\"" + item.CategoryId.replace(/\s/g, "") + "\">" + FormCategoryPath(item.Depth, item.Name) + "</option>");
+            });
+            $("#slscategory").prepend("<option value=''>全部</option>");
+            $("#slscategory").get(0).selectedIndex = 0;
+        }
+
+        if (Hidistro_designer.ElementValues.ImageSizeRange != null && Hidistro_designer.ElementValues.ImageSizeRange != "undefined" && Hidistro_designer.ElementValues.ImageSizeRange != "") {
+            $("#slsthumbil").empty();
+            var thumbilstr = Hidistro_designer.ElementValues.ImageSizeRange.split(',');
+            for (var i = 0; i < thumbilstr.length; i++) {
+                $("#slsthumbil").append("<option value=" + thumbilstr[i] + ">" + thumbilstr[i] + "*" + thumbilstr[i] + "</option>");
+            }
+        }
+    }
+
+    function BindProductTopEvent() {
+        if (Hidistro_designer.ElementValues != null) {
+            $("#slscategory option[value='" + Hidistro_designer.ElementValues.CategoryId + "']").attr("selected", true);
+            $("#slsthumbil option[value='" + Hidistro_designer.ElementValues.ImageSize + "']").attr("selected", true);
+            $("#txttopmaxnum").val(Hidistro_designer.ElementValues.MaxNum);
+            $("#txttopimagecount").val(Hidistro_designer.ElementValues.ImageNum);
+            if (Hidistro_designer.ElementValues.IsShowPrice == "true") {
+                $("#cktopprice").attr("checked", "true");
+                isshowprice = true;
+            } else {
+                $("#cktopprice").removeAttr("checked");
+            }
+            if (Hidistro_designer.ElementValues.IsShowSaleCounts == "true") {
+                $("#cktopsalecount").attr("checked", "true");
+                isshowcount=true;
+            } else {
+                $("#cktopsalecount").removeAttr("checked");
+            }
+            if (Hidistro_designer.ElementValues.IsImgShowPrice == "true") {
+                $("#ckimgtopprice").attr("checked", "true");
+                isimgshowprice = true;
+            } else {
+                $("#ckimgtopprice").removeAttr("checked");
+            }
+            if (Hidistro_designer.ElementValues.IsImgShowSaleCounts == "true") {
+                $("#ckimgtopsalecount").attr("checked", "true");
+                isimgshowcount = true;
+            } else {
+                $("#ckimgtopsalecount").removeAttr("checked");
+            }
+        }
+    }
+
+    function FormCategoryPath(depath, categoryname) {
+        for (var index = 1; index < depath; index++) {
+            categoryname = "　　" + categoryname;
+        }
+        return categoryname;
+    }
+
+    function SaveElmentValue() {
+
+        if ($("#slsthumbil option:selected").val() == "") {
+            Hidistro_Dialog.dialogTip('error', '请选择图片规格');
+            return false;
+        }
+
+
+
+        if ($("#txttopmaxnum").val().replace(/\s/g, "") == "") {
+            Hidistro_Dialog.dialogTip('error', '显示数量不允许为空');
+            return false;
+        }
+        if (isNaN($("#txttopmaxnum").val().replace(/\s/g, ""))
+        || parseInt($("#txttopmaxnum").val().replace(/\s/g, "")) <= 0
+        || parseInt($("#txttopmaxnum").val().replace(/\s/g, "")) >100) {
+            Hidistro_Dialog.dialogTip('error', '显示数量必须为1~100的正整数');
+            return false;
+        }
+
+        if ($("#txttopimagecount").val().replace(/\s/g, "") == "") {
+            Hidistro_Dialog.dialogTip('error', '图片数量不允许为空');
+            return false;
+        }
+        if (isNaN($("#txttopimagecount").val().replace(/\s/g, ""))
+        || parseInt($("#txttopimagecount").val().replace(/\s/g, "")) < 0
+        || parseInt($("#txttopimagecount").val().replace(/\s/g, "")) >100) {
+            Hidistro_Dialog.dialogTip('error', '图片数量必须为1~100的正整数');
+            return false;
+        }
+        var categoryId = "";
+        if ($("#slscategory").val() != null)
+            categoryId = $("#slscategory").val();
+       
+
+        $.ajax({
+            url: "Handler/DesigProduct.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "editeproducttop",
+                Param: "{\"SubjectId\":\"" + Hidistro_designer.CurrentContentID +
+                            "\",\"CategoryId\":\"" + categoryId +
+                            "\",\"MaxNum\":\"" + $("#txttopmaxnum").val() +
+                            "\",\"ImageNum\":\"" + $("#txttopimagecount").val() +
+                            "\",\"IsShowPrice\":\"" + isshowprice +
+                            "\",\"IsShowSaleCounts\":\"" + isshowcount +
+                            "\",\"IsImgShowPrice\":\"" + isimgshowprice +
+                            "\",\"IsImgShowSaleCounts\":\"" + isimgshowcount +
+                            "\",\"ImageSize\": \"" + $("#slsthumbil").val() + "\"}"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    $("#" + Hidistro_designer.CurrentContentID).replaceWith(msg.Result.ProductTop);
+                    Hidistro_Dialog.dialogTip("succeed", "商品销售排行榜更新成功");
+                } else {
+                    Hidistro_Dialog.dialogTip("error", msg.Result);
+                }
+            },
+            complete: function () {
+                Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+            }
+        });
+    }
+
+    function CheckboxValue(objmore, typ) {
+        if (typ == 1) {
+            isshowprice = objmore.checked;
+        } else if (typ == 2) {
+            isshowcount = objmore.checked;
+        } else if (typ == 3) {
+            isimgshowprice = objmore.checked;
+        } else {
+            isimgshowcount = objmore.checked;
+        }
+    }
+</script>

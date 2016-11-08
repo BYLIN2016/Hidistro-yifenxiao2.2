@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B2D3239-08D3-42E1-B12A-144DE4F18EB8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Hidistro.Core</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hidistro.Core</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Hidistro.Core/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\Hidistro\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <Name>Microsoft.Practices.EnterpriseLibrary.Data</Name>
+      <HintPath>..\Hidistro\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <HintPath>System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+      <HintPath>System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <HintPath>System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <HintPath>System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+      <HintPath>System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Name>System.Web.ApplicationServices</Name>
+      <HintPath>System.Web.ApplicationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+      <HintPath>System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AppLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\HiApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\HiConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\Provider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\RolesConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataProviders.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\DbQueryResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Pagination.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums\ApplicationType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums\DataProviderAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums\SortAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums\SSLSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Express.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Globals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HiCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HiCryptographer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCodingAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\IJob.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\Job.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Jobs\Jobs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LicenseHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ResourcesHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Urls\ApplicationKeyMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Urls\HiUrlReWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Urls\Location.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Urls\LocationSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Urls\ReWrittenUrl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Urls\SiteUrls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Urls\SiteUrlsData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Urls\UrlReWriteProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

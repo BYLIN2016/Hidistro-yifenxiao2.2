@@ -1,0 +1,102 @@
+﻿ <style>
+ .show_img li a{width:30px;height:30px;}
+  .show_img li a i{width:30px;height:30px;}
+ </style>
+ <div class="tableform">
+   <table>
+        <tr>
+             <td width="200"><span class="input100" style="width:88px;">显示图片：</span>
+                <div id="title_picture" class="show_img" style="width:auto">
+        <ul><li><a><img  width="30px" height="30px" src="http://images.net.92hidc.net/Storage/none.gif" /><i></i></a></li></ul>
+        </div>
+            </td>
+            <td><span class="input100" style="width:88px;">显示标题：</span><input type="text" name="txtcommenttitle" id="txtcommenttitle" class="input-text" /></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr><td colspan="3"><iframe src="" id="Seltitframe" name="Seltitframe" width="655px" scrolling="no" frameborder="0" style="display: inline; height: 290px;"></iframe></td></tr>
+    </table>
+</div>
+
+<script>
+    var CommentTitleJson = null;
+    function SelectTab(obj, suoyin) {
+        $(obj).addClass("selected").siblings().removeClass("selected");
+        $("#tab" + suoyin).css("display", "block").siblings().css("display", "none");
+    }
+
+    //删除图片
+    function RemovetempImg(currentobj) {
+        if ($(currentobj).prev("img").attr("src") != "http://images.net.92hidc.net/Storage/none.gif")
+            $(currentobj).prev("img").attr("src", "http://images.net.92hidc.net/Storage/none.gif");
+    }
+
+    function loadEditDialogData() {
+        Hidistro_Dialog.dialogContent = $(taboverlaycontent).html();
+        Hidistro_Dialog.dialogShow();
+        Hidistro_Dialog.dialogTitle($(ctrnamediv).html());
+
+        $(".show_img i").bind("click", function () {
+            RemovetempImg(this);
+        });
+        BindCommentTitleEvent();
+    }
+
+    function SaveElmentValue() {
+
+        if ($("#txtcommenttitle").val().replace(/\s/g, "") == "") {
+            Hidistro_Dialog.dialogTip('error', '显示标题不允许为空');
+            return false;
+        }
+
+        var titleimg = "";
+        if ($("#title_picture img:eq(0)").attr("src") != "http://images.net.92hidc.net/Storage/none.gif") {
+            titleimg = $("#title_picture img:eq(0)").attr("src");
+        }
+
+        $.ajax({
+            url: "Handler/DesigComments.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "editecommenttitle",
+                Param: "{\"Id\":\"" + Hidistro_designer.CurrentContentID +
+                            "\",\"Title\":\"" + $("#txtcommenttitle").val() +
+                            "\",\"ImageTitle\": \"" + titleimg + "\"}"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    $("#" + Hidistro_designer.CurrentContentID).replaceWith(msg.Result.ComTitle);
+                    Hidistro_Dialog.dialogTip("succeed", "标题标签更新成功");
+                } else {
+                    Hidistro_Dialog.dialogTip("error", msg.Result);
+                }
+            },
+            complete: function () {
+                Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+            }
+        });
+    }
+
+    function BindCommentTitleEvent() {
+        if (Hidistro_designer.ElementValues != null) {
+            if (Hidistro_designer.ElementValues.Title != "" && Hidistro_designer.ElementValues.Title != null) {
+                $("#txtcommenttitle").val(Hidistro_designer.ElementValues.Title);
+            }
+
+            if (Hidistro_designer.ElementValues.ImageTitle != "") {
+                $("#title_picture img:eq(0)").attr("src", Hidistro_designer.ElementValues.ImageTitle);
+            }
+            if (Hidistro_designer.ElementValues.TitleImageSize != null && Hidistro_designer.ElementValues.TitleImageSize != "") {
+                $("#Seltitframe").attr("src", "DialogTemplates/SelectImage.aspx?size=" + Hidistro_designer.ElementValues.TitleImageSize + "&type=titleimg");
+            }
+        }
+    }
+
+    function FormCategoryPath(depath, categoryname) {
+        for (var index = 1; index < depath; index++) {
+            categoryname = "　　" + categoryname;
+        }
+        return categoryname;
+    }
+</script>

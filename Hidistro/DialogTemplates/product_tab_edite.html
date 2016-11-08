@@ -1,0 +1,416 @@
+﻿<style>
+.tableform td{padding-bottom:0px;}
+.tableform .selectmult{width:210px;height:130px;}
+</style>
+<div class="tableform" style="height:340px">
+     <div class="ratetab">
+        <ul>
+            <li class="selected" onclick="SelectTab(this,1)"><a>选项卡一</a></li>
+            <li onclick="SelectTab(this,2)"><a>选项卡二</a></li>
+            <li onclick="SelectTab(this,3)"><a>选项卡三</a></li>
+            <li onclick="SelectTab(this,4)"><a>选项卡四</a></li>
+            <li onclick="SelectTab(this,5)"><a>选项卡五</a></li>
+            <li onclick="SelectTab(this,6)"><a>选项卡六</a></li>
+            <li onclick="SelectTab(this,7)"><a>选项卡七</a></li>
+            <li onclick="SelectTab(this,8)"><a>选项卡八</a></li>
+        </ul>
+     </div>
+     <div class="clear"></div>
+     <div class="ratebox">
+       <table id="tab1">
+        <tr>
+            <td colspan="3">标题名称：<input type="text" name="txttabtitle1" id="txttabtitle1" class="input-text"/></td>
+          
+        </tr>
+        <tr class="tr_header">
+            <td>商品分类</td><td>商品品牌</td><td>商品标签</td>
+        </tr>
+         <tr>
+            <td><select name="slscategory1" id="slscategory1" class="selectmult" size="5"><option value="">---请选择---</option></select></td>
+            <td><select name="slsbrand1" id="slsbrand1" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+            <td><select name="slstag1" id="slstag1" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+        </tr>
+       </table>
+        <table id="tab2" style="display:none">
+            <tr>
+                <td colspan="3">标题名称：<input type="text" name="txttabtitle2" id="txttabtitle2" class="input-text"/></td>
+            </tr>
+            <tr class="tr_header">
+                <td>商品分类</td><td>商品品牌</td><td>商品标签</td>
+            </tr>
+            <tr>
+                <td><select name="slscategory2" id="slscategory2" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slsbrand2" id="slsbrand2" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slstag2" id="slstag2" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+              
+             </tr>
+        </table>
+        <table id="tab3" style="display:none">
+            <tr>
+                <td colspan="3">标题名称：<input type="text" name="txttabtitle3" id="txttabtitle3" class="input-text"/></td>
+            </tr>
+            <tr class="tr_header">
+                <td>商品分类</td><td>商品品牌</td><td>商品标签</td>
+            </tr>
+            <tr>
+                <td><select name="slscategory3" id="slscategory3" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slsbrand3" id="slsbrand3" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slstag3" id="slstag3" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+             </tr>
+        </table>
+        <table id="tab4" style="display:none">
+            <tr>
+                <td colspan="3">标题名称：<input type="text" name="txttabtitle4" id="txttabtitle4" class="input-text"/></td>
+            </tr>
+            <tr class="tr_header">
+                <td>商品分类</td><td>商品品牌</td><td>商品标签</td>
+            </tr>
+            <tr>
+                <td><select name="slscategory4" id="slscategory4" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slsbrand4" id="slsbrand4" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slstag4" id="slstag4" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+             </tr>
+        </table>
+        <table id="tab5" style="display:none">
+            <tr>
+                <td colspan="3">标题名称：<input type="text" name="txttabtitle5" id="txttabtitle5" class="input-text"/></td>
+            </tr>
+            <tr class="tr_header">
+                <td>商品分类</td><td>商品品牌</td><td>商品标签</td>
+            </tr>
+            <tr>
+                <td><select name="slscategory5" id="slscategory5" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slsbrand5" id="slsbrand5" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slstag5" id="slstag5" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+             </tr>
+        </table>
+        <table id="tab6" style="display:none">
+            <tr>
+                <td colspan="3">标题名称：<input type="text" name="txttabtitle6" id="txttabtitle6" class="input-text"/></td>
+            </tr>
+            <tr class="tr_header">
+                <td>商品分类</td><td>商品品牌</td><td>商品标签</td>
+            </tr>
+            <tr>
+                <td><select name="slscategory6" id="slscategory6" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slsbrand6" id="slsbrand6" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slstag6" id="slstag6" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+             </tr>
+        </table>
+        <table id="tab7" style="display:none">
+            <tr>
+                <td colspan="3">标题名称：<input type="text" name="txttabtitle7" id="txttabtitle7" class="input-text"/></td>
+            </tr>
+            <tr class="tr_header">
+                <td>商品分类</td><td>商品品牌</td><td>商品标签</td>
+            </tr>
+            <tr>
+                <td><select name="slscategory7" id="slscategory7" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slsbrand7" id="slsbrand7" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slstag7" id="slstag7" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+             </tr>
+        </table>
+        <table id="tab8" style="display:none">
+            <tr>
+                <td colspan="3">标题名称：<input type="text" name="txttabtitle8" id="txttabtitle8" class="input-text"/></td>
+            </tr>
+            <tr class="tr_header">
+                <td>商品分类</td><td>商品品牌</td><td>商品标签</td>
+            </tr>
+            <tr>
+                <td><select name="slscategory8" id="slscategory8" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slsbrand8" id="slsbrand8" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                <td><select name="slstag8" id="slstag8" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+             </tr>
+        </table>
+     </div>
+     <div style="margin-top:10px">
+       <table>
+            <tr>
+            <td style="width:231px;padding-right:0px;">商品数量：<input type="text" name="txtMaxNum" id="txtMaxNum" class="input-text"/></td>
+             
+             <td style="width:231px;padding-right:0px;">图片规格：
+            <select name="slsthumbil" id="slsthumbil" class="input-select">
+              <option value="60">60*60</option>
+                    <option value="100">100*100</option>
+                    <option value="160">160*160</option>
+                    <option value="180">180*180</option>
+                    <option value="220">220*220</option>
+                    <option value="310">310*310</option>
+            </select></td>
+            <td></td>
+            </tr>
+        </table>
+     </div>
+</div>
+<script>
+    var ProductTabJson = null;
+
+
+    function loadEditDialogData() {
+
+       
+        Hidistro_Dialog.dialogContent = $(taboverlaycontent).html();
+
+        Hidistro_Dialog.dialogShow();
+        Hidistro_Dialog.dialogTitle($(ctrnamediv).html());
+
+
+        $.ajax({
+            url: "Handler/DesigProduct.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "producttabview"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    ProductTabJson = msg.Result;
+                    DataBindValue();
+                } else {
+                    art.dialog({ content: msg.Result, lock: true });
+                }
+            },
+            complete: function () {
+                BindProductTabEvent();
+            }
+        });
+    }
+
+    //初始化数据
+    function DataBindValue() {
+        if (ProductTabJson.Categorys.length > 0) { //循环商品分类
+            var categroyoption = "";
+            $.each(ProductTabJson.Categorys, function (index, item) {
+                categroyoption += "<option value=\"" + item.CategoryId.replace(/\s/g, "") + "\">" + FormCategoryPath(item.Depth, item.Name) + "</option>";
+            });
+          
+            $("#slscategory1").append("<option value=\"" + ProductTabJson.Categorys[0].CategoryId + "\">" + FormCategoryPath(ProductTabJson.Categorys[0].Depth, ProductTabJson.Categorys[0].Name) + "</option");
+            for (var places = 1; places <=8; places++) {
+                $("#slscategory" + places).empty();
+                $("#slscategory" + places).append(categroyoption);
+                $("#slscategory"+places).prepend("<option value=''>全部</option>");
+                $("#slscategory"+places).get(0).selectedIndex = 0;
+            }
+        }
+
+        if (ProductTabJson.Brands.length > 0) {//品牌绑定
+            var brandoption = "";
+            $.each(ProductTabJson.Brands, function (index, item) {
+                brandoption += "<option value=\"" + item.BrandId.replace(/\s/g, "") + "\">" + item.BrandName.replace(/\s/g, "") + "</option>";
+            });
+           
+            for (var places = 1; places <= 8; places++) {
+                $("#slsbrand" +places).empty();
+                $("#slsbrand" +places).append(brandoption);
+                $("#slsbrand" +places).prepend("<option value=''>全部</option>");
+                $("#slsbrand" +places).get(0).selectedIndex = 0;
+            }
+
+        }
+
+        if (ProductTabJson.Tags.length > 0) {//自定义标签循环
+            var tagoption = "";
+            $.each(ProductTabJson.Tags, function (index, item) {
+                tagoption+="<option value=\"" + item.TagID.replace(/\s/g, "") + "\">" + item.TagName.replace(/\s/g, "") + "</option>";
+            });
+
+            for (var places = 1; places <= 8; places++) {
+                $("#slstag" + places).empty();
+                $("#slstag" + places).append(tagoption);
+                $("#slstag"+places).prepend("<option value=''>全部</option>");
+                $("#slstag" + places).get(0).selectedIndex = 0;
+            } 
+        }
+    }
+
+    //绑定值
+    function BindProductTabEvent(){
+        if (Hidistro_designer.ElementValues != null) {
+            if (Hidistro_designer.ElementValues.Where1 != "" && Hidistro_designer.ElementValues.Where1.split(",").length == 3) {
+                var strwhere = Hidistro_designer.ElementValues.Where1.split(",");
+                $("#slscategory1 option[value='" + strwhere[0] + "']").attr("selected", true);
+                $("#slstag1 option[value='" + strwhere[1] + "']").attr("selected", true);
+                $("#slsbrand1 option[value='" + strwhere[2] + "']").attr("selected", true);
+            }
+
+            if (Hidistro_designer.ElementValues.Where2 != "" && Hidistro_designer.ElementValues.Where2.split(",").length == 3) {
+                var strwhere = Hidistro_designer.ElementValues.Where2.split(",");
+                $("#slscategory2 option[value='" + strwhere[0] + "']").attr("selected", true);
+                $("#slstag2 option[value='" + strwhere[1] + "']").attr("selected", true);
+                $("#slsbrand2 option[value='" + strwhere[2] + "']").attr("selected", true);
+            }
+
+            if (Hidistro_designer.ElementValues.Where3 != "" && Hidistro_designer.ElementValues.Where3.split(",").length == 3) {
+                var strwhere = Hidistro_designer.ElementValues.Where3.split(",");
+                $("#slscategory3 option[value='" + strwhere[0] + "']").attr("selected", true);
+                $("#slstag3 option[value='" + strwhere[1] + "']").attr("selected", true);
+                $("#slsbrand3 option[value='" + strwhere[2] + "']").attr("selected", true);
+            }
+
+            if (Hidistro_designer.ElementValues.Where4 != "" && Hidistro_designer.ElementValues.Where4.split(",").length == 3) {
+                var strwhere = Hidistro_designer.ElementValues.Where4.split(",");
+                $("#slscategory4 option[value='" + strwhere[0] + "']").attr("selected", true);
+                $("#slstag4 option[value='" + strwhere[1] + "']").attr("selected", true);
+                $("#slsbrand4 option[value='" + strwhere[2] + "']").attr("selected", true);
+            }
+
+            if (Hidistro_designer.ElementValues.Where5 != "" && Hidistro_designer.ElementValues.Where5.split(",").length == 3) {
+                var strwhere = Hidistro_designer.ElementValues.Where5.split(",");
+                $("#slscategory5 option[value='" + strwhere[0] + "']").attr("selected", true);
+                $("#slstag5 option[value='" + strwhere[1] + "']").attr("selected", true);
+                $("#slsbrand5 option[value='" + strwhere[2] + "']").attr("selected", true);
+            }
+
+            if (Hidistro_designer.ElementValues.Where6 != "" && Hidistro_designer.ElementValues.Where6.split(",").length == 3) {
+                var strwhere = Hidistro_designer.ElementValues.Where6.split(",");
+                $("#slscategory6 option[value='" + strwhere[0] + "']").attr("selected", true);
+                $("#slstag6 option[value='" + strwhere[1] + "']").attr("selected", true);
+                $("#slsbrand6 option[value='" + strwhere[2] + "']").attr("selected", true);
+            }
+            if (Hidistro_designer.ElementValues.Where7 != "" && Hidistro_designer.ElementValues.Where7.split(",").length == 3) {
+                var strwhere = Hidistro_designer.ElementValues.Where7.split(",");
+                $("#slscategory7 option[value='" + strwhere[0] + "']").attr("selected", true);
+                $("#slstag7 option[value='" + strwhere[1] + "']").attr("selected", true);
+                $("#slsbrand7 option[value='" + strwhere[2] + "']").attr("selected", true);
+            }
+            if (Hidistro_designer.ElementValues.Where8 != "" && Hidistro_designer.ElementValues.Where8.split(",").length == 3) {
+                var strwhere = Hidistro_designer.ElementValues.Where6.split(",");
+                $("#slscategory8 option[value='" + strwhere[0] + "']").attr("selected", true);
+                $("#slstag8 option[value='" + strwhere[1] + "']").attr("selected", true);
+                $("#slsbrand8 option[value='" + strwhere[2] + "']").attr("selected", true);
+            }
+
+            if (Hidistro_designer.ElementValues.ImageSizeRange != null && Hidistro_designer.ElementValues.ImageSizeRange != "undefined" && Hidistro_designer.ElementValues.ImageSizeRange != "") {
+                $("#slsthumbil").empty();
+                var thumbilstr = Hidistro_designer.ElementValues.ImageSizeRange.split(',');
+                for (var i = 0; i < thumbilstr.length; i++) {
+                    $("#slsthumbil").append("<option value=" + thumbilstr[i] + ">" + thumbilstr[i] + "*" + thumbilstr[i] + "</option>");
+                }
+            }
+
+            $("#txttabtitle1").val(Hidistro_designer.ElementValues.TabTitle1);
+            $("#txttabtitle2").val(Hidistro_designer.ElementValues.TabTitle2);
+            $("#txttabtitle3").val(Hidistro_designer.ElementValues.TabTitle3);
+            $("#txttabtitle4").val(Hidistro_designer.ElementValues.TabTitle4);
+            $("#txttabtitle5").val(Hidistro_designer.ElementValues.TabTitle5);
+            $("#txttabtitle6").val(Hidistro_designer.ElementValues.TabTitle6);
+            $("#txttabtitle7").val(Hidistro_designer.ElementValues.TabTitle7);
+            $("#txttabtitle8").val(Hidistro_designer.ElementValues.TabTitle8);
+      
+
+            $("#txtMaxNum").val(Hidistro_designer.ElementValues.MaxNum);
+            $("#slsthumbil option[value='" + Hidistro_designer.ElementValues.ImageSize + "']").attr("selected", true);
+          
+        }
+    }
+
+    //保存
+    function SaveElmentValue() {
+        if ($("#txtMaxNum").val().replace(/\s/g, "") == "") {
+            Hidistro_Dialog.dialogTip('error', '商品数量不允许为空');
+            return false;
+        }
+        if (isNaN($("#txtMaxNum").val().replace(/\s/g, "")) ||
+         parseInt($("#txtMaxNum").val().replace(/\s/g, "")) <= 0||
+         parseInt($("#txtMaxNum").val().replace(/\s/g, ""))>100) {
+            Hidistro_Dialog.dialogTip('error', '商品数量必须在1~100的正整数');
+            return false;
+        }
+        if ($("#slsthumbil option:selected").val() == "") {
+            Hidistro_Dialog.dialogTip('error', '请选择图片规格');
+            return false;
+        }
+
+        var where1 = where2 = where3 = where4 = where5 = where6 = where7 = where8 = "";
+        var categoryarrary = new Array();
+        var tagarray = new Array();
+        var brandarray =new Array();
+        for (var x = 1; x <= 8; x++) {
+            if ($("#slscategory" + x).val() != null) {
+                categoryarrary[x - 1] = $("#slscategory" + x).val();
+            } else {
+                categoryarrary[x - 1] = "";
+            }
+            
+        }
+        for (var x = 1; x <= 8; x++) {
+            if ($("#slstag" + x).val() != null) {
+                tagarray[x - 1] = $("#slstag" + x).val();
+            } else {
+                tagarray[x - 1] ="";
+            }
+            
+        }
+        for (var x = 1; x <= 8; x++) {
+            if ($("#slsbrand" + x).val() != null) {
+                brandarray[x - 1] = $("#slsbrand" + x).val();
+            } else {
+                brandarray[x - 1] = "";
+            }
+        }
+
+        where1 = categoryarrary[0] + "," + tagarray[0] + "," + brandarray[0];
+        where2 = categoryarrary[1] + "," + tagarray[1] + "," + brandarray[1];
+        where3 = categoryarrary[2] + "," + tagarray[2] + "," + brandarray[2];
+        where4 = categoryarrary[3] + "," + tagarray[3] + "," + brandarray[3];
+        where5 = categoryarrary[4] + "," + tagarray[4] + "," + brandarray[4];
+        where6 = categoryarrary[5] + "," + tagarray[5] + "," + brandarray[5];
+        where7 = categoryarrary[6] + "," + tagarray[6] + "," + brandarray[6];
+        where8 = categoryarrary[7] + "," + tagarray[7] + "," + brandarray[7];
+
+        $.ajax({
+            url: "Handler/DesigProduct.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "editeproducttab",
+                Param: "{\"SubjectId\":\"" + Hidistro_designer.CurrentContentID +
+                        "\",\"TabTitle1\":\"" + $("#txttabtitle1").val() +
+                        "\",\"TabTitle2\":\"" + $("#txttabtitle2").val() +
+                        "\",\"TabTitle3\":\"" + $("#txttabtitle3").val() +
+                        "\",\"TabTitle4\":\"" + $("#txttabtitle4").val() +
+                        "\",\"TabTitle5\":\"" + $("#txttabtitle5").val() +
+                        "\",\"TabTitle6\":\"" + $("#txttabtitle6").val() +
+                        "\",\"TabTitle7\":\"" + $("#txttabtitle7").val() +
+                        "\",\"TabTitle8\":\"" + $("#txttabtitle8").val() +
+                        "\" ,\"Where1\": \"" + where1 +
+                        "\" ,\"Where2\": \"" + where2 +
+                        "\" ,\"Where3\": \"" + where3 +
+                        "\" ,\"Where4\": \"" + where4 +
+                        "\" ,\"Where5\": \"" + where5 +
+                        "\" ,\"Where6\": \"" + where6 +
+                        "\" ,\"Where7\": \"" + where7 +
+                        "\" ,\"Where8\": \"" + where8 +
+                        "\",\"MaxNum\":\"" + $("#txtMaxNum").val().replace(/\s/g, "") +
+                        "\",\"ImageSize\": \"" + $("#slsthumbil").val() + "\"}"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    $("#" + Hidistro_designer.CurrentContentID).replaceWith(msg.Result.ProductTab);
+                    Hidistro_Dialog.dialogTip("succeed", "商品选项卡更新成功");
+                } else {
+                    Hidistro_Dialog.dialogTip("error", msg.Result);
+                }
+            },
+            complete: function () {
+                Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+            }
+        });
+    }
+
+    function FormCategoryPath(depath, categoryname) {
+        for (var index = 1; index < depath; index++) {
+            categoryname = "　　" + categoryname;
+        }
+        return categoryname;
+    }
+
+    function SelectTab(obj,suoyin) {
+        $(obj).addClass("selected").siblings().removeClass("selected");
+        $("#tab" + suoyin).css("display", "block").siblings().css("display","none");
+    }
+ 
+</script>

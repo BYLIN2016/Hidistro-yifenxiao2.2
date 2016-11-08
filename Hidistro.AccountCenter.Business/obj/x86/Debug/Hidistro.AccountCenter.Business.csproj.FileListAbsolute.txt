@@ -1,0 +1,23 @@
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.AccountCenter.Business.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.AccountCenter.Business.pdb
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.AccountCenter.Profile.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.Core.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.Entities.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.Membership.Context.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.Membership.Core.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hishop.Components.Validation.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.Entities.pdb
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.Core.pdb
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.Membership.Context.pdb
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.Membership.Core.pdb
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hidistro.AccountCenter.Profile.pdb
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\obj\x86\Debug\Hidistro.AccountCenter.Business.dll
+E:\Hidistro2.1\Hidistro.AccountCenter.Business\obj\x86\Debug\Hidistro.AccountCenter.Business.pdb
+e:\Hidistro2.1\Hidistro.AccountCenter.Business\bin\Debug\Hishop.Components.Validation.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.AccountCenter.Business\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.AccountCenter.Business\obj\x86\Debug\Hidistro.AccountCenter.Business.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.AccountCenter.Business\obj\x86\Debug\Hidistro.AccountCenter.Business.pdb

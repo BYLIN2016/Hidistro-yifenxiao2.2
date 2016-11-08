@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="style/layout.css" />
+<script src="../../Utility/jquery-1.6.4.min.js"></script>
+<script src="../../Utility/jquery.artDialog.js"></script>
+<script src="../../Utility/iframeTools.js"></script>
+<script>
+    function ShowSecondMenuLeft(firstnode, secondurl, threeurl) {
+        window.parent.ShowMenuLeft(firstnode, secondurl, threeurl);
+        art.dialog.close();
+    }
+</script>
+</head>
+
+<body>
+<div class="guide_close"><img src="images/pic/close.jpg" /></div>
+<div class="guide_tit"><img src="images/pic/index_tit2.jpg" /></div> 
+<div class="ready_meun">
+<ul>
+<li id="ready_pitch">开始准备</li>
+<li>录入数据</li>
+<li>营销推广</li>
+<li>开展分销</li>
+<li>业务管理</li>
+<li>完成</li>
+</ul>
+</div> 
+ 
+<div class="ready_con">
+<h2>基本设置</h2>
+<p>基本设置用来设置店铺的基本信息，在这里你可以填写店铺名称、标志、域名等信息，请务必如实填写。<a href="javascript:ShowSecondMenuLeft('店铺配置','store/sitecontent.aspx',null)">现在填写</a></p>
+<h2>挑选模板</h2>
+<p>系统已经内置了多套精美模版，你可以挑选您最喜欢的模板然后一键应用即可。<a href="javascript:ShowSecondMenuLeft('页面管理','store/managethemes.aspx',null)">现在应用</a></p>
+</div> 
+ 
+<div class="guide_buttom2">
+<em><a href="data.html">下一步</a></em>
+</div>
+
+
+</body>
+</html>

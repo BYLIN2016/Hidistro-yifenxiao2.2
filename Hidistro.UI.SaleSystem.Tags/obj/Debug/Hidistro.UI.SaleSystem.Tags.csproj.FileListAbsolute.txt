@@ -1,0 +1,75 @@
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\obj\Debug\ResolveAssemblyReference.cache
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.SaleSystem.Tags.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.SaleSystem.Tags.pdb
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Core.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Entities.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Context.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Core.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Comments.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Member.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Shopping.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.Common.Controls.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hishop.Components.Validation.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\ASPNET.WebControls.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\obj\Debug\Hidistro.UI.SaleSystem.Tags.dll
+C:\Hidistro2.2\Hidistro.UI.SaleSystem.Tags\obj\Debug\Hidistro.UI.SaleSystem.Tags.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.SaleSystem.Tags.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.SaleSystem.Tags.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Core.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Entities.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Context.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Core.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Comments.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Member.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Shopping.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.Common.Controls.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hishop.Components.Validation.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\ASPNET.WebControls.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Core.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Entities.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Context.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Core.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Comments.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Member.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Shopping.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.Common.Controls.pdb
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\obj\Debug\ResolveAssemblyReference.cache
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\obj\Debug\Hidistro.UI.SaleSystem.Tags.dll
+E:\web\源码研究\Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\obj\Debug\Hidistro.UI.SaleSystem.Tags.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.SaleSystem.Tags.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.SaleSystem.Tags.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Core.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Entities.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Context.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Core.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Catalog.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Comments.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Member.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Shopping.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.Common.Controls.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hishop.Components.Validation.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\ASPNET.WebControls.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Core.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Entities.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Context.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.Membership.Core.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Catalog.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Comments.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Member.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.SaleSystem.Shopping.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\bin\Debug\Hidistro.UI.Common.Controls.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\obj\Debug\ResolveAssemblyReference.cache
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\obj\Debug\Hidistro.UI.SaleSystem.Tags.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hidistro.UI.SaleSystem.Tags\obj\Debug\Hidistro.UI.SaleSystem.Tags.pdb

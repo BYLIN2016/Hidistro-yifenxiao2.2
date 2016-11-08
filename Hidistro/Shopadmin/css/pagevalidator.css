@@ -1,0 +1,58 @@
+﻿/*.msgError{background:#FFF2E9 url(../images_1/validate_error.gif) no-repeat; width:350px; padding:5px 10px 5px 15px;border: #f60 1px solid;}
+.msgError a{color:red;}
+.msgAjaxing{background:#E9FFEB url(../images_1/spinner.gif) no-repeat 3px 3px; padding-left:25px;padding-top:5px;padding-bottom:3px;}*/
+
+/*.validator{position:relative;padding-top:20px;}
+.validator li{position:relative;}
+.validator .Rvaliedate{ position:absolute;top:0px; right:20px;text-align:left;background:#FFF2E9 url(../images_1/validate_error.gif) no-repeat; width:350px; padding:5px 10px 5px 10px;border: #f60 1px solid;}
+.validator span.msgError{ position:absolute;top:0px; right:20px;text-align:left;background:#FFF2E9 url(../images_1/validate_error.gif) no-repeat; width:350px; padding:5px 10px 5px 10px;border: #f60 1px solid;}*/
+.errorFocus{background:url("../images/errorFocus.png") no-repeat scroll 0 0 white;border:1px solid #ff6600;color:#333;padding:4px 0 4px 2px;}
+
+.validator1{padding-top:20px;}
+.validator1 li p{padding:0px 10px 0px 0px;margin:5px 0px 0px 197px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator1 li p.msgError{display:block;clear:both;width:370px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 197px;height:24px;line-height:24px;}
+.validator1 li p.msgTrue{display:block;clear:both;width:370px;background:#f0f5d1 url(../images/true.gif) 2px 4px no-repeat;border: #9ac275 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 197px;height:24px;line-height:24px;}
+.validator1 li span.span{display:block;clear:both; padding:0px 10px 0px 0px;margin:5px 0px 0px 197px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator1 li span.msgError{display:block;clear:both;width:370px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 197px;height:24px;line-height:24px;}
+.validator1 li span.msgTrue{display:block;clear:both;width:370px;background:#FFF2E9 url(../images/true.gif) 2px 4px no-repeat;border: #f60 1px solid;height:24px;line-height:24px;padding:0px 10px 0px 25px;margin:5px 0px 0px 197px;height:24px;line-height:24px;}
+
+.validator2{padding-top:20px;}
+.validator2 li p{padding:0px 10px 0px 0px;margin:5px 0px 0px 100px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator2 li p.msgError{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 100px;height:24px;line-height:24px;}
+.validator2 li p.msgTrue{display:block;clear:both;width:450px;background:#f0f5d1 url(../images/true.gif) 2px 4px no-repeat;border: #9ac275 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 100px;height:24px;line-height:24px;}
+.validator2 li span.span{display:block;clear:both; padding:0px 10px 0px 0px;margin:5px 0px 0px 100px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator2 li span.msgError{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 100px;height:24px;line-height:24px;}
+.validator2 li span.msgTrue{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/true.gif) 2px 4px no-repeat;border: #f60 1px solid;height:24px;line-height:24px;padding:0px 10px 0px 25px;margin:5px 0px 0px 100px;height:24px;line-height:24px;}
+
+.validator3{padding-top:20px;}
+.validator3 li p{padding:0px 10px 0px 0px;margin:5px 0px 0px 128px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator3 li p.msgError{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 128px;height:24px;line-height:24px;}
+.validator3 li p.msgTrue{display:block;clear:both;width:450px;background:#f0f5d1 url(../images/true.gif) 2px 4px no-repeat;border: #9ac275 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 128px;height:24px;line-height:24px;}
+.validator3 li span.span{display:block;clear:both; padding:0px 10px 0px 0px;margin:5px 0px 0px 100px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator3 li span.msgError{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 128px;height:24px;line-height:24px;}
+.validator3 li span.msgTrue{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/true.gif) 2px 4px no-repeat;border: #f60 1px solid;height:24px;line-height:24px;padding:0px 10px 0px 25px;margin:5px 0px 0px 128px;height:24px;line-height:24px;}
+
+.validator4{padding-top:20px;}
+.validator4 li p{padding:0px 10px 0px 0px;margin:5px 0px 0px 110px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator4 li p.msgError{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 110px;height:24px;line-height:24px;}
+.validator4 li p.msgTrue{display:block;clear:both;width:450px;background:#f0f5d1 url(../images/true.gif) 2px 4px no-repeat;border: #9ac275 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 110px;height:24px;line-height:24px;}
+.validator4 li span.span{display:block;clear:both; padding:0px 10px 0px 0px;margin:5px 0px 0px 100px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator4 li span.msgError{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 110px;height:24px;line-height:24px;}
+.validator4 li span.msgTrue{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/true.gif) 2px 4px no-repeat;border: #f60 1px solid;height:24px;line-height:24px;padding:0px 10px 0px 25px;margin:5px 0px 0px 110px;height:24px;line-height:24px;}
+
+.validator5{padding-top:20px;}
+.validator5 li p{padding:0px 10px 0px 0px;margin:5px 0px 0px 140px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator5 li p.msgError{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 140px;height:24px;line-height:24px;}
+.validator5 li p.msgTrue{display:block;clear:both;width:450px;background:#f0f5d1 url(../images/true.gif) 2px 4px no-repeat;border: #9ac275 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 140px;height:24px;line-height:24px;}
+.validator5 li span.span{display:block;clear:both; padding:0px 10px 0px 0px;margin:5px 0px 0px 100px;height:24px;line-height:24px;border:1px solid #fff;}
+.validator5 li span.msgError{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 140px;height:24px;line-height:24px;}
+.validator5 li span.msgTrue{display:block;clear:both;width:450px;background:#FFF2E9 url(../images/true.gif) 2px 4px no-repeat;border: #f60 1px solid;height:24px;line-height:24px;padding:0px 10px 0px 25px;margin:5px 0px 0px 140px;height:24px;line-height:24px;}
+
+.dataarea .datalist table td p{padding:0px 0px 0px 0px;margin:0px 0px 0px 0px;/*height:24px;*/line-height:24px;border:1px solid #fff;color:#888; font-size:12px; clear:both;}
+.dataarea .datalist table td p.msgError{display:block;clear:both;width:300px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 0px;height:24px;line-height:24px;}
+.dataarea .datalist table td p.msgTrue{display:block;clear:both;width:300px;background:#f0f5d1 url(../images/true.gif) 2px 4px no-repeat;border: #9ac275 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 0px;height:24px;line-height:24px;}
+
+
+.dataarea .list table td p{padding:0px 0px 0px 0px;margin:0px 0px 0px 0px;/*height:24px;*/line-height:24px;border:1px solid #fff;color:#888; font-size:12px; clear:both;}
+.dataarea .list table td p.msgError{display:block;clear:both;width:300px;background:#FFF2E9 url(../images/false.gif) 2px 4px no-repeat;border: #f60 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 0px;height:24px;line-height:24px;}
+.dataarea .list table td p.msgTrue{display:block;clear:both;width:300px;background:#f0f5d1 url(../images/true.gif) 2px 4px no-repeat;border: #9ac275 1px solid;padding:0px 10px 0px 25px;margin:5px 0px 0px 0px;height:24px;line-height:24px;}

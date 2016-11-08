@@ -1,0 +1,223 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<div class="main">
+    <style type="text/css">
+          .fpright{float:right;}
+          .fpleft{float:left;}
+          .fpclear{clear body;}
+          .ischeck{display:block}
+          .a{display:none;}
+          
+          
+</style>
+    <script language="javascript" type="text/javascript">
+
+        function testImages() {
+            var img = document.getElementById("login_imgUrl");
+            if (img == null) {
+                alert("该商品未上传图片。请上传商品图片，再调整或者放在blog里展示");
+                return;
+            }
+            var lblheight = document.getElementById("login_lblHeight");
+            var lblwidth = document.getElementById("login_lblWidth");
+            var lblfloat = document.getElementById("login_lblFloat");
+            var lblPStye = document.getElementById("login_lblIscenter");
+            var check = document.getElementById("login_chcPhoto");
+            var msg = document.getElementById("massage");
+            //alert (radiSize[0].value);
+            var radiSize = document.getElementsByName("radiobuttonSize");
+            var radiSizeText = null;
+            for (var i = 0; i < radiSize.length; i++) {
+                if (radiSize[i].checked) {
+                    var radiSizeText = radiSize[i].value;
+                }
+            }
+            //alert(radiSizeText);
+            var radiFloat = document.getElementsByName("radiobuttonFloat");
+            var radiFloatText = null;
+            for (var i = 0; i < radiFloat.length; i++) {
+                if (radiFloat[i].checked) {
+                    radiFloatText = radiFloat[i].value;
+                }
+            }
+            if (radiSizeText == "small") {
+                //alert("小图");
+                img.style.height = 100 + "px";
+                img.style.width = 100 + "px";
+                lblheight.innerHTML = "100px";
+                lblwidth.innerHTML = "100px";
+
+            }
+            else {
+                //alert("大图");
+                img.style.height = 500 + "px";
+                img.style.width = 500 + "px";
+                lblheight.innerHTML = "500px";
+                lblwidth.innerHTML = "500px";
+            }
+            if (radiFloatText == "left" && !check.checked) {
+                //alert("居左");
+                img.className = "fpleft";
+                lblfloat.innerHTML = "float:left";
+                lblPStye.innerHTML = "";
+            }
+            else if (radiFloatText == "right" && !check.checked) {
+                //alert("居右");
+                img.className = "fpright";
+                lblfloat.innerHTML = "float:right";
+                lblPStye.innerHTML = "";
+            }
+            else if (radiFloatText == "left" && check.checked) {
+                //alert("独占一行居左");
+                img.className = "fpclear";
+                msg.align = "left";
+                lblfloat.innerHTML = "margin:auto;";
+                lblPStye.innerHTML = "align='left'";
+            }
+            else if (radiFloatText == "right" && check.checked) {
+                //alert("独占一行居右");
+                img.className = "fpclear"
+                msg.align = "right";
+                lblfloat.innerHTML = "margin:auto";
+                lblPStye.innerHTML = "align='right'";
+            }
+            else {
+                img.className = "fpclear";
+                msg.align = "center";
+                lblPStye.innerHTML = "align='center'";
+
+            }
+        } 
+    </script>
+    <div class="re_blogit_tab">
+        <table width="910" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left" class="re_blogit_pro_t">
+                    <span>把&nbsp;&nbsp;</span> <span>“【<%<asp:HyperLink ID="hlinkProductTitle" runat="server"/>%>】”&nbsp;&nbsp;</span>
+                    <span>放在你的blog里</span>
+                </td>
+            </tr>
+        </table>
+        <table width="910" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td height="92" colspan="2" align="left" class="re_blogit_pro_pict">
+                    <div id="massage">
+                        <%<Hi:HiImage ID="imgUrl" runat="server" CssClass="fpleft" />%></div>
+                    <div>
+                        我们为您提供了多种样式的代码。您只需在下面的代码生成器中任选“图片大小”及“图片对齐方式”并点击“确定”按钮，在浅黄色背景区域就会自动生成一段代码。将生成的代码片断添加在您的blog中即让您blog的浏览者知道这件产品及其链接。</div>
+                </td>
+            </tr>
+            <tr>
+                <td height="10" colspan="2" align="left" valign="top">
+                    <div style="border-top: 1px #D9D9D9 dotted;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="663" height="60" align="left" valign="top" style="padding-top: 10px;">
+                    <table width="653" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="18">
+                                编辑你的博客文章的时候，插入这段代码可以显示上面商品图片
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="re_blogit_pro_area1">
+                                    &lt;p
+                                    <%<asp:Label id="lblIscenter" runat="server"></asp:Label>%>
+                                    &gt;&lt;a href=<%<asp:Label ID="lblUrl" runat="server"></asp:Label>%>&gt; &lt;img
+                                    border='0' src=<%<asp:Label ID="lblImgUrl" runat="server"></asp:Label>%> higth=
+                                    '<%<asp:Label id="lblHeight" Text="100px" runat="server"></asp:Label>%>' width='<%<asp:Label runat="server" Text="100px" id="lblWidth"></asp:Label>%>'
+                                    style='<%<asp:Label runat="server" Text="float:left" id="lblFloat"></asp:Label>%>'
+                                    /&gt;&lt;/a&gt;&lt;/p&gt;
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="18">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="18">
+                                <%<asp:Label ID="lblProductNameLinkText" runat="server"></asp:Label>%>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="re_blogit_pro_area1">
+                                    &lt;a href=<%<asp:Label ID="lblUrl2" runat="server"></asp:Label>%>&gt;<%<asp:HyperLink ID="hlinkProductContent" runat="server" ></asp:HyperLink>%>&lt;/a&gt;</p></div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="211" align="left" valign="top"  style="padding-top: 10px;">
+                    <table width="211" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="20" align="center">
+                                代码生成器
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">
+                                <div class="re_blogit_pro_area2">
+                                    <table width="190" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td width="61" height="51">
+                                                图象大小
+                                            </td>
+                                            <td width="129">
+                                                <input type="radio" name="radiobuttonSize" value="small" checked="checked" />小(100*100)
+                                                <br />
+                                                <input type="radio" name="radiobuttonSize" value="big" />大(500*500)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25">
+                                                对齐方式
+                                            </td>
+                                            <td>
+                                                <input type="radio" name="radiobuttonFloat" value="left" checked="checked" />左
+                                                <input type="radio" name="radiobuttonFloat" value="center" />中
+                                                <input type="radio" name="radiobuttonFloat" value="right" />右
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25">&nbsp;
+                                                
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="chcPhoto" runat="server" />独占一行
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="50" colspan="2" align="center" valign="middle">
+                                                <input id="btnOK" type="button" value="调整" class="blogit_subbg" onclick="testImages();" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  colspan="2">&nbsp;
+                                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript" language="javascript">
+        var img = document.getElementById("login_imgUrl");
+        var lblheight = document.getElementById("login_lblHeight");
+        var lblwidth = document.getElementById("login_lblWidth");
+        if (img != null) {
+            img.style.height = 100 + "px";
+            img.style.width = 100 + "px";
+            lblheight.innerHTML = "100px";
+            lblwidth.innerHTML = "100px";
+        }
+    </script>
+</div>
+<%<Hi:Common_Footer runat="server"   />%>

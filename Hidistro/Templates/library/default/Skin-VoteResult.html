@@ -1,0 +1,33 @@
+﻿<%<Hi:Common_Header runat="server"  />%>    
+<form runat="server">
+<div class="main">
+		<div class="vote_title_bg bTopMargin10">
+			<div class="vote_title_left"></div>
+			<div class="vote_title_right"></div>
+		</div>
+		<div class="vote_con">
+			<div class="vote_con_img">  </div>
+			<div class="vote_con_vote">
+				<div style="color:#cc0000; font-size:12px;">
+				<!-- 提示控件 -->
+                <%<Hi:SmallStatusMessage id="Status" runat="server" Visible="False"  />%>
+				</div>
+				<!-- 投票调查名称 -->
+				<h2 class="vote_cont_title"><%<asp:Literal ID="lblVoteName" runat="server" />%></h2>
+				<div>
+                   <table width="100%" class="vote_table" cellpadding="0" cellspacing="0">
+					<%<Hi:ThemedTemplatedRepeater ID="rptVoteItem" runat="server" TemplateFile="/ascx/tags/Common_Comment/Skin-Common_Vote_ResultList.ascx" />%>
+                    </table>
+				</div>
+				<div style="padding-top:14px;">投票总数（Totals）：<strong style="font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#cc0000"><%<asp:Label ID="lblTotal" runat="server"></asp:Label>%></strong></div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		<div class="vote_bottom_bg">
+			<div class="vote_bottom_left"></div>
+			<div class="vote_bottom_right"></div>
+		</div>
+	</div>
+</form>
+
+<%<Hi:Common_Footer runat="server"   />%>

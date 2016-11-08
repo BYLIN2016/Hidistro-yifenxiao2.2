@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <%<Hi:MetaTags runat="server" />%>
+    <%<Hi:PageTitle runat="server" />%>
+    <link href="/style/DistributorLogin.css" rel="stylesheet" type="text/css" />
+
+    <script src="/utility/jquery-1.6.4.min.js" type="text/javascript"></script>
+
+    <script src="/utility/validate/pagevalidator.js" type="text/javascript"></script>
+
+    <%<Hi:HeadContainer ID="HeadContainer1" runat="server" />%>
+</head>
+<body>
+    <form runat="server" id="form1">
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="loginput">
+            <div class="imgbg">
+                <span class="topimg"></span><span class="cenimg"></span><span class="botimg"></span>
+            </div>
+            <div class="inputbg">
+                <table width="247" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td colspan="3">
+                            <img src="/images/process/distri_08.gif" width="247" height="38" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="67" nowrap="nowrap">
+                            用户名：
+                        </td>
+                        <td colspan="2">
+                            <%<asp:TextBox ID="txtUserName" runat="server" class="inputcs" width="180"/>%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            密&nbsp;&nbsp;码：
+                        </td>
+                        <td colspan="2">
+                            <%<asp:TextBox ID="txtPassword" runat="server" TextMode="Password" class="inputcs" width="180" />%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            验证码：
+                        </td>
+                        <td>
+                            <%<asp:TextBox ID="txtCode" runat="server" class="inputcs" MaxLength="4" Size="9" style="width:60px;"></asp:TextBox>%>&nbsp;<img
+                                id="img_txtNumber" src="" alt="" />
+                        </td>
+                        <td width="166">
+                            <a href="javascript:refreshCode();">
+                                <img id="imgVerifyCode" src='' style="border-style: none" alt="" /></a>
+
+                            <script language="javascript" type="text/javascript">
+                                document.getElementById('imgVerifyCode').src = applicationPath + "/VerifyCodeImage.aspx";
+                                function refreshCode() {
+                                    var img = document.getElementById("imgVerifyCode");
+
+                                    if (img != null) {
+                                        var currentDate = new Date();
+                                        img.src = applicationPath + "/VerifyCodeImage.aspx?t=" + currentDate.getTime();
+                                    }
+                                }
+                            </script>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;
+                            
+                        </td>
+                        <td>
+                            <asp:button id="btnLogin" runat="server" text="立即登录" class="btn" />
+                        </td>
+                        <td class="linkword">
+                            <a href="url:ForgotPassword">忘记密码?</a>|<a href="DistributorsRegisterAgreement.aspx"><span><u>注册</u></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <%<Hi:SmallStatusMessage id="Status" runat="server" Visible="False" />%>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#img_txtNumber").hide();
+            $("#distributorsRegister_txtCode").keyup(function() {
+                var value = $(this).val();
+                if (value.length < 4) {
+                    $("#img_txtNumber").hide();
+                    temp = "";
+                }
+                else if (value.length == 4) {
+                    if (temp != value) {
+                        $("#img_txtNumber").show();
+                        $.ajax({
+                            url: "DistributorLogin.aspx",
+                            type: 'post', dataType: 'json', timeout: 10000,
+                            data: {
+                                isCallback: "true",
+                                code: $("#distributorsRegister_txtCode").val()
+                            },
+                            async: false,
+                            success: function(resultData) {
+                                var flag = resultData.flag;
+                                if (flag == "1") {
+                                    $("#img_txtNumber").attr("src", "/images/true.gif");
+                                }
+                                else if (flag == "0") {
+                                    $("#img_txtNumber").attr("src", "/images/false.gif");
+                                }
+                            }
+                        });
+                    }
+                    temp = value;
+                }
+            });
+        });
+    </script>
+
+    </form>
+</body>
+</html>

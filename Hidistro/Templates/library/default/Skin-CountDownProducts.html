@@ -1,0 +1,41 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+
+<div class="main">
+    <div class="nav_info"><%<Hi:Common_Location runat="server" />%>&nbsp;</div>
+    <div class="buy_list">
+       <div class="buy_list_tit">
+           <h2><a href="url:GroupBuyProducts">团购商品展示</a></h2>
+           <h2 class="buyhover"><a href="url:CountDownProducts">限时抢购商品展示</a></h2>
+           <h2><a href="url:OnlineGifts">积分兑换商品展示</a></h2>
+           <h2>&nbsp;</h2>
+       </div>
+        <script src="/utility/time.js" type="text/javascript"></script>
+       <div class="buy_list_product">
+           <ul>
+           <!--显示列表-->
+		        <%<Hi:ThemedTemplatedRepeater ID="rptProduct" runat="server" TemplateFile="/ascx/Tags/Common_GoodsList/Skin-Common_GoodsList_CountDownBuy.ascx" />%>  
+           </ul>
+           <script>
+               $(function () {
+                   $(".buy_list_product .buy_product").hover(function () {
+                       if ($(".buy_list_product .buy_product").index(this) != 0) {
+                           $(".buy_list_product .buy_product:first").attr("class", "buy_product");
+                       }
+                       $(this).attr("class", "buy_product wraphover");
+                   }, function () {
+                       $(this).attr("class", "buy_product");
+                   });
+                   $(".buy_list_product .buy_product:first").attr("class", "buy_product wraphover");
+               });
+</script>
+        </div> 
+
+     </div>
+     <div class="page">
+        <%<UI:Pager runat="server" ShowTotalPages="true" ID="pager" DefaultPageSize="20"/>%>
+     </div>
+     
+</div>
+
+<%<Hi:Common_Footer runat="server"   />%>
+

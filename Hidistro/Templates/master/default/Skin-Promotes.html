@@ -1,0 +1,41 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<div class="main">
+<div class="tqj"></div>
+<div class="container articleshelp">
+  <div class="cssleft">
+  <h6><img src="/images/process/yhhd.gif" width="182" height="45" /></h6>
+  <div class="csslist">
+<h4><a href="url:Promotes(1)">商品直接打折</a></h4>
+<h4><a href="url:Promotes(2)">商品固定金额出售</a></h4>
+<h4><a href="url:Promotes(3)">商品减价优惠</a></h4>
+<h4><a href="url:Promotes(4)">批发打折</a></h4>
+<h4><a href="url:Promotes(5)">买商品赠送礼品</a></h4>
+<h4><a href="url:Promotes(6)">商品有买有送</a></h4>
+
+<h4><a href="url:Promotes(11)">订单满额打折</a></h4>
+<h4><a href="url:Promotes(12)">订单满额优惠金额</a></h4>
+<h4><a href="url:Promotes(13)">混合批发打折</a></h4>
+<h4><a href="url:Promotes(14)">混合批发优惠金额</a></h4>
+<h4><a href="url:Promotes(15)">订单满额送礼品</a></h4>
+<h4><a href="url:Promotes(16)">订单满额送倍数积分</a></h4>
+<h4><a href="url:Promotes(17)">订单满额免运费</a></h4>
+<h4><a href="url:Promotes">显示所有优惠活动</a></h4>
+  </div>
+  </div>
+  <div class="cssright">
+   <div class="cssright_h1"><a href="url:home">首页</a> > 促销活动 </div>
+    <ul class="cssborder">
+	    <%<Hi:ThemedTemplatedRepeater runat="server" ID="rptPromoteSales" TemplateFile="/ascx/tags/Common_Comment/Skin-Common_PromoteCenter_PromoteList.ascx" />%>
+    </ul>
+    <div class="csspage">            
+        <div class="pagination">
+            <%<UI:Pager runat="server" ShowTotalPages="true" ID="pager" />%>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="tqj"></div>
+ </div>
+
+<%<Hi:Common_Footer runat="server"   />%>
+

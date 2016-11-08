@@ -1,0 +1,148 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<form runat="server">
+<div class="main">
+<div class="message_nav"><a href="url:home">首页</a> > 客户留言 </div>
+    <script src="/utility/validate/pagevalidator.js" type="text/javascript"></script>
+	  <span style=" color:#F00; float:right; height:20px; line-height:20px; padding:5px 0px;"><%<Hi:SmallStatusMessage id="Status" runat="server" Width="200" Visible="False" />%></span>  	  
+      <div class="message_list">  
+          <div class="message_list_tab">
+ 
+              <ul class="message_list_c"><%<Hi:ThemedTemplatedRepeater ID="rptLeaveComments" runat="server" TemplateFile="/ascx/tags/Common_Comment/Skin-Common_LeaveComments_List.ascx" />%> </ul>
+            <div class="message_page"> 
+                  <div class="page">
+                        <%<UI:Pager runat="server" ShowTotalPages="true" ID="pager" DefaultPageSize="15"  />%>
+                  </div>
+              </div> 
+          </div>
+          
+    
+    
+    <table width="300" border="0" cellspacing="0" cellpadding="0" class="message_add_tab" > 
+    
+      <tr>
+        <td align="center" valign="top">
+    
+            <div style=" width:250px; overflow:hidden; margin:0 auto;margin-top:10px;">
+    
+            
+    
+            <table width="250" border="0" cellpadding="0" cellspacing="0"  >
+                <tr>
+                   <td align="left"><span style=" height:30px; line-height:30px; overflow:hidden;font-family:'microsoft yahei'; font-size:15px; font-weight:bold">客户留言</span></td>
+                </tr>
+                <tr>
+                    <td  align="left" >标题<span style="color:Red; margin-left:5px;">*</span></td>
+                </tr>
+                <tr>
+                    <td   align="left"  ><%<asp:TextBox id="txtTitle" CssClass="input2" runat="Server" Width="242"></asp:TextBox> %></td>
+                </tr>
+                <tr>
+                    <td   align="left" style="color:#cc0000; font-size:12px;" ><div id="txtTitleTip" runat="server"></div></td>
+                
+                </tr>
+                <tr>
+                    <td align="left" >姓名<span style="color:Red; margin-left:5px;">*</span></td>
+                </tr>
+                <tr>
+                    <td align="left" ><%<asp:TextBox id="txtUserName" CssClass="input2" runat="Server" Width="242"></asp:TextBox> %></td>
+                 </tr>
+                 <tr>
+                    <td  align="left" style="color:#cc0000; font-size:12px;"><div id="txtUserNameTip" runat="server"></div></td>
+                 </tr>
+                <tr >
+                    <td  align="left" valign="top">内容<span style="color:Red; margin-left:5px;">*</span></td>
+                 </tr>
+                 <tr>
+                    <td align="left" valign="top"><%<asp:TextBox id="txtContent" Height="80" Width="250" TextMode="MultiLine" runat="Server"></asp:TextBox> %></td>
+                 </tr>   
+                
+                <tr>
+                    <td colspan="2" align="left" valign="top" style="color:#cc0000; font-size:12px;"><div id="txtContentTip" runat="server" >（注意请不要超过300个字符）</div></td>
+                  </tr>
+            </table>
+            
+            <table width="250" border="0" cellpadding="0" cellspacing="0" style="font-size:12px;" >
+                <tr >
+                    <td height="60" align="center" valign="middle"class=" color_34b"></td>
+                    <td   colspan="2" align="left" valign="top">
+                        <ul style="margin-top:10px; font-size:14px;">
+                            <li><span id="spLeaveUserName" runat="server">用户名<span style="color:Red; margin-left:5px;">*</span><br/><input type=text id="txtLeaveUserName" runat="server" class="input2" style="width:242px;" /></span></li>
+                            <li><span id="spLeavePsw" runat="server">密&nbsp;&nbsp;&nbsp;&nbsp;码<span style="color:Red; margin-left:5px;">*</span><br/><input type=password id="txtLeavePsw" runat="server" class="input2" style="width:242px;"/></span></li>
+                            <li>
+                                <span>
+                                    <span style=" display:block;  ">验证码<span style="color:Red; margin-left:5px;">*</span></span>
+                                    <input type=text id="txtLeaveCode" runat="server" style="width:100px; float:left;" class="input2" />&nbsp;<img id="img_txtNumber" src="" alt="" />
+                                    <a href="javascript:refreshLeaveCode();" ><img id="imgLeaveVerifyCode" src='' style="border-style:none;" alt=""/></a>
+                                    <script language="javascript" type="text/javascript">
+                                    document.getElementById('imgLeaveVerifyCode').src = applicationPath + "/VerifyCodeImage.aspx";
+                                    function refreshLeaveCode() {
+                                        var img = document.getElementById("imgLeaveVerifyCode");
+    
+                                        if (img != null) {
+                                            var currentDate = new Date();
+                                            img.src = applicationPath + "/VerifyCodeImage.aspx?t=" + currentDate.getTime();
+                                        }
+                                    }
+                                    </script>
+                                </span>
+    
+                            </li>
+                            <li style=" width:250px; overflow:hidden; padding-top:10px;"><%<asp:Button runat="server" ID="btnRefer" CssClass="btn_sub" OnClientClick="return PageIsValid();" ValidationGroup="valsIntroduced" Text="确认" />%><span id="spLeaveReg" runat="server"  class="message_btnRefer"><Hi:SiteUrl UrlName="register" runat="server">免费注册</Hi:SiteUrl></span></li>
+                           
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            
+    
+            </div>
+        
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" language="javascript">
+            function InitValidators() {
+                initValid(new InputValidator('LeaveComments_txtTitle', 1, 60, false, null, '标题为必填项，长度限制在60字符以内'))
+                initValid(new InputValidator('LeaveComments_txtUserName', 1, 30, false,null,'请输入您的名字，不能为空长度限制在1-30之间'))
+                initValid(new InputValidator('LeaveComments_txtContent', 1, 300, false, null, '请输入您的留言，不能为空长度限制在1-300之间'))
+            }
+            $(document).ready(function () {
+                InitValidators();
+                $("#img_txtNumber").hide();
+                $("#LeaveComments_txtLeaveCode").keyup(function () {
+                    var value = $(this).val();
+                    if (value.length < 4) {
+                        $("#img_txtNumber").hide();
+                        temp = "";
+                    }
+                    else if (value.length == 4) {
+                        if (temp != value) {
+                            $("#img_txtNumber").show();
+                            $.ajax({
+                                url: "LeaveComments.aspx",
+                                type: 'post', dataType: 'json', timeout: 10000,
+                                data: {
+                                    isCallback: "true",
+                                    code: $("#LeaveComments_txtLeaveCode").val()
+                                },
+                                async: false,
+                                success: function (resultData) {
+                                    var flag = resultData.flag;
+                                    if (flag == "1") {
+                                        $("#img_txtNumber").attr("src", "/images/true.gif");
+                                    }
+                                    else if (flag == "0") {
+                                        $("#img_txtNumber").attr("src", "/images/false.gif");
+                                    }
+                                }
+                            });
+                        }
+                        temp = value;
+                    }
+                });
+            });
+        </script>
+    </div> 
+</div>
+</form>
+<%<Hi:Common_Footer runat="server"   />%>

@@ -1,0 +1,117 @@
+﻿ <style>
+ .tableform{width:300px;height:200px;}
+ </style>
+ <div class="tableform">
+    <table cellpadding="0" cellspacing="0" border="0" style=" padding-top:10px;">
+     <tr>
+            <td><span class="input100">商品分类：</span><select id="slscategory" size="5" style="width:140px;height:160px;"></select></td>
+        </tr>
+         <tr>
+             <td><span class="input100">显示数量：</span><input type="text" name="txtcategorymaxnum" id="txtcategorymaxnum" class="input-text" /></td>
+        </tr>
+    </table>
+ </div>
+ <script type="text/javascript">
+     function loadEditDialogData() {
+         Hidistro_Dialog.dialogContent = $(taboverlaycontent).html();
+         Hidistro_Dialog.dialogShow();
+         Hidistro_Dialog.dialogTitle($(ctrnamediv).html());
+
+         $.ajax({
+             url: "Handler/DesigComments.ashx",
+             async: false,
+             type: "post",
+             data: {
+                 ModelId: "commentCategory"
+             },
+             dataType: "json",
+             success: function (msg) {
+                 if (msg.success) {
+                     DataBindValue(msg.Result);
+                 } else {
+                     art.dialog({ content: msg.Result, lock: true });
+                 }
+             },
+             complete: function () {
+                 BindCommentCategoryEvent();
+             }
+         });
+
+     }
+
+     function DataBindValue(commentCategoryJson) {
+         if (commentCategoryJson.length > 0) { //循环商品分类 
+             $("#slscategory").empty();
+             $.each(commentCategoryJson, function (index, item) {
+                 $("#slscategory").append("<option value=\"" + item.CategoryId + "\">" + FormCategoryPath(item.Depth, item.Name) + "</option>");
+             });
+         }
+     }
+
+     function FormCategoryPath(depath, categoryname) {
+         for (var index = 1; index < depath; index++) {
+             categoryname = "　　" + categoryname;
+         }
+         return categoryname;
+     }
+
+     function BindCommentCategoryEvent() {
+         if (Hidistro_designer.ElementValues != null) {
+             if (Hidistro_designer.ElementValues.CategoryId != "" && Hidistro_designer.ElementValues.CategoryId != null) {
+                 $("#slscategory option[value='" + Hidistro_designer.ElementValues.CategoryId + "']").attr("selected", true);
+             }
+
+             if (Hidistro_designer.ElementValues.MaxNum != "" && Hidistro_designer.ElementValues.MaxNum != null) {
+                 $("#txtcategorymaxnum").val(Hidistro_designer.ElementValues.MaxNum);
+             }
+         }
+     }
+
+
+     function SaveElmentValue() {
+         if ($("#slscategory").val().replace(/\s/g, "") == "" || $("#slscategory").val()==null) {
+             Hidistro_Dialog.dialogTip('error', '请选择商品分类！');
+             return false;
+         }
+
+         if (isNaN($("#slscategory").val().replace(/\s/g, "")) || parseInt($("#slscategory").val().replace(/\s/g, "")) <= 0) {
+             Hidistro_Dialog.dialogTip('error', '请选择商品分类');
+             return false;
+         }
+        
+         if ($("#txtcategorymaxnum").val().replace(/\s/g, "") == "") {
+             Hidistro_Dialog.dialogTip('error', '显示数量不允许为空');
+             return false;
+         }
+         if (isNaN($("#txtcategorymaxnum").val().replace(/\s/g, "")) || parseInt($("#txtcategorymaxnum").val().replace(/\s/g, "")) <= 0) {
+             Hidistro_Dialog.dialogTip('error', '显示数量必须大于0');
+             return false;
+         }
+
+       
+         $.ajax({
+             url: "Handler/DesigComments.ashx",
+             async: false,
+             type: "post",
+             data: {
+                 ModelId: "editecommentcategory",
+                 Param: "{\"Id\":\"" + Hidistro_designer.CurrentContentID +
+                            "\",\"CategoryId\":\"" + $("#slscategory").val() +
+                            "\",\"MaxNum\": \"" + $("#txtcategorymaxnum").val() + "\"}"
+             },
+             dataType: "json",
+             success: function (msg) {
+                 if (msg.success) {
+                     $("#" + Hidistro_designer.CurrentContentID).replaceWith(msg.Result.ComCategory);
+                     Hidistro_Dialog.dialogTip("succeed", "商品分类标签更新成功");
+                 } else {
+                     Hidistro_Dialog.dialogTip("error", msg.Result);
+                 }
+             },
+             complete: function () {
+                 Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+             }
+         });
+     }
+
+ </script>

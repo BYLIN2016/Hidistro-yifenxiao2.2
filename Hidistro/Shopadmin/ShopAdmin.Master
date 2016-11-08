@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ShopAdmin.master.cs" Inherits="Hidistro.UI.Web.Shopadmin.ShopAdmin" %>
+<%@ Register TagPrefix="Hi" Namespace="Hidistro.UI.Common.Controls" Assembly="Hidistro.UI.Common.Controls" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <Hi:PageTitle ID="PageTitle1" runat="server" />
+    <Hi:HeadContainer ID="HeadContainer1" runat="server" />
+     <link rel="stylesheet" href="/utility/skins/blue.css" />
+    <link rel="stylesheet" href="/Shopadmin/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/Shopadmin/css/css.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/Shopadmin/css/windows.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/Shopadmin/css/pagevalidator.css" type="text/css" media="screen" />
+     
+        <Hi:Script ID="Script4" runat="server" Src="/utility/globals.js" />
+        <Hi:Script ID="Script1" runat="server" Src="/utility/jquery-1.6.4.min.js" />
+          <Hi:Script ID="Script5" runat="server" Src="/utility/jquery.artDialog.js" />
+       <Hi:Script ID="Script7" runat="server" Src="/utility/iframeTools.js" />
+      <Hi:Script ID="Script6" runat="server" Src="/utility/Window.js" /> 
+         <Hi:Script ID="Script2" runat="server" Src="/utility/windows.js" />
+        <Hi:Script ID="Script3" runat="server" Src="/Shopadmin/script/pagevalidator.js" />
+    <asp:ContentPlaceHolder ID="headHolder" runat="server">
+     <!--功能页面独有的脚本文件、样式文件的引用-->
+    </asp:ContentPlaceHolder>
+     <asp:ContentPlaceHolder ID="validateHolder" runat="server">
+    <!--客户端验证-->
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+         $(document).ready(function()
+         {
+          /*列表添加鼠标移动效果*/
+            $(".datalist table tr,.list table tr").each(function (index, domEle){
+             if(index!=0){
+                  if($(this).attr("class")!="table_title")
+                 // $(this).mouseover(function(){$(this).css("background","#f6faf1");}).mouseout(function(){$(this).css("background","#ffffff")}); 
+                   $(this).mouseover(function(){$(this).addClass("currentcolor");}).mouseout(function(){$(this).removeClass("currentcolor")});
+                  }
+                  
+              if(BrowsVersion()==true)
+             {
+                $(this).children("td").each(function(indexTd,objTd){
+                   var htmlTd=$(objTd).html().trim();
+                     if(htmlTd.length<1)
+                      {
+                        $(objTd).css("display","none");
+                      }               
+                }) 
+              } 
+          })	       
+    });
+    
+      function BrowsVersion()
+      {
+        var Sys = {};
+        var ua = navigator.userAgent.toLowerCase();
+        var s;
+        (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+        (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+        (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+        (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+        (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+        //以下进行测试
+        if (Sys.ie) return false;
+        if (Sys.firefox) return true; /*document.write('Firefox: ' + Sys.firefox);*/
+        if (Sys.chrome) return false;
+        if (Sys.opera) return false;
+        if (Sys.safari) return false;     
+      }  
+</script>
+</head>
+<body>
+    <form id="thisForm" runat="server">
+        <div class="toparea">
+	<!--顶部logo区域-->
+         <div class="logoImg">
+         <Hi:HiImage runat="server" ID="imgLogo" Width="177" Height="39" />
+         <span>
+            <asp:HyperLink ID="hlinkHome" runat ="server" Target="_blank" Text="浏览网店前台" ></asp:HyperLink>
+            <a class="a" href="#">|</a>
+            <asp:HyperLink ID="hpkDefault" runat ="server" Target="_self" Text="即时营业信息" ></asp:HyperLink>
+            <a class="a" href="#">|</a>
+            <a href="comment/myreceivedmessagestoadmin.aspx" style="color:Gray" id="hp_message" runat="server">站内信(0)</a>
+            <a class="a" href="#">|</a>
+            <asp:HyperLink runat="server" ID="hlinkToTaobao" ImageUrl="~/Shopadmin/images/tubiao.jpg" Target="_blank" Text="同步淘宝" />
+            </span>
+         <p><strong></strong> <asp:Label ID="lblUserName" runat="server"></asp:Label> [<strong><asp:HyperLink runat="server" ID="hlinkLogout" Text="退出" /></strong>]        
+         </div>
+	</div>
+        <!--主菜单-->
+        <div class="topchannel clearfix">
+            <div class="channelshell">
+                <div class="menutab">
+                    <ul class="clearfix">
+                        <asp:Literal runat="server" ID="mainMenuHolder" />
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--二级菜单-->
+        <div class="subchannel clearfix">
+	        <div class="channelshell">
+		        <div class="menutab">
+			        <ul class="clearfix">
+			            <asp:Literal runat="server" ID="subMenuHolder" />
+			        </ul>
+		        </div>
+	        </div>
+        </div>
+	    <!--面包屑-->
+	    <div class="blank5 clearfix"></div>
+
+	
+	<!--结束-->
+	<div class="blank12 clearfix"></div>
+        <asp:ContentPlaceHolder ID="contentHolder" runat="server">
+        <!--功能页面-->
+        </asp:ContentPlaceHolder>
+        </div>
+       
+    </form>
+    
+   
+    <div class="bottomarea testArea">
+    <!--顶部logo区域-->
+  </div> 
+  
+</body>
+</html>

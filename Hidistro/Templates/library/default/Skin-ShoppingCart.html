@@ -1,0 +1,152 @@
+﻿<%<Hi:Common_Header runat="server" SkinName="ascx/tags/Skin-Common-Top.ascx"  />%>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnLoginAndBuy").bind("click", function () { LoginAndCheck(); });
+        $("#btnAmoBuy").bind("click", function () { window.location.href = applicationPath + "/SubmmitOrder.aspx"; });
+        $("#textfieldusername").keydown(function (e) { if (e.keyCode == 13) { LoginAndCheck(); return false; } });
+        $("#textfieldpassword").keydown(function (e) { if (e.keyCode == 13) { LoginAndCheck(); return false; } });
+    });
+    function CloseLogin() {
+        $("#loginForBuy").hide('hide');
+    }
+    function GoToCheck() {
+        if ($("#ShoppingCart_hfdIsLogin").val() == "logined")
+            return true;
+
+        $("#loginForBuy").show('hide');
+        return false;
+    }
+    // 登录后再购买
+    function LoginAndCheck() {
+        var username = $("#textfieldusername").val();
+        var password = $("#textfieldpassword").val();
+        var thisURL = document.URL;
+
+        if (username.length == 0 || password.length == 0) {
+            alert("请输入您的用户名和密码!");
+            return;
+        }
+
+
+        $.ajax({
+            url: "Login.aspx",
+            type: "post",
+            dataType: "json",
+            timeout: 10000,
+            data: { username: username, password: password, action: "Common_UserLogin" },
+            async: false,
+            success: function (data) {
+                if (data.Status == "Succes") {
+                    $("#loginForBuy").hide('hide');
+                    $("#hiddenIsLogin").val('logined');
+                    window.location.href = applicationPath + "/SubmmitOrder.aspx";
+                }
+                else {
+                    alert(data.Msg);
+                }
+            }
+        });
+    }
+</script>
+<form runat="server">
+<div style="width:1000px; margin:0 auto; color:red;"><%<Hi:SmallStatusMessage id="Status" runat="server" Width="200" Visible="False" />%></div>
+<div class="cart_h">
+	<div id="logo"><Hi:Common_Logo ID="Common_Logo1" runat="server" /></div>
+	<div class="cart_step">
+		<ul class="cart_step1">
+			<li class="step-1"><b></b>1.我的购物车</li>
+			<li class="step-2"><b></b>2.填写核对订单信息</li>
+			<li class="step-3">3.成功提交订单</li>
+		</ul>
+	</div>
+</div>
+<asp:Panel ID="pnlShopCart" runat="server">
+<div class="cart_content">
+	<div class="cart-hd ">
+		<h2>我的购物车</h2>
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+            <td width="58%" valign="middle" height="24" align="left">
+                    <div class="cart_prompt">
+                    <span>温馨提示:</span>
+                    如果你记得该商品的货号，可直接输入货号进行添加商品
+                    <%<asp:Literal ID="litNoProduct" runat="server" Text="您的购物车中没有任何商品"></asp:Literal> %>
+                    </div>
+            </td>
+            <td width="1%" valign="middle" align="left"><img src="/images/cart/promptback.jpg" /></td>
+            <td width="31%" valign="middle" align="left"><%<asp:TextBox ID="txtSKU" runat="server" Cssclass="cart_text_input" width="200px" />%> </td>
+            <td width="10%" valign="middle" align="left"><%<asp:Button ID="btnSKU" runat="server"  Cssclass="cart_submit_input" text="添加到购物车"  />%> 
+            </td>
+      </tr>
+    </tbody>
+   </table>
+	</div>
+ 
+    <div class="cart_commodit">
+        <%<Hi:Common_ShoppingCart_ProductList runat="server" Width="100%" />%>
+        <div style="text-align:right;">
+            <%<asp:Literal ID="lblAmoutPrice" runat="server" />%>
+            <%<asp:HyperLink ID="hlkReducedPromotion" runat="server" />%>
+            <span class="cart_commodit_price3">购物车总计:<span>￥<span><%<Hi:FormatedMoneyLabel ID="lblTotalPrice" runat="server" />%></span></span></span></div>
+        </div>
+        <%<Hi:Common_ShoppingCart_PromoGiftList runat="server" Width="100%" /> %>
+         <%<Hi:Common_ShoppingCart_GiftList runat="server" Width="100%" />%>
+        <div class="cart_commodit_settle">
+        <div class="clear_buycart"><%<Hi:ImageLinkButton ID="btnClearCart" IsShow="true" DeleteMsg="您确认要删除选中的商品吗？"  runat="server" Text="删除选中的商品"  />%></div>
+        <div class="cart_buy_cartsub"><%<asp:Button ID="btnCheckout"  class="cart_chekout" Text="结&nbsp;算" runat="server" OnClientClick="return GoToCheck();" />%>  </div>
+
+</div>
+     
+</div>
+
+</asp:Panel>
+  <div class="login_tan" id="loginForBuy" style="display:none;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr >
+          <td colspan="4">
+             <table class="loginForBuytit"  border="0" cellspacing="0" cellpadding="0">
+               <tr>
+                  <td width="400"> 
+                      <h2>您尚未登录，请登录</h2>           
+                  </td>
+                  <td width="39"><p><img alt="关闭"  id="imgCloseLogin" onclick="CloseLogin();"src="/images/sub/close2.jpg" width="25" height="24" /></p></td>
+               </tr>
+             </table>
+           </td> 
+        </tr>
+         <tr><td colspan="4">&nbsp;</td></tr>
+        <tr>
+          <td width="25" valign="middle" w>&nbsp;</td>
+          <td valign="middle" width="60" class="fB">用户名：</td>
+          <td  width="250" valign="middle"><label>
+            <input type="text" name="textfield" id="textfieldusername"  class="login_tan_input1"/>
+          </label></td>
+          <td valign="middle" width="104">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="45" valign="middle">&nbsp;</td>
+          <td valign="middle" class="fB">密　码：</td>
+          <td  valign="middle"><input type="password" name="textfield2" id="textfieldpassword" class="login_tan_input2" /></td>
+          <td valign="middle"><a href="url:ForgotPassword">忘记密码了?</a></td>
+        </tr>
+        <tr>
+           <td colspan="4">
+              <table>
+                 <tr>
+                      <td width="85" valign="middle" >&nbsp;</td>
+                      <td width="140"><label>
+                        <input type="button" name="button" id="btnLoginAndBuy" value=" " class="login_tan_input3" />
+                      </label></td>
+                      <td width="79"  align="center"><a href="url:register">我要注册</a></td>
+                      <td width="135"><input id="btnAmoBuy" type="button" value="匿名购买" /></td>
+                 </tr>
+              </table>
+           </td>
+        </tr>
+      </table>
+    </div>
+<%<asp:HiddenField runat="server" ID="hfdIsLogin" value="0" /> %>
+<%<Hi:Common_Footer runat="server" SkinName="ascx/tags/Skin-Common_Bottom.ascx"  />%>
+</form>
+

@@ -1,0 +1,64 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<form runat="server">
+<div class="main">
+<link href="/style/addcss.css" rel="stylesheet" type="text/css" />
+<div class="buy_intro2">
+    <div class="buy_intro_table">
+      
+            <div  class="buy_product_name"><span>积分礼品：</span><%<asp:Literal id="litGiftName" runat="server" />%></div>
+            <div class="buy_product_time">
+                <span><a href="url:OnlineGifts">更多积分商城>></a></span>
+            </div> 
+           
+           <div class="buy_product_frame">
+                    <div class="buy_product_bigpic2">
+                      <table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
+                          <tr>
+                            <td  valign="middle" align="center"><%<Hi:HiImage runat="server" ID="imgGiftImage" />%></td>
+                          </tr>
+                      </table>
+                    </div>
+                  
+                    <div class="buy_product_price2">
+                        <div class="buy_product_price3">
+                            <span  id="buycurrent2"><h2>所需积分</h2><span><%<asp:Label id="litNeedPoint" runat="server" />%></span></span>
+                            <span id="buyoriginal2"><h2>原价</h2><del>￥<span><%<Hi:FormatedMoneyLabel ID="lblMarkerPrice" runat="server" />%></span></del></span>
+                            <span id="buypoint2"><h2>您的积分</h2><span><%<asp:Label id="litCurrentPoint" runat="server" />%></span></span>
+                        </div>
+                         
+                        <div class="buy_product_explain2">
+                            <h2>积分礼品简单说明：</h2>
+                            <p><%<asp:Literal id="litShortDescription" runat="server" /> %></p>
+                        </div>
+                        
+                        <span id="buyButton"><%<asp:Button runat="server" ID="btnChage"  class="add_jifen_submit2"  /> %></span>
+                    </div>
+           </div>
+    </div> 
+</div>
+   
+
+
+    <div style="height:40px; overflow:hidden; clear:both;"></div>
+   
+    <div class="buy_product_detail">
+        <ul class="buy_product_wrap">
+            <li class="curr"><a href="#">积分详细说明</a></li>
+        </ul>
+        <div class="product_mc"><%<asp:Literal ID="litDescription" runat="server" />%></div>
+    </div>   
+</div>
+</form>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $("#GiftDetails_btnChage").bind("click", function () {
+              if (eval($("#GiftDetails_litCurrentPoint").html()) < eval($("#GiftDetails_litNeedPoint").html())) {
+                  alert("您当前积分不够，不能兑换该礼品");
+                  return false;
+              }
+          });
+      });
+</script>
+
+<%<Hi:Common_Footer runat="server"   />%>
+

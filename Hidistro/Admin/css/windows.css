@@ -1,0 +1,26 @@
+﻿/**
+ * windows.css
+ * @category   javascript
+ * @package    jquery
+ * @author     KalVen <63352413@gmail.com>  
+ */
+.dialog-loading {background:url(../images/common_loading.gif) no-repeat center; width:100%; height:100%}
+.dialog-mask{border:0px; background:#000; margin:0px; padding:0px; position:absolute; top:0px; left:0px;background:url(../images/dialog_bg.png); _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod="scale", src="/Admin/images/dialog_bg.png"); _background:none;}
+.windowsdialog{width:320px;color:#444;background:#1f66c3;padding:5px;position:absolute;z-index:999;left:20%;}
+.windowsdialog a:link,windowsdialog a:visited {color: #005EAC; text-decoration:none;}
+.windowsdialog a:hover {color:#ff6600; text-decoration:underline;}
+.windowsdialog .dialog-header{height:26px; position:relative; cursor:move;}
+.windowsdialog .dialog-title{text-align:left;margin-left:10px;font-size:12px;color:#fff;line-height:24px;font-weight:bold;}
+.windowsdialog .dialog-tl{position:absolute;left:-2px;top:-2px;height:26px;background:none;width:100%;}
+.windowsdialog .dialog-tr{position:absolute; right:0px;top:0px;width:20px; height:20px;}
+.windowsdialog .dialog-content{background:#fff;}
+.windowsdialog .ico_1{width:50px;height:50px;background-image:url(../images/ico.gif); background-position:0px 0px; background-repeat:no-repeat;margin:15px 5px 10px 10px;} /*成功*/
+.windowsdialog .ico_2{width:50px;height:50px;background-image:url(../images/ico.gif); background-position:0px -52px; background-repeat:no-repeat;margin:15px 5px 10px 10px;} /*失敗*/
+.windowsdialog .ico_3{width:50px;height:50px;background-image:url(../images/ico.gif); background-position:0px -104px; background-repeat:no-repeat;margin:15px 5px 10px 10px;} /*穎問*/
+.windowsdialog .ico_4{width:50px;height:50px;background-image:url(../images/ico.gif); background-position:0px -156px; background-repeat:no-repeat;margin:15px 5px 10px 10px;} /**/
+.windowsdialog .ico_5{width:50px;height:50px;background-image:url(../images/ico.gif); background-position:0px -208px; background-repeat:no-repeat;margin:15px 5px 10px 10px;} /*停止*/
+.windowsdialog .ico_6{width:50px;height:50px;background-image:url(../images/ico.gif); background-position:0px -260px; background-repeat:no-repeat;margin:15px 5px 10px 10px;} /**/
+.windowsdialog .ico_7{width:50px;height:50px;background-image:url(../images/ico.gif); background-position:0px -312px; background-repeat:no-repeat;margin:15px 5px 10px 10px;} /**/
+.windowsdialog .dialog-close{float:right;cursor:pointer;height:16px; width:16px;background:url(../images/c1.gif) 0px 0px no-repeat;blr:expression(this.onFocus=this.blur());}
+.windowsdialog .dialog-close:hover{background:url(../images/c2.gif) 0px 0px no-repeat;}
+.windowsdialog .dialog-word{font-size:12px;line-height:22px;padding:10px;color:#333;text-align:left;}

@@ -1,0 +1,58 @@
+﻿<style>
+.tableform{width:980px;}
+.tableform td{padding-right:0px;}
+</style>
+<div class="tableform">
+     <table>
+         <tr><td><iframe id="customframe" name="customframe" scrolling="no" frameborder="0" style="display: inline; height: 450px;width:960px"  scrolling="no" frameborder="0" style="display: inline; height: 300px;"></iframe></td></tr>
+     </table>
+</div>
+<script>
+   // var customnencode = null;
+    var encodehtml = null;
+    function loadEditDialogData() {
+        Hidistro_Dialog.dialogContent = $(taboverlaycontent).html();
+        Hidistro_Dialog.dialogShow();
+        Hidistro_Dialog.dialogTitle($(ctrnamediv).html());
+        BindCustomEvent();
+    }
+
+    function BindCustomEvent() {
+        if (Hidistro_designer.ElementValues != null) {
+            if (Hidistro_designer.ElementValues.Id && Hidistro_designer.CurrentContentID!="") {
+                $("#customframe").attr("src", "DialogTemplates/CustomContent.aspx?id=" + Hidistro_designer.CurrentContentID + "&type=custom&name=Html&x=" + Math.random());
+            }
+        }
+    }
+
+    function SaveElmentValue() {
+        var description = $("#customframe").contents().find("#content_customDescription").val();
+        if (description== "") {
+            Hidistro_Dialog.dialogTip('error', '请输入自定义内容');
+            return false;
+        }
+        var customnencode = $("#customframe")[0].contentWindow.HTMLEncode(description);
+        $.ajax({
+            url: "Handler/DesigAdvert.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "editeadvertcustom",
+                Param: "{\"Id\":\"" + Hidistro_designer.CurrentContentID +
+                            "\",\"Html\": \"" + customnencode + "\"}"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    $("#" + Hidistro_designer.CurrentContentID).replaceWith(msg.Result.AdCustom);
+                    Hidistro_Dialog.dialogTip("succeed", "自定义内容更新成功");
+                } else {
+                    Hidistro_Dialog.dialogTip("error", msg.Result);
+                }
+            },
+            complete: function () {
+                Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+            }
+        });
+    }
+</script>

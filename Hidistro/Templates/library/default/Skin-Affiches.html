@@ -1,0 +1,25 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<div class="main">
+    <div class="notice_w">
+        <div class="notice_dh">
+            当前位置：<a href="url:home">首页</a> > 公告中心
+        </div>
+        <div class="notice_c">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="affiches_t">
+                <tr>
+                    <td width="148" align="center">
+                        公告标题
+                    </td>
+                    <td width="637">
+                        &nbsp;
+                    </td>
+                    <td width="123" align="left">
+                        创建日期
+                    </td>
+                </tr>
+            </table>
+            <%<Hi:ThemedTemplatedRepeater runat="server" ID="rptAffiches" TemplateFile="/ascx/tags/Common_Comment/Skin-Common_AllAfficheList.ascx" />%>
+        </div>
+    </div>
+</div>
+<%<Hi:Common_Footer runat="server"   />%>

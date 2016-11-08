@@ -1,0 +1,19 @@
+ 
+.login{ width:961px; margin:0 auto; _width:964px;}
+.login .logo{ width:570px; height:112px; background:url(../images/process/login_02.jpg) no-repeat center; padding-left:30px;}
+.login .loginput{ height:330px; padding-top:15px;}
+
+.loginput .icon{ width:183px; height:330px; background:url(../images/process/login_14.jpg) no-repeat bottom; float:left;}
+.loginput .imgbg{ width:631px; float:left;}
+.loginput .imgbg span{ display:block; height:100px; width:631px;}
+.loginput .topimg{ background:url(../images/process/distri_05.jpg) no-repeat;}
+.loginput .cenimg{ background:url(../images/process/distri_08.jpg) no-repeat;}
+.loginput .botimg{ background:url(../images/process/distri_11.jpg) no-repeat;}
+.loginput .inputbg{ background:url(../images/process/distri_06.gif) no-repeat; width:252px; overflow:hidden; height:330px; float:right; padding:0px 50px 0 28px;}
+.loginput .inputbg table td{ padding-top:15px; font-size:14px;}
+.loginput .inputcs{ border:1px #ff7751 solid; height:20px; line-height:20px;}
+.loginput .btn{ width:102px; height:38px;  background:url(../images/process/distri_14.gif) no-repeat; font-size:14px; color:#FFF; font-weight:700; border:0px;}
+.loginput .tsg{ border:1px #ff7575 solid; background:url(../images/process/login_29.gif) no-repeat left #fff0f0; font-size:12px; padding-left:25px;}
+.loginput .linkword{color:#999; white-space:nowrap;}
+.loginput .linkword a{color:#999;padding:0px 5px;font-size:9pt;}
+.loginput .linkword a:hover{color:#f60;}

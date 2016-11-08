@@ -1,0 +1,14 @@
+User-Agent: *
+Disallow: /Installer/
+Disallow: /Admin/
+Disallow: /config/
+Disallow: /User/
+Disallow: /Pay/
+Disallow: /Templates/
+Disallow: /kindeditor/
+Disallow: /OpenID/
+Disallow: /Utility/
+Disallow: /Shopadmin/
+Disallow: /*.axd$
+Allow: /Sitemap: http://192.168.10.34/sitemapindex.xml
+

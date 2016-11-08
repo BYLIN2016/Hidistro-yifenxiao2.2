@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/user.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<%<Hi:HeadContainer ID="HeadContainer1" runat="server" />%>
+<%<Hi:PageTitle runat="server" />%>
+<%<Hi:MetaTags runat="server" />%>
+<link href="/style/user.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/style/pagevalidator.css" type="text/css" media="screen" />
+<script src="/utility/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="/utility/validate/pagevalidator.js" type="text/javascript"></script>
+<script src="/utility/globals.js" type="text/javascript"></script>
+</head>
+<body>
+<form runat="server" id="form1">
+
+<%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Header.ascx" />%>
+
+<div class="member_guide"><!-- InstanceBeginEditable name="编辑区" -->
+		<ul class="User_nav">
+			<li class="User_navLeft"></li>
+			<li class="User_navM">
+				<div class="User_nav_icon">当前位置：<span><a href="url:home">首页</a></span>><span><a href="url:user_UserDefault">会员中心</a></span>><span><a href="url:user_MyAccountSummary">预付款账户</a></span>><span><a href="#">申请提现确认</a></span></div>
+			</li>
+			<li class="User_navRight"></li>
+		</ul>
+	<!-- InstanceEndEditable --></div>
+<div class="core_blank8"></div>
+<div class="core_userform">
+	<div class="core_newform">
+		<%<Hi:Common_Header runat="server" SkinName = "/ascx/tags/Common_UserCenter/Skin-Common_User_Menu.ascx" />%>
+		<div class="core_formright">
+   <!-- InstanceBeginEditable name="编辑2" -->
+			  <div class="User_manage"><span class="User_manIcon"></span>申请提现确认</div>
+			  <div style="margin-top:10px;"><%<Hi:smallstatusmessage id="Status" runat="server" visible="False" />%></div>
+			<div class="bTop_BomPadding10">
+  <div class="contentarea"><div class="Cblock bar"><ul class="APNav">
+   <li><a href="url:user_RechargeRequest">预付款充值</a></li>
+   <li><a href="url:user_RequestBalanceDraw">申请提现</li>
+   <li><a href="url:user_MyAccountSummary"><%<Hi:SiteUrl UrlName="user_MyAccountSummary" CssClass="color-blue-violet" runat="server">账户查询</Hi:SiteUrl>%></li>
+   </ul>
+   </div>
+   <div class="Cblock">
+
+     <p><label class="labeldefault">用户名：</label><span class="color_blue font_b"><%<asp:Literal ID="litUserName" runat="server" />%></span></p>
+     <p><label class="labeldefault">提现金额：</label><span class="color_red font_b"><%<Hi:FormatedMoneyLabel ID="lblDrawBanlance" runat="server" />%></span></p>
+     <p><label class="labeldefault">开户银行：</label><%<asp:Literal ID="litBankName" runat="server" />%></p>
+     <p><label class="labeldefault">银行开户名：</label><%<asp:Literal ID="litAccountName" runat="server" />%></p>
+     <p><label class="labeldefault">账号信息：</label><%<asp:Literal ID="litMerchantCode" runat="server" />%></p>
+     <p><label class="labeldefault">备注：</label><%<asp:Literal ID="litRemark" runat="server" />%></p>
+     <p><label class="labeldefault"></label><%<asp:Button ID="btnDrawConfirm" runat="server" Text="确认提现" class="btnNothing" />%></p>
+   </div>
+  </div>
+			</div>
+			<!-- InstanceEndEditable -->
+		</div>
+	</div>
+</div>
+
+
+
+
+</form>
+</body>
+<!-- InstanceEnd --></html>

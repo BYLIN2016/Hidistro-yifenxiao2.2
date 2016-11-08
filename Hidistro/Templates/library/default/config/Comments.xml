@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Comment Id="1" Type="article" Title="时尚资讯" ImageTitle="" AdImage="/templates/master/default/UploadImage/advertimg/20130911162752_6589.jpg" CategoryId="8" MaxNum="4" TitleImageSize="200*15" AdImageSize="150*98" />
+  <Comment Id="2" Type="category" CategoryId="107" MaxNum="16" />
+  <Comment Id="3" Type="brand" CategoryId="" IsShowLogo="true" IsShowTitle="false" MaxNum="12" ImageSize="92*39" />
+  <Comment Id="4" Type="keyword" CategoryId="" MaxNum="8" />
+  <Comment Id="5" Type="brand" CategoryId="37" IsShowLogo="true" IsShowTitle="true" MaxNum="10" ImageSize="88*30" />
+  <Comment Id="6" Type="brand" CategoryId="" IsShowLogo="true" IsShowTitle="true" MaxNum="10" ImageSize="86*29" />
+  <Comment Id="7" Type="attribute" CategoryId="309" MaxNum="5" />
+  <Comment Id="8" Type="title" Title="美食特产" ImageTitle="/templates/master/default/UploadImage/titleimg/20130911105735_6802.jpg" TitleImageSize="200*150" />
+  <Comment Id="9" Type="morelink" Title="更多" CategoryId="309" />
+  <Comment Id="10" Type="title" Title="数码电器" ImageTitle="/templates/master/default/UploadImage/titleimg/20130911105735_6802.jpg" TitleImageSize="28*36" />
+  <Comment Id="11" Type="category" CategoryId="37" MaxNum="14" />
+  <Comment Id="12" Type="keyword" CategoryId="6" MaxNum="1" />
+  <Comment Id="13" Type="title" Title="汽车/配件" ImageTitle="/templates/master/default/UploadImage/titleimg/20130911105735_6802.jpg" TitleImageSize="28*36" />
+  <Comment Id="14" Type="morelink" Title="更多" CategoryId="273" />
+  <Comment Id="15" Type="keyword" CategoryId="70" MaxNum="10" />
+  <Comment Id="16" Type="category" CategoryId="274" MaxNum="8" />
+  <Comment Id="17" Type="brand" CategoryId="" IsShowLogo="true" IsShowTitle="true" MaxNum="10" ImageSize="86*29" />
+  <Comment Id="18" Type="brand" CategoryId="" IsShowLogo="true" IsShowTitle="false" MaxNum="10" ImageSize="88*30" />
+  <Comment Id="19" Type="brand" CategoryId="" IsShowLogo="true" IsShowTitle="false" MaxNum="10" ImageSize="88*30" />
+</root>

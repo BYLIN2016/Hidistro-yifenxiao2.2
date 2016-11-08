@@ -1,0 +1,29 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+<div class="main">
+    <div class="notice_w">
+        <div class="notice_dh">
+            当前位置：<a href="url:home">首页</a> ><a href="url:Affiches">公告中心</a> > 查看公告
+        </div>
+        <div class="notice_w_bs">
+            <h2>
+                <%<asp:Literal runat="server" ID="litTilte" />%></h2>
+            <h3>
+                发布日期：<span class="cORed"><%<Hi:FormatedTimeLabel ID="litAffichesAddedDate" runat="server" />%></span>
+                <strong class="spanB" style="cursor: pointer;" onclick="window.close();">【关闭】 </strong>
+            </h3>
+        </div>
+        <div class="notice_c">
+            <%<asp:Literal runat="server" ID="litContent" />%></div>
+        <div class="notice_w_bs">
+            <h4>
+                <%<asp:Label ID="lblFront" runat="server" Text="上一篇公告："></asp:Label>%><a target="_self"
+                    runat="server" id="front"><%<asp:Label ID="lblFrontTitle" runat="server" ></asp:Label>%></a></h4>
+            <h4>
+                <%<asp:Label ID="lblNext" runat="server" Text="下一篇公告："></asp:Label>%><a target="_self"
+                    runat="server" id="next"><%<asp:Label ID="lblNextTitle" runat="server" ></asp:Label>%>
+                </a>
+            </h4>
+        </div>
+    </div>
+</div>
+<%<Hi:Common_Footer runat="server"   />%>

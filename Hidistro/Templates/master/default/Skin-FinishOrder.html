@@ -1,0 +1,37 @@
+﻿<%<Hi:Common_Header runat="server" SkinName="ascx/tags/Skin-Common-Top.ascx"  />%>
+<form runat="server">
+<div class="cart_h">
+	<div id="logo"><Hi:Common_Logo ID="Common_Logo1" runat="server" /></div>
+	<div class="cart_step">
+		<ul class="cart_step3">
+			<li class="step-1"><b></b>1.我的购物车</li>
+			<li class="step-2"><b></b>2.填写核对订单信息</li>
+			<li class="step-3">3.成功提交订单</li>
+		</ul>
+	</div>
+</div>
+<div class="cart_content">
+
+  <div class="cart_payment">
+    <table cellpadding="0" cellspacing="0" border="0" class="cart_payment_table">
+      <tr>
+        <td width="10%" valign="top"><img src="/images/cart/successico.jpg" /></td>
+        <td width="90%" class="cart_payment_td">
+            <p>感谢您，订单提交成功！请您及时付款！</p>
+            <table cellpadding="0" cellspacing="0" border="0" width="90%">
+               <tr>
+                  <td width="30%">订单号：<span><%<asp:Literal  runat="server" ID="litOrderId" />%></span></td><td width="30%">付款方式：<span><%<asp:Literal runat="server" ID="litPaymentName" />%></span></td><td width="30%" >支付总金额：<em class="emcolor"> ￥<%<Hi:FormatedMoneyLabel  runat="server" ID="litOrderPrice" />%></em></td>
+               </tr>
+            </table>
+            <div>请您记下订单号，以便您在付款和享受售后服务的时候使用。</div>
+            <div>完成支付后，您可以：<a href="url:home">继续购物</a> </div>
+            <div><%<asp:Button CssClass="core_order_pay_sub" Text="立刻支付"  runat="server"  ID="btnSubMitOrder"/>%></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+     
+</div>
+</form>
+ <%<Hi:Common_Footer runat="server" SkinName="ascx/tags/Skin-Common_Bottom.ascx"  />%>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="style/layout.css" />
+<script src="../../Utility/jquery-1.6.4.min.js"></script>
+<script src="../../Utility/jquery.artDialog.js"></script>
+<script src="../../Utility/iframeTools.js"></script>
+<script>
+    function ShowSecondMenuLeft(firstnode, secondurl, threeurl) {
+        window.parent.ShowMenuLeft(firstnode, secondurl, threeurl);
+        art.dialog.close();
+    }
+</script>
+</head>
+
+<body>
+
+<div class="guide_close"><img src="images/pic/close.jpg" /></div>
+<div class="guide_tit"><img src="images/pic/index_tit2.jpg" /></div> 
+<div class="ready_meun">
+<ul>
+<li>开始准备</li>
+<li  id="ready_pitch">录入数据</li>
+<li>营销推广</li>
+<li>开展分销</li>
+<li>业务管理</li>
+<li>完成</li>
+</ul>
+</div> 
+ 
+<div class="ready_con">
+<h2>添加商品分类</h2>
+<p>商品分类是对您的商品进行分门别类，可以让客户对店铺销售的商品一目了然，快速找到相应商品。<a href="javascript:ShowSecondMenuLeft('商 品','product/managecategories.aspx','product/AddCategory.aspx')">现在添加</a></p>
+<h2>添加商品类型</h2>
+<p>商品类型一方面供顾客查看，如衣服的季节，一方面供客户购买时选择，如颜色、尺码。<a href="javascript:ShowSecondMenuLeft('商 品','product/producttypes.aspx','product/AddProductType.aspx')">现在添加</a></p>
+<h2>添加商品资料</h2>
+<p>尽量把商品信息填写得全面、详细，客户只有足够了解商品后，才会乐意购买。<a href="javascript:ShowSecondMenuLeft('商 品','product/selectcategory.aspx',null)">现在添加</a></p>
+<p>另外，你也可以将其他店铺（淘宝、拍拍、分销商城）的商品批量导入。<a href="javascript:ShowSecondMenuLeft('商 品','product/importfromtb.aspx',null)">点击查看</a></p>
+<h2>添加产品线</h2>
+<p>供应商可按品牌及分类设置多条产品线，针对不同分销商授权不同产品线。一方面提高铺货效率，另一方面可以有效管控分销渠道的商品。<a href="javascript:ShowSecondMenuLeft('商 品','product/productlines.aspx','product/AddProductLine.aspx')">现在添加</a></p>
+</div> 
+ 
+<div class="guide_buttom2">
+<span><a href="readiness.html">上一步</a></span><em><a href="promote.html">下一步</a></em>
+</div>
+
+</body>
+</html>

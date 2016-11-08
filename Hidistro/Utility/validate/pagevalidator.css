@@ -1,0 +1,4 @@
+
+.msgError{background:#FFF2E9 url(validate_error.gif) no-repeat; width:350px; padding-left:25px;padding-top:3px;padding-bottom:3px;border: #f60 1px solid;}
+.msgError a{color:red;}
+.msgAjaxing{background:#E9FFEB url(spinner.gif) no-repeat 3px 3px; padding-left:25px;padding-top:5px;padding-bottom:3px;} 

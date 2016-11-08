@@ -1,0 +1,31 @@
+﻿ <%<Hi:Common_Header runat="server"  />%>
+<div class="main">
+        <div class="re_friend_tab">
+            <h2 class="re_productreviews_h2">
+                成交记录信息</h2>
+            <table class="tab_sales">
+                <tr class="tr_head">
+                    <td>
+                        买家
+                    </td>
+                    <td>
+                        数量
+                    </td>
+                    <td>
+                        付款时间
+                    </td>
+                    <td>
+                        款式和型号
+                    </td>
+                </tr>
+                <%<Hi:ThemedTemplatedRepeater ID="rptRecords" runat="server" TemplateFile="/ascx/tags/Common_ViewProduct/Skin-Common_LineItem.ascx" />%>
+            </table>
+            <div class="product_reviews_pages">
+                <div class="pagination">
+                    <%<UI:Pager runat="server" ShowTotalPages="true" ID="pager"/>%>
+                </div>
+            </div>
+        </div>
+</div>
+<%<Hi:Common_Footer runat="server"   />%>
+

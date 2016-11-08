@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root CategoryNum="0">
+  <Menu Id="1" Title="商城资讯" DisplaySequence="2" Category="1" Url="AllArticles" Where="" Visible="true" />
+  <Menu Id="2" Title="限时抢购" DisplaySequence="1" Category="1" Url="CountDownProducts" Where="" Visible="true" />
+  <Menu Id="3" Title="团购" DisplaySequence="3" Category="1" Url="GroupBuyProducts" Where="" Visible="true" />
+  <Menu Id="4" Title="捆绑销售" DisplaySequence="4" Category="1" Url="BundlingProducts" Where="" Visible="true" />
+  <Menu Id="5" Title="品牌专卖" DisplaySequence="5" Category="1" Url="brand" Where="" Visible="true" />
+  <Menu Id="6" Title="优惠活动" DisplaySequence="6" Category="1" Url="Promotes" Where="" Visible="false" />
+  <Menu Id="7" Title="玩具" DisplaySequence="1" Category="2" Url="" Where="309,55,2,0,100,1" Visible="true" />
+  <Menu Id="8" Title="下架区" DisplaySequence="1" Category="1" Url="productunslaes" Where="" Visible="true" />
+</root>

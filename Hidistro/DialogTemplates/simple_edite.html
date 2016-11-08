@@ -1,0 +1,297 @@
+﻿<style>
+.tableform{height:420px;}
+</style>
+<div class="tableform">
+    <table cellpadding="0" cellspacing="0" border="0" style=" padding-top:10px;">
+        <tr>
+          <td>商品数量：<input type="text" class="input-text" id="txtnum" name="txtnum" /></td>
+          <td>图片规格：<select name="slsthumbil" id="slsthumbil" class="input-select">
+            <option value="60">60*60</option>
+            <option value="100">100*100</option>
+            <option value="160">160*160</option>
+            <option value="180">180*180</option>
+            <option value="220">220*220</option>
+            <option value="310">310*310</option>
+         </select></td>
+          <td></td>
+         </tr>
+        
+        <tr class="tr_header">
+            <td>商品分类</td>
+             <td>商品品牌</td>
+            <td>自定义标签</td>
+        </tr>
+     <tr>
+         <td><select name="slscategroy" id="slscategory" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+         <td><select name="slsbrand" id="slsbrand" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+         <td><select name="slstag" id="slstag" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+     </tr>
+         <tr class="tr_header">
+         <td>商品类型</td>        
+            <td>商品属性名</td>
+            <td>商品属性值</td>
+         </tr>
+         <tr>
+         <td>
+           <select name="slstype" id="slstype" size="5" class="selectmult"><option value="">---请选择商品类型---</option></select>
+         </td>
+         <td><select name="slsattribute" id="slsattribute" size="5" class="selectmult"><option value="">---请选择属性名称---</option></select></td>
+         <td><select name="slsattributevalue" id="slsattributevalue" size="5" class="selectmult"><option value="">---请选择属性值---</option></select></td>
+         </tr>
+    </table>
+</div>
+<script>
+    var SimpleJson = null;
+    function loadEditDialogData() {
+
+        Hidistro_Dialog.dialogContent = $(taboverlaycontent).html();
+
+        Hidistro_Dialog.dialogShow();
+        Hidistro_Dialog.dialogTitle($(ctrnamediv).html());
+
+        $.ajax({
+            url: "Handler/DesigProduct.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "simpleview"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    SimpleJson = msg.Result;
+                    DataBindValue();
+                } else {
+                    art.dialog({ content: msg.Result, lock: true });
+                }
+            },
+            complete: function () {
+                BindSimpleEvent();
+            }
+        });
+    }
+
+    //绑定加载后的事件
+    function BindSimpleEvent() {
+        if (SimpleJson != null) {
+            $("#slstype").change(function (suoyin, op) { //绑定商品类型change事件
+                $("#slsattribute").empty();
+                $("#slsattributevalue").empty();
+                if (this.value != "" && parseInt(this.value) > 0) {
+                    var typeid = this.value;
+                    $.each(SimpleJson.Attributes, function (index, item) {
+                        if (parseInt(item.TypeId) == parseInt(typeid)) {
+                            $("#slsattribute").append("<option value=\"" + item.AttributeId + "\">" + item.AttributeName + "</option>");
+                        }
+                    });
+                }
+
+                $("#slsattribute").prepend("<option value=''>全部</option>");
+                $("#slsattribute").get(0).selectedIndex = 0;
+                $("#slsattributevalue").prepend("<option value=''>全部</option>");
+                $("#slsattributevalue").get(0).selectedIndex = 0;
+            });
+
+            $("#slsattribute").change(function () {//商品属性change事件
+                $("#slsattributevalue").empty();
+                if (this.value != "" && parseInt(this.value) > 0) {
+                    var attributeId = this.value;
+                    $.each(SimpleJson.Attributes, function (index, item) {
+                        if (parseInt(item.AttributeId) == parseInt(attributeId)) {
+                            $.each(item.AttributeValues, function (suoyin, options) {
+                                $("#slsattributevalue").append("<option value=\"" + options.ValueId + "\">" + options.ValueStr + "</option>");
+                            });
+                        }
+                    });
+                }
+                $("#slsattributevalue").prepend("<option value=''>全部</option>");
+                $("#slsattributevalue").get(0).selectedIndex = 0;
+            });
+        }
+        if (Hidistro_designer.ElementValues != null) {
+            
+            $("#slscategory option[value='" + Hidistro_designer.ElementValues.CategoryId + "']").attr("selected", true);
+            $("#slsbrand option[value='" + Hidistro_designer.ElementValues.BrandId + "']").attr("selected", true);
+            $("#slstag option[value='" + Hidistro_designer.ElementValues.TagId + "']").attr("selected", true);
+            if (Hidistro_designer.ElementValues.TypeId != "") {
+                $("#slstype option[value='" + Hidistro_designer.ElementValues.TypeId + "']").attr("selected", true);
+                $("#slstype").trigger("change");
+            }
+            if (Hidistro_designer.ElementValues.AttributeString != "") {
+                $("#slsattribute option[value='" + Hidistro_designer.ElementValues.AttributeString + "']").attr("selected", true);
+                $.each(Hidistro_designer.ElementValues.AttributeString.split(','), function (index, item) {
+                    $("#slsattribute option[value='" + item.split('_')[0] + "']").attr("selected", true);
+                    $("#slsattribute").trigger("change");
+                });
+                $.each(Hidistro_designer.ElementValues.AttributeString.split(','), function (index, item) {
+                    $("#slsattributevalue option[value='" + item.split('_')[1] + "']").attr("selected", true);
+                });
+            }
+            if (Hidistro_designer.ElementValues.ImageSizeRange != null && Hidistro_designer.ElementValues.ImageSizeRange != "undefined" && Hidistro_designer.ElementValues.ImageSizeRange != "") {
+                $("#slsthumbil").empty();
+                var thumbilstr = Hidistro_designer.ElementValues.ImageSizeRange.split(',');
+                for (var i = 0; i < thumbilstr.length; i++) {
+                    $("#slsthumbil").append("<option value=" + thumbilstr[i] + ">" + thumbilstr[i] + "*" + thumbilstr[i] + "</option>");
+                }
+            }
+            $("#slsthumbil option[value='" + Hidistro_designer.ElementValues.ImageSize + "']").attr("selected", true);
+            $("#txtnum").val(Hidistro_designer.ElementValues.MaxNum);
+        }
+    }
+
+    //绑定值
+    function DataBindValue() {
+        if (SimpleJson.Categorys.length > 0) { //循环商品分类 
+            $("#slscategory").empty();
+            $.each(SimpleJson.Categorys, function (index, item) {
+                
+                $("#slscategory").append("<option value=\"" + item.CategoryId.replace(/\s/g, "") + "\">" + FormCategoryPath(item.Depth, item.Name) + "</option>");
+            });
+            $("#slscategory").prepend("<option value=''>全部</option>");
+            $("#slscategory").get(0).selectedIndex = 0;
+        }
+
+        if (SimpleJson.Brands.length > 0) {//品牌绑定
+            $("#slsbrand").empty();
+            $.each(SimpleJson.Brands, function (index, item) {
+                $("#slsbrand").append("<option value=\"" + item.BrandId.replace(/\s/g, "") + "\">" + item.BrandName.replace(/\s/g, "") + "</option>");
+            });
+            $("#slsbrand").prepend("<option value=''>全部</option>");
+            $("#slsbrand").get(0).selectedIndex =0;
+
+        }
+
+        if (SimpleJson.Tags.length > 0) {//自定义标签循环
+            $("#slstag").empty();
+            $.each(SimpleJson.Tags, function (index, item) {
+                $("#slstag").append("<option value=\"" + item.TagID.replace(/\s/g, "") + "\">" + item.TagName.replace(/\s/g, "") + "</option>");
+            });
+            $("#slstag").prepend("<option value=''>全部</option>");
+            $("#slstag").get(0).selectedIndex =0;
+        }
+
+  
+        if (SimpleJson.ProductTypes.length > 0) {//商品类型循环
+            $("#slstype").empty();
+
+            $.each(SimpleJson.ProductTypes, function (index, item) {
+                $("#slstype").append("<option value=\"" + item.TypeId+ "\">" + item.TypeName.replace(/\s/g, "") + "</option>");
+            });
+            $("#slstype").prepend("<option value=''>全部</option>");
+            $("#slstype").get(0).selectedIndex =0;
+        }
+
+        if (SimpleJson.Attributes.length > 0) {
+            $("#slsattribute").empty();
+            $("#slsattributevalue").empty();
+            $.each(SimpleJson.Attributes, function (index, item) {
+                $("#slsattribute").append("<option value=\"" + item.AttributeId+ "\">" + item.AttributeName.replace(/\s/g, "") + "</option>");
+            });
+            $("#slsattribute").prepend("<option value=''>全部</option>");
+            $("#slsattribute").get(0).selectedIndex = 0;
+
+            if (SimpleJson.Attributes[0].AttributeValues.length > 0) {
+                $.each(SimpleJson.Attributes[0].AttributeValues, function (index, item) {
+                    $("#slsattributevalue").append("<option value=\"" + item.ValueId + "\">" + item.ValueStr.replace(/\s/g, "") + "</option");
+                });
+                $("#slsattributevalue").prepend("<option value=''>全部</option>");
+                $("#slsattributevalue").get(0).selectedIndex =0;
+            }
+       }
+
+    }
+
+    //确定保存
+    function SaveElmentValue() {
+        if ($("#txtnum").val().replace(/\s/g, "") == "") {
+            Hidistro_Dialog.dialogTip('error', '商品数量不允许为空');
+            return false;
+        }
+        if (isNaN($("#txtnum").val().replace(/\s/g, ""))
+        || parseInt($("#txtnum").val().replace(/\s/g, "")) <= 0
+        || parseInt($("#txtnum").val().replace(/\s/g, "")) > 100) {
+            Hidistro_Dialog.dialogTip('error', '商品数量必须1~100之间');
+            return false;
+        }
+        if ($("#slsthumbil option:selected").val()=="") {
+            Hidistro_Dialog.dialogTip('error', '请选择图片规格');
+            return false;
+        }
+        if ($("#slsattribute option:selected").val() != "" && $("#slsattributevalue option:selected").val()=="") {
+            Hidistro_Dialog.dialogTip('error', '请选择属性值');
+            return false;
+        }
+        var attributestring="";
+        if($("#slsattribute option:selected").val() != ""&&$("#slsattributevalue option:selected").val()!=""){
+                attributestring=$("#slsattribute option:selected").val()+"_"+$("#slsattributevalue option:selected").val();
+        }
+
+            var categoryId = brandId = typeId =tagId="";
+            if ($("#slscategory").val() != null)
+                categoryId = $("#slscategory").val();
+            if ($("#slsbrand").val() != null)
+                brandId = $("#slsbrand").val();
+            if ($("#slstype").val() != null)
+                typeId = $("#slstype").val();
+            if ($("#slstag").val() != null)
+                tagId = $("#slstag").val();
+
+        $.ajax({
+            url: "Handler/DesigProduct.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "editesimple",
+                Param: "{\"SubjectId\":\"" + Hidistro_designer.CurrentContentID +
+                "\",\"CategoryId\":\"" + categoryId + "\" ,\"TagId\": \"" + tagId +
+                 "\", \"BrandId\": \"" + brandId + "\" ,\"TypeId\":\"" + typeId +
+                  "\",\"AttributeString\":\"" + attributestring + "\",\"MaxNum\":\"" + $("#txtnum").val()+ 
+                  "\",\"ImageSize\": \"" + $("#slsthumbil").val() + "\"}"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    $("#" + Hidistro_designer.CurrentContentID).replaceWith(msg.Result.Simple);
+                    Hidistro_Dialog.dialogTip("succeed","商品列表更新成功");
+                } else {
+                    Hidistro_Dialog.dialogTip("error", msg.Result);
+                }
+            },
+            complete: function () {
+                Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+            }
+        });
+
+    }
+
+    function GetHtmlByElementId() {
+        $.ajax({
+            url: "Handler/DesigProduct.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "loadhtml",
+                SubjectId: Hidistro_designer.CurrentContentID,
+                Type: Hidistro_designer.CurrentContentIDCurrentcontrolType
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    
+                } else {
+                    Hidistro_Dialog.dialogTip("error", msg.Result);
+                }
+            },
+            complete: function () {
+                Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+            }
+        });
+    }
+
+    function FormCategoryPath(depath, categoryname) {
+        for (var index = 1; index < depath; index++) {
+            categoryname = "　　" + categoryname;
+        }
+        return categoryname;
+    }      
+</script>

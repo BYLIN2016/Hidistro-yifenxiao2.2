@@ -1,0 +1,30 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+
+<div class="main">
+    <div class="nav_info">&nbsp;<a  href="/">首页</a>>><span>捆绑销售</span></div>
+    <div class="category">
+        <div class="category_l">
+            <div class="category_list">
+              <%<Hi:Common_ProductCategoryList TemplateFile="/ascx/tags/Skin-Common_ProductCategoryList.ascx"  runat="server" />%>
+              </div>
+              <div class="category_browse">
+                  <h2>浏览过的商品</h2>
+                  <ul>
+                   <%<Hi:Common_GoodsList_Browsed MaxNum="4"  runat="server" />%>
+                  </ul>
+              </div>
+        </div>
+
+        <div class="category_r">
+	        
+	        <div class="category_pro_tab">
+	                <%<Hi:ThemedTemplatedRepeater ID="rptProduct" runat="server" TemplateFile="/ascx/Tags/Common_GoodsList/Skin-Common_GoodsList_BundlingProducts.ascx" />%>
+	        </div>
+	        <div class="page">
+              <%<UI:Pager runat="server" ShowTotalPages="true" ID="pager" DefaultPageSize="5" />%>
+             </div>
+        </div>
+    </div>
+</div>
+
+<%<Hi:Common_Footer runat="server"   />%>

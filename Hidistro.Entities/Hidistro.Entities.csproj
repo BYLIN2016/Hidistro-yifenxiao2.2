@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49294930-30AA-4764-A11A-1BF3844CA8F0}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Hidistro.Entities</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hidistro.Entities</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Hidistro.Entities/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hidistro.Core">
+      <Name>Hidistro.Core</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Membership.Context">
+      <Name>Hidistro.Membership.Context</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Membership.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="Hidistro.Membership.Core">
+      <Name>Hidistro.Membership.Core</Name>
+      <HintPath>..\Hidistro\bin\Hidistro.Membership.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hishop.Components.Validation">
+      <Name>Hishop.Components.Validation</Name>
+      <HintPath>..\Hidistro\bin\Hishop.Components.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <HintPath>System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+      <HintPath>System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <HintPath>System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Name>System.Runtime.Serialization</Name>
+      <HintPath>System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+      <HintPath>System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+      <HintPath>System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comments\AfficheInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\ArticleCategoryInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\ArticleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\ArticleQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\ConsultationReplyType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\DesignTempleteInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\HelpCategoryInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\HelpInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\HelpQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\LeaveCommentInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\LeaveCommentQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\LeaveCommentReplyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\MessageBoxInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\MessageBoxQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\MessageStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\ProductConsultationAndReplyQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\ProductConsultationInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\ProductReviewAndReplyQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\ProductReviewInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\ProductReviewQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Comments\UserProductReviewAndReplyQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\AdvancedProductQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ApiErrorCode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\AttributeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\AttributeUseageMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\AttributeValueInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\BrandCategoryInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\BrowsedProductQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\CategoryActionStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\CategoryInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\PenetrationStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ProductActionStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ProductBrowseInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ProductBrowseQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ProductInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ProductLineInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ProductQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ProductSaleStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ProductTypeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\ProductTypeQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\PublishStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\SKUItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commodities\SubjectListQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Distribution\DistributorQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Distribution\SiteRequestInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Distribution\SiteRequestStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmailType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpressHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HOP\PublishToTaobaoProductInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HOP\TaobaoProductInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ManageThemeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\AccountSummaryInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\BalanceDetailInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\BalanceDetailQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\BalanceDrawRequestInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\BalanceDrawRequestQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\ClientStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\DistributorGradeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\InpourRequestInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\MemberClientSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\MemberGradeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\MemberQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\MemberRankActionStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\OpenIdSettingsInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Members\TradeTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\BundlingInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\BundlingInfoQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\BundlingItemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\CountDownInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\CouponActionStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\CouponInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\CouponItemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\CouponItemInfoQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\GiftActionStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\GiftInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\GiftQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\GropBuyConditionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\GroupBuyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\GroupBuyQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\GroupBuyStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\PromoteType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Promotions\PromotionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegionHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\AdminStatisticsInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\DebitNote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\DebitNoteQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ExpressCompanyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\LineItemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\OrderActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\OrderGiftInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\OrderGiftQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\OrderInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\OrderMark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\OrderPriceStatisticsForChartInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\OrderQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\OrderStatisticsInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\OrderStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PaymentModeActionStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PaymentModeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PurchaseDebitNote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PurchaseOrderActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PurchaseOrderGiftInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PurchaseOrderGiftQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PurchaseOrderInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PurchaseOrderItemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PurchaseOrderQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PurchaseOrderTaobaoInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\PurchaseShoppingCartItemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\RefundApplyQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\RefundStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ReplaceApplyQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ReturnsApplyQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\SaleStatisticsAnalyzeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\SaleStatisticsQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\SaleStatisticsType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\SendNote.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ShippersInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ShippingAddressInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ShippingModeGroupInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ShippingModeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ShippingRegionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ShoppingCartGiftInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ShoppingCartInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\ShoppingCartItemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\StatisticsInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\UserOrderQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\UserPointInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\UserPointTradeType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\UserStatisticsForDate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sales\UserStatisticsInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Store\FriendlyLinksInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Store\ManagerQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Store\OperationLogEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Store\OperationLogQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Store\Privilege.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Store\VoteCheckType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Store\VoteInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Store\VoteItemInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TagsHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

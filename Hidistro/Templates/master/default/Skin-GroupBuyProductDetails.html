@@ -1,0 +1,253 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+    <div class="main">
+      <script src="/utility/cloud-zoom.1.0.2.js" type="text/javascript"></script>
+        <link href="/utility/cloud-zoom.css" rel="stylesheet" type="text/css" media="screen" />
+        <div class="login_tan" id="loginForBuy" style="display: none;">
+            <table width="0%" border="0" cellspacing="0">
+                <tr>
+          <td width="30" height="31">&nbsp;
+                        
+                    </td>
+                    <td width="101">&nbsp;
+                        
+                    </td>
+                    <td colspan="2">&nbsp;
+                        
+                    </td>
+                    <td width="116" align="right" valign="top">
+                        <img id="imgCloseLogin" src="/images/tancu_03.gif" width="26" height="26" />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="45" valign="middle">&nbsp;
+                        
+                    </td>
+                    <td valign="middle" class="fB">
+                        用户名：
+                    </td>
+                    <td colspan="2" valign="middle">
+                        <label>
+                            <input type="text" name="textfield" id="textfieldusername" class="login_tan_input1" />
+                        </label>
+                    </td>
+                    <td valign="middle">&nbsp;
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td height="45" valign="middle">&nbsp;
+                        
+                    </td>
+                    <td valign="middle" class="fB">
+                        密 码：
+                    </td>
+                    <td colspan="2" valign="middle">
+                        <input type="password" name="textfield2" id="textfieldpassword" class="login_tan_input2" />
+                    </td>
+                    <td valign="middle">
+                        <a href="url:ForgotPassword">忘记密码了?</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;
+                        
+                    </td>
+                    <td height="40">&nbsp;
+                        
+                    </td>
+                    <td width="123">
+                        <label>
+                            <input type="button" name="button" id="btnLoginAndBuy" value=" " class="login_tan_input3" />
+                        </label>
+                    </td>
+                    <td width="79">
+                        <a href="url:register">我要注册</a>
+                    </td>
+                    <td>&nbsp;
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <a name="top_name" id="top1"></a>
+        <div class="buy_intro">
+            <table cellpadding="0" cellspacing="0" border="0" class="buy_intro_table">
+                <tr style="padding: 0; margin: 0;">
+                    <td colspan="2">
+                        <div class="buy_product_name">
+                            <span>今日团购：</span><%<asp:Literal id="litProductName" runat="server" />%></div>
+                        <div class="buy_product_time">
+                            开始时间:<label id="lblStartTime"><%<Hi:FormatedTimeLabel runat="server" ID="lblStartTime"/> %></label>
+                            结束时间:<label id="lblEndTime"><%<Hi:FormatedTimeLabel runat="server" ID="lblEndTime"/> %></label>
+                            <span><a href="url:GroupBuyProducts">更多团购>></a></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="padding: 0; margin: 0;">
+                    <td width="521" valign="top">
+                        <div class="buy_product_price">
+                            <div>
+                                <span id="buycurrent">￥<span><%<Hi:FormatedMoneyLabel ID="lblCurrentSalePrice" runat="server" />%></span></span>
+                                <span id="buyoriginal">原价：<del>￥<span><%<Hi:FormatedMoneyLabel ID="lblSalePrice" runat="server" />%></span></del></span>
+                            </div>
+                            <%<Hi:BuyButton runat="server"  id="btnOrder">参团</Hi:BuyButton>%>
+                        </div>
+                        <div class="buy_product_parameter">
+                            <table width="496" cellspacing="0" cellpadding="0" border="0" class="buy_product_table">
+                                <tr>
+                                    <td width="165">
+                                        商品货号：<span><%<Hi:SkuLabel runat="server" id="lblSku" />%></span>
+                                    </td>
+                                    <td width="165">
+                                        库存数量：<span><%<Hi:StockLabel ID="lblStock" runat="server" />%><%<asp:Literal ID="litUnit" runat="server" />%></span>
+                                    </td>
+                                    <td width="165">
+                                        重&nbsp;&nbsp;&nbsp;&nbsp;量：<span><%<asp:Label ID="litWeight" runat="server" />%></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：<span><%<asp:Literal ID="litBrand" runat="server" />%></span>
+                                    </td>
+                                    <td>
+                                        浏览次数：<span><%<asp:Literal ID="litBrosedNum" runat="server" />%>
+                                            次</span>
+                                    </td>
+                                    <td>
+                                        违约金：<span><%<Hi:FormatedMoneyLabel ID="lblNeedPrice" runat="server" />%></span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="buy_product_next">
+                                <div class="buy_product_size">
+                                    <!--供填写属性-->
+                                    <%<Hi:SKUSelector runat="server" CssClass="Product_WareFun_bg"/>%>
+                                </div>
+                                <div class="quantity">
+                                    <ul>
+                                        <li>购买数量：</li>
+                                        <li><span>
+                                            <%<Hi:BuyAmountBox id="txtBuyAmount" CssClass="Product_input" runat="server"></Hi:BuyAmountBox>%></span></li>
+                                        <li class="total">商品总价：<span>￥<span><%<Hi:TotalLabel ID="lblTotalPrice" runat="server" /> %></span></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="buy_product_num">
+                                <p>
+                                    已有<span><%<asp:Label ID="litCount" runat="server" />%></span>参团 数量有限 请尽快购买！</p>
+                                <em>团购上限数量<span><%<asp:Label ID="litMaxCount" runat="server" />%></span>，满足 <span>
+                                    <%<asp:Literal ID="litNeedCount" runat="server" />%></span>团购成立！</em>
+                            </div>
+                            <div class="buy_product_time2">
+                                <span id="txtlefttime" class="tuangou_details_info_syfont"></span><span class="tuangou_details_info_sytime">
+                                    <label id="litRemainTimeHtml">
+                                        <%<asp:Literal ID='litRemainTime' runat='server' />%></label>
+                                    <script src="/utility/time.js" type="text/javascript"></script>
+                                    <script type="text/javascript">
+                                        function showtime() {
+                                            var strstartTime = document.getElementById("lblStartTime").innerHTML;
+                                            var strTime = document.getElementById("lblEndTime").innerHTML; //2011-01-06 11:40:00
+                                            showTimeList(strTime, "litRemainTimeHtml", "1", strstartTime);
+                                            setTimeout(showtime, 1000);
+                                        }
+                                        $(document).ready(function () {
+                                            showtime();
+                                        });		    
+                                    </script>
+                                </span>
+                            </div>
+                            <div class="buy_product_spread">
+                                <ul class="spread1">
+                                    <li class="product_re_blog">
+                                        <%<Hi:Common_ViewProduct_Blog Text="在Blog上展示这件商品" runat="server" />%>
+                                    </li>
+                                    <li class="product_re_friend">
+                                        <%<Hi:Common_ViewProduct_Commend  Text="向朋友推荐" runat="server" />%>
+                                    </li>
+                                    <li class="w"><a href="url:LeaveComments">有问题请留言</a></li>
+                                </ul>
+                                <ul class="spread2">
+                                    <li class="s">
+                                        <label>
+                                            <%<Hi:Common_ViewProduct_Favorite runat="server" Text="我要收藏" ></Hi:Common_ViewProduct_Favorite>%></label></li>
+                                    <li style="width: 320px;">
+                                        <h2 style="float: left;">
+                                            分享：</h2>
+                                        <div class="jiathis_style">
+                                            <a class="jiathis_button_qzone"></a><a class="jiathis_button_tsina"></a><a class="jiathis_button_tqq">
+                                            </a><a class="jiathis_button_renren"></a><a class="jiathis_button_kaixin001"></a>
+                                            <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis"
+                                                target="_blank"></a><a class="jiathis_counter_style"></a>
+                                        </div>
+                                        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1350294149446525"
+                                            charset="utf-8"></script>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="412" valign="top">
+                        <%<Hi:Common_ProductImages  SkinName="/ascx/tags/Common_ViewProduct/Skin-Common_ProductImages_hd.ascx"  Is410Image="false"  Is60Image="true"  ID="images" runat="server" />%>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <img src="/images/sub/buy/buydetails_27.jpg" /></div>
+        <div class="buy_product_explain">
+            <h2>
+                团购简单说明：</h2>
+            <p>
+                <%<asp:Literal ID="litContent" runat="server" />%></p>
+        </div>
+        <div style="height: 40px; overflow: hidden; clear: both;">
+        </div>
+        <div class="buy_product_detail">
+            <ul class="buy_product_wrap">
+                <li class="curr">详细说明</li>
+                <li>商品咨询</li>
+                <li>商品评论</li>
+            </ul>
+            <div class="product_mc">
+                <ul>
+                    <%<Hi:ThemedTemplatedRepeater ID="rptExpandAttributes" runat="server" TemplateFile="/ascx/tags/Common_ViewProduct/Skin-ExpandAttributes_hd.ascx" />%></ul>
+                <div class="clear_both">
+                    <%<asp:Literal ID="litDescription" runat="server" />%></div>
+            </div>
+            <div class="product_mc" style="display: none">
+                <%<Hi:Common_ProductConsultations runat="server" TemplateFile="/ascx/tags/Common_ViewProduct/Skin-Common_ProductConsultations.ascx" MaxNum="5" />%>
+                <div class="details_plzx details_plzx2">
+                    <span class="colorF">
+                        <%<asp:HyperLink ID="hpkProductConsultations" runat="server" CssClass="Product_a Product_b" />%></span>
+                    <%<Hi:Common_ViewProduct_Consultation runat="server" CssClass="Product_a"/>%>
+                </div>
+            </div>
+            <div class="product_mc" style="display: none">
+                <div>
+                    <!--商品评论-->
+                    <%<Hi:Common_ProductReview runat="server" TemplateFile="/ascx/tags/Common_ViewProduct/Skin-Common_ProductReview.ascx" MaxNum="5" />%>
+                    <div class="details_plzx details_plzx2">
+                        <span class="colorF">
+                            <%<asp:HyperLink ID="hpkProductReviews" runat="server" CssClass="Product_a Product_b" />%></span><%<Hi:Common_ViewProduct_Review runat="server" CssClass="Product_a"/>%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(".buy_product_wrap li").click(function () {
+                var li_index = $(".buy_product_wrap li").index(this);
+                $(".product_mc").hide().eq(li_index).show();
+                $(this).addClass("curr").siblings().removeClass("curr");
+            });
+        </script>
+        <script src="/utility/product.helper.js" type="text/javascript"></script>
+        <!-- 相关商品-->
+        <div class="product_related">
+            <h2>
+                <b>相关商品</b></h2>
+            <ul>
+                <%<Hi:Common_GoodsList_Correlative TemplateFile="/ascx/tags/Common_GoodsList/Skin-Common_GoodsList_Correlative_hd.ascx" MaxNum="5" runat="server"/>%>
+            </ul>
+        </div>
+    </div>
+<%<Hi:Common_Footer runat="server"   />%>

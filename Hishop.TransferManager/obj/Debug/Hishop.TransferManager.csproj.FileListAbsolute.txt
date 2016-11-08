@@ -1,0 +1,38 @@
+C:\Hidistro2.2\Hishop.TransferManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Hidistro2.2\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.dll
+C:\Hidistro2.2\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.pdb
+C:\Hidistro2.2\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.dll
+C:\Hidistro2.2\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.pdb
+E:\web\源码研究\Hidistro2.22源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.dll
+E:\web\源码研究\Hidistro2.22源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.pdb
+E:\web\源码研究\Hidistro2.22源码\Hishop.TransferManager\obj\Debug\ResolveAssemblyReference.cache
+E:\web\源码研究\Hidistro2.22源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.dll
+E:\web\源码研究\Hidistro2.22源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.pdb
+E:\web\源码研究\复件 Hidistro2.22源码\Hishop.TransferManager\obj\Debug\ResolveAssemblyReference.cache
+E:\web\源码研究\复件 Hidistro2.22源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.dll
+E:\web\源码研究\复件 Hidistro2.22源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.pdb
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.dll
+J:\复件 Hidistro2.2源码\复件 Hidistro2.22源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.pdb
+J:\Hidistro2.22源码\Hidistro2.2源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.pdb
+J:\Hidistro2.22源码\Hidistro2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.dll
+J:\Hidistro2.22源码\Hidistro2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.pdb
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hishop.TransferManager\obj\Debug\ResolveAssemblyReference.cache
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.dll
+H:\结婚照片\新源码研究\Hidistro2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.pdb
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.dll
+C:\Users\Administrator\Desktop\销售模块\Hidistro易分销2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hishop.TransferManager\bin\Debug\Hishop.TransferManager.pdb
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.dll
+C:\Users\Administrator\Desktop\Hidistro易分销2.2源码\Hishop.TransferManager\obj\Debug\Hishop.TransferManager.pdb

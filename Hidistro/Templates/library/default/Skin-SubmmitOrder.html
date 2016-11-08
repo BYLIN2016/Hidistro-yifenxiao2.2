@@ -1,0 +1,234 @@
+﻿<%<Hi:Common_Header runat="server" SkinName="ascx/tags/Skin-Common-Top.ascx"  />%> 
+<hi:script id="Script2" runat="server" src="utility/validate/pagevalidator.js" />
+<hi:script id="Script3" runat="server" src="utility/submmitorder.helper.js" />
+<script language="javascript" type="text/javascript">
+        function InitValidators() {
+            initValid(new InputValidator('SubmmitOrder_txtShipTo', 2, 20, false, '[\u4e00-\u9fa5a-zA-Z]+[\u4e00-\u9fa5_a-zA-Z0-9]*', '名字不能为空，只能是汉字或字母开头，长度在2-20个字符之间'));
+            initValid(new InputValidator('SubmmitOrder_txtAddress', 3, 200, false, null, '详细地址不能为空,3-200个字符'));
+            initValid(new InputValidator('SubmmitOrder_txtTelPhone', 3, 20, true, null, '收货人的电话号码(区号-电话号码-分机)'));
+            initValid(new InputValidator('SubmmitOrder_txtCellPhone', 3, 20, true, null, '收货人的手机号码'));
+
+        }
+
+        $(document).ready(function () {
+            javascript: window.history.forward(1);
+
+            InitValidators();
+        });
+</script>
+<form runat="server" id="form1">
+    <div class="cart_h">
+        <div id="logo">
+            <hi:common_logo runat="server" />
+        </div>
+        <div class="cart_step">
+            <ul class="cart_step2">
+                <li class="step-1"><b></b>1.我的购物车</li>
+                <li class="step-2"><b></b>2.填写核对订单信息</li>
+                <li class="step-3">3.成功提交订单</li>
+            </ul>
+        </div>
+    </div>
+    <%<Hi:SmallStatusMessage id="Status" runat="server" Visible="False" />%>
+    <div class="cart_content">
+        <div class="OrderSubmit">
+            <div class="OrderSubmit_switch">
+                <h2>
+                    请填写并核对订单信息</h2>
+                <p>
+                    <a id="a_salemode">切换到代销模式</a></p>
+            </div>
+            <% <asp:Panel ID="pannel_useraddress" runat="server" ClientidMode="Static"> %>
+            <div class="cart_Order_address">
+                <h3 style="border-top:1px solid #ebeaea;">收货地址</h3>
+                <div class="address_have" id="addresslist">
+                    <% <Hi:Common_ShippingAddress runat="server" /> %>
+                    <div class="control">
+                        <a class="use_newAddr" id="btnaddaddress">+使用新地址</a><a class="manageAddr" target="_blank"
+                            href="url:user_UserShippingAddresses">管理收货地址</a></div>
+                </div>
+                <div class="comon_submmitorder_address">
+                    <% <Hi:Common_Link_OpenId_Address Text="获取支付宝收货地址" ImageUrl="images/alipay_consignee.png"  runat="server"  />%>
+                </div>
+            </div>
+            <%</asp:Panel> %>
+            <div class="comon_submmitorder_address2">
+                <input type="hidden" id="hdcopyshipping" value="SubmmitOrder_txtShipTo,SubmmitOrder_txtCellPhone,SubmmitOrder_txtTelPhone,SubmmitOrder_txtZipcode,SubmmitOrder_txtAddress" />
+                <%<Hi:Common_CopyShippingAddress runat="server" />%>
+            </div>
+            <div class="cart_Order_address" id="user_shippingaddress">
+                <table class="loginForBuytit" border="0" cellspacing="0" cellpadding="0" id="tab_address"
+                    style="display: none">
+                    <tr>
+                        <td width="800">
+                            <h2 id="tr_addresstitle">
+                                新增收获地址</h2>
+                        </td>
+                        <td width="40">
+                            <p>
+                                <img id="imgCloseLogin" src="/images/sub/close2.jpg" width="25" height="24" /></p>
+                        </td>
+                    </tr>
+                </table>
+                <ul>
+                    <li>
+                        <h2><em>*</em>收货人：</h2>
+                        <%<asp:TextBox ID="txtShipTo" CssClass="textform"  runat="server" />%><span id="txtShipToTip"
+                            runat="server"></span>
+                    </li>
+                    <li>
+                        <h2><em>*</em>收货地址：</h2>
+                        <%<Hi:RegionSelector runat="server" id="dropRegions" />%>
+                    </li>
+                    <li>
+                        <h2><em>*</em>详细地址：</h2>
+                        <%<asp:TextBox ID="txtAddress" CssClass="textform"  width="400" runat="server" />%><span
+                            id="txtAddressTip" runat="server"></span></li>
+                    <li>
+                        <h2>邮政编码：</h2>
+                        <%<asp:TextBox ID="txtZipcode" CssClass="textform"  runat="server" /> %></li>
+                    <li>
+                        <h2>电话号码：</h2>
+                        <%<asp:TextBox ID="txtTelPhone" CssClass="textform"  runat="server" /> %>
+                        <span id="txtTelPhoneTip" runat="server"></span></li>
+                    <li>
+                        <h2><em>*</em>手机号码：</h2>
+                        <%<asp:TextBox ID="txtCellPhone" CssClass="textform"  runat="server" /> %><span id="txtCellPhoneTip"
+                            runat="server"></span></li>
+                    <li id="btnaddr">
+                        <h2>
+                        </h2>
+                        <a class="manageAddr" onclick="return AddShippAddress()">添加收货地址</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Order_deliver_time">
+                <h2>送货上门时间：</h2>
+                <select runat="server" id="drpShipToDate" class="textform">
+                    <option>时间不限</option>
+                    <option>周一至周五</option>
+                    <option>周六日及公众假期</option>
+                </select>
+            </div>
+            <div class="cart_Order_deliver">
+                <h3>配送方式</h3>
+                <%<Hi:Common_ShippingModeList runat="server" />%>
+                <h3>支付方式</h3>
+                <span id="PaymentList">
+                    <%<Hi:Common_PaymentModeList runat="server" />%>
+                </span>
+            </div>
+            <div class="cart_Order_info">
+                <h3>商品清单<a href="/ShoppingCart.aspx"  class="return">返回修改购物车</a></h3>
+                <div class="cart_Order_info2">
+                    <%<Hi:Common_SubmmintOrder_ProductList runat="server" Width="100%" />%>
+                   
+                    <div class="cart_Weight">
+                        <strong>货物总重量（含礼品）：</strong><span style="color: Green; font-weight: 700;"><%<asp:Label ID="litAllWeight" runat="server" />%></span>
+                        克&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<em>运费：</em><span style="font-family:'microsoft yahei'; color:#008000">￥<%<Hi:FormatedMoneyLabel ID="lblShippModePrice" runat="server" NullToDisplay="0.00" />%>
+                            <%<asp:HyperLink ID="hlkFeeFreight" runat="server" Target="_blank" />%></span>&nbsp;&nbsp;&nbsp;</div>
+                </div>
+                <div class="cart_Order_info">
+           
+                    <%<Hi:Common_SubmmintOrder_GiftList runat="server" Width="100%" />%>
+                    
+                </div>
+                <div class="cart_Order_info3">
+                    <div class="cart_Order_coupon3">
+                        <div class="cart_Order_coupon" id="divcopue">
+                            <table width="540" cellspacing="0" cellpadding="0" runat="server" border="0" id="tbCoupon">
+                                <tbody>
+                                    <tr>
+                                        <td width="140"  height="32"  >
+                                            <link href="/style/easyui.css" rel="stylesheet" type="text/css" />
+                                            <script type="text/javascript" src="/utility/jquery.easyui.min.js"></script>
+                                            <select id="CmbCoupCode" name="CmbCoupCode" class="easyui-combobox" required="false"
+                                                style="width:140px;" runat="server">
+                                            </select>
+                                        </td>
+                                        <td width="10">&nbsp;</td>
+                                        <td  width="390">
+                                            <input type="button" value="使用优惠券" id="btnCoupon" />
+                                            <span style="font-size:12px;">(使用优惠券可抵扣订单金额)</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table width="540" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="150">
+                                            <b style="font-size: 14px; color: #cb0100">您需要附加说明吗？</b>
+                                        </td>
+                                        <td valign="middle" height="15" align="left">
+                                            <%<asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="1" Columns="45" />%>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table width="540" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td width="140">
+                                    <input type="checkbox" runat="server" id="chkTax" name="chkTax" onclick="javascript:if(this.checked){$('#div_fapiao').show();}else{$('#div_fapiao').hide()}" />
+                                    
+                                        是否需要发票
+                                    </td>
+                                    <td align="left">
+                                        <div id="div_fapiao" style="display: none">
+                                            税金：(<em><%<asp:Label runat="server" ID="litTaxRate" />%></em>%)
+                                            +<span>￥<span><%<Hi:FormatedMoneyLabel ID="lblTax" runat="server" NullToDisplay="0.00" />%></span></span>
+                                            发票抬头：<%<asp:TextBox ID="txtInvoiceTitle" runat="server" MaxLength="50" CssClass="cart_invoice" Width="160px" />%>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="cart_Order_total">
+                    
+                        <div>
+                            <%<asp:Literal runat="server" ID="litProductAmount" />%>
+                        </div>
+                        <div>
+                            <h2>
+                                购物车小计：</h2>
+                            <span>￥<%<Hi:FormatedMoneyLabel ID="lblTotalPrice" runat="server" />%>&nbsp;<%<asp:Literal runat="server" ID="litProductBundling" />%></span></div>
+
+                            
+                        <div>
+                            <%<asp:HyperLink ID="hlkReducedPromotion" runat="server" Target="_blank" />%>
+                        </div>
+
+                        <div>
+                            <h2>
+                                可得积分：</h2>
+                            <span>
+                                <%<asp:Label ID="litPoint" runat="server" />%>
+                                <%<asp:HyperLink ID="hlkSentTimesPoint" runat="server" Target="_blank" />%></span></div>
+                        <div>
+                            <h2>
+                                优惠券抵扣金额：</h2>
+                            <span>￥<%<Hi:FormatedMoneyLabel ID="litCouponAmout" runat="server" NullToDisplay="0.00" />%></span></div>
+                        <div id="divPaymentPrice" style="display:none">
+                            <h2>
+                                支付手续费：</h2>
+                            <span>￥<%<Hi:FormatedMoneyLabel ID="lblPaymentPrice" runat="server" NullToDisplay="0.00" />%></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_Order_submit2">
+                <%<asp:Button ID="btnCreateOrder" runat="server" Text="确认提交"  />%><span class="total">应付总额：<span>￥<%<Hi:FormatedMoneyLabel ID="lblOrderTotal" runat="server" />%></span>元</span>
+            </div>
+        </div>
+    </div>
+    <!--所有的隐藏域-->
+    <input runat="server" id="htmlCouponCode" type="hidden" />
+    <input runat="server" id="inputPaymentModeId" type="hidden" />
+    <input runat="server" id="inputShippingModeId" type="hidden" />
+    <input type="hidden" id="hdbuytype" name="hdbuytype" runat="server" />
+    <!--结束-->
+  
+</form>  
+<%<Hi:Common_Footer runat="server" SkinName="ascx/tags/Skin-Common_Bottom.ascx"  />%>
+

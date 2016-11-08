@@ -1,0 +1,224 @@
+﻿<%<Hi:Common_Header runat="server"  />%>
+
+<div class="main">
+    <div class="main_p1" id="main_p1">
+        <div class="main_p1_m">
+        <div class="banner"> 
+            <script src="/utility/Tags/MogFocus.js" type="text/javascript"></script>
+            <Hi:Common_SlideAd runat="server" AdId="1" />
+        </div>
+        <div class="m_ggw1">
+            <Hi:Common_CustomAd runat="server" AdId="11" />
+        </div>
+    </div>
+    <div class="main_p1_r">
+    <div class="notice_tab">
+    <div class="notice_tab_hd">
+    <em>网站公告</em><span><a href="url:Affiches">更多>></a></span>
+    </div>
+    <div class="bd">
+    <ul>
+    <%<Hi:Common_AfficheList runat="server" TemplateFile="/ascx/tags/Common_Comment/Skin-Common_AfficheList.ascx" MaxNum="4" />%>
+    </ul>
+    </div>
+    <div class="r_ggw2"><Hi:Common_ImageAd runat="server" AdId="2" /></div>
+
+    </div>
+
+    <div class="group_buy">
+        <div class="notice_tab_hd">
+            <em>我要团</em><span><a href="url:GroupBuyProducts">更多>></a></span>
+        </div>
+        <script src="../../../Utility/time.js" type="text/javascript"></script>
+        <div class="bd">
+            <ul>
+           <Hi:Common_GoodsList_LatestGroupBuy runat="server" MaxNum="1" />
+        </ul>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+
+
+    <div class="main_p2">
+        <div id="main_p2_l" class="main_p2_l">
+            <div class="panic_buy">
+            <div class="hd">限时抢购</div>
+            <div class="bd">
+            <ul>
+             <Hi:Common_GoodsList_LatestCountDownBuy runat="server" MaxNum="4" />
+            </ul>
+            </div>
+            </div>
+            <div class="main_p2_tab">
+                <script src="/utility/Tags/TagsHelper.js" type="text/javascript"></script>
+                <Hi:Common_SubjectProduct_Tab runat="server" SubjectId="2" />
+            </div>
+        </div>
+        <div id="main_p2_r" class="main_p2_r">
+            <div class="brand_tab">
+                <div class="hd">推荐品牌</div>
+                <Hi:Common_SubjectBrand runat="server" CommentId="3" />
+            </div>
+
+            <div class="vote_tab">
+                <div class="hd">调查问卷</div>
+                <div class="bd">
+                    <div class="vote_btn">
+                       <%<Hi:Common_Vote ID="voteList" runat="server"  TemplateFile="/ascx/tags/Common_Comment/Skin-Common_Vote.ascx" />%>
+                    </div>
+                </div>
+            </div>
+
+            <div class="r_ggw3"><Hi:Common_ImageAd runat="server" AdId="3" /></div>
+
+        </div>
+    </div>
+
+    <div id="templetecontent">
+        <!--floor--->
+        <Hi:Common_SubjectProduct_Floor runat="server" SubjectId="1" />
+
+        <!--group-->
+        <Hi:Common_SubjectProduct_Group runat="server" SubjectId="4" />
+
+
+
+
+        <!---组合标签--->
+        <div class="pro_combination">
+            <div class="combination_l">
+            <Hi:Common_SubjectTitle runat="server" CommentId="8" />
+            <Hi:Common_SubjectCategory runat="server" CommentId="2" />
+            <Hi:Common_ImageAd runat="server" AdId="9" />
+            </div>
+     
+
+            <div class="combination_m combination_tab">
+                <Hi:Common_SubjectProduct_Tab runat="server" SubjectId="6" />
+            </div>
+
+            <div class="combination_r">
+            <div class="hd">销售排行</div>
+            <Hi:Common_SubjectProduct_Top runat="server" SubjectId="10" />
+            <div class="r_ggw7">
+              <Hi:Common_ImageAd runat="server" AdId="4" />
+            </div>
+
+            </div>
+            <Hi:Common_SubjectBrand runat="server" CommentId="5" />
+        </div>
+
+
+
+        <div class="pro_floor3">
+        <div class="floor_hd">
+        <Hi:Common_SubjectTitle runat="server" CommentId="10" />
+         <Hi:Common_SubjectKeyword runat="server" CommentId="12" />
+        <Hi:Common_SubjectMoreLink runat="server" CommentId="9" />
+        </div>
+
+        <div class="floor_bd">
+        <div class="floor_l">
+        <Hi:Common_SubjectCategory runat="server" CommentId="11" />
+        <div class="l_ggw4">
+            <Hi:Common_ImageAd runat="server" AdId="10" />
+        </div>
+        </div>
+         <Hi:Common_SubjectProduct_Simple runat="server" SubjectId="11" />
+
+    <Hi:Common_SubjectBrand runat="server" CommentId="6" />
+        </div>
+
+        </div>
+
+
+        <div class="pro_floor3">
+        <div class="floor_hd">
+        <Hi:Common_SubjectTitle runat="server" CommentId="13" />
+         <Hi:Common_SubjectKeyword runat="server" CommentId="15" />
+        <Hi:Common_SubjectMoreLink runat="server" CommentId="14" />
+        </div>
+
+        <div class="floor_bd">
+        <div class="floor_l">
+         <Hi:Common_SubjectCategory runat="server" CommentId="16" />
+        <div class="l_ggw4"><Hi:Common_ImageAd runat="server" AdId="6" /></div>
+        </div>
+
+        <Hi:Common_SubjectProduct_Simple runat="server" SubjectId="12" />
+
+        <Hi:Common_SubjectBrand runat="server" CommentId="17" />
+        </div>
+
+        </div>
+
+
+        <div class="main_p3">
+    <div class="on_sale">
+    <div class="hd"><b>特价清仓</b><span>Clearning</span></div>
+       <Hi:Common_SubjectProduct_Simple runat="server" SubjectId="13" />
+    </div>
+    <div class="main_p3_r">
+    <div class="order_news">
+    <Hi:Common_SubjectArticle CommentId="1" runat="server" />
+
+    <div class="order_notice">
+    <div class="notice_bd">
+    <marquee direction="left" onMouseOut="start()" onMouseOver="stop()" scrollamount="2">
+        <%<Hi:Common_YetShipOrderList TemplateFile="/ascx/tags/Skin-Common_YetShipOrderList.ascx" runat="server" /> %>
+    </marquee>
+    </div>
+    </div>
+    <div class="order_select">
+    <span>填上你的订单号</span><%<Hi:Common_OrderSearch runat="server"/> %>
+    </div>
+
+    </div>
+
+    <div class="order_reviews">
+    <div class="hd"><b>用户评价</b><span>User evaluation</span></div>
+    <div class="bd" id="div4" style="height:48px;overflow:hidden" >
+    <ul>
+    <%<Hi:Common_LatestReview MaxNum="5" TemplateFile="/ascx/tags/Skin-Common_LatestReview.ascx" runat="server" /> %>    
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+</div>
+<script>
+function startmarquee(lh,speed,delay,id) {
+	var t;
+	var p=false;
+	var o=document.getElementById(id);
+	o.innerHTML+=o.innerHTML;
+	o.onmouseover=function () {p=true;}
+	o.onmouseout=function () {p=false;}
+	o.scrollTop=0;
+	function start() {
+		t=setInterval(scrolling,speed);
+		if(!p)o.scrollTop+=2;
+	}
+	function scrolling() {
+		if(o.scrollTop%lh!=0) {
+			o.scrollTop+=2;
+			if(o.scrollTop>=o.scrollHeight/2)o.scrollTop=0;
+		}else {
+			clearInterval(t);
+			setTimeout(start,delay);
+		}
+	}
+	setTimeout(start,delay);
+}
+
+startmarquee(68,30,3000,'div4');
+
+</script>
+
+ <%<Hi:Common_Footer runat="server" SkinName="ascx/tags/Skin-Common_DefaultFooter.ascx" />%>
+

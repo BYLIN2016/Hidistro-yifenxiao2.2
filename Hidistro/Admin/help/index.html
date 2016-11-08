@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="style/layout.css" />
+<script src="../../Utility/jquery-1.6.4.min.js"></script>
+<script src="../../Utility/jquery.cookie.js"></script>
+<!--<script type="text/javascript" src="images/jquery.corner.js"></script>-->
+<script src="../../Utility/jquery.artDialog.js"></script>
+<script src="../../Utility/iframeTools.js"></script>
+<script>
+    function ShowSecondMenuLeft(firstnode, secondurl, threeurl) {
+        window.parent.ShowMenuLeft(firstnode, secondurl, threeurl);
+        art.dialog.close();
+    }
+    function SetGuide(checkobj) {
+        if (checkobj.checked) {
+            $.cookie("guide",1, { expires: 360, path: "/" });
+        } else {
+            $.cookie("guide",null, { expires: 360, path: "/" });
+        }
+    }
+
+    $(function () {
+        var a;
+        $(".guide_con ul li").hover(function () {
+
+            if (a) {
+                window.clearTimeout(a)
+            }
+            var c = this;
+            a = window.setTimeout(function () {
+                var g = $(".detail-frame", c).html();
+                var i = $("img", c).eq(1).offset().left;
+                var h = $("img", c).eq(1).offset().top;
+                var j = 0;
+                if ($(c).width() == 100) {
+                    j = 110;
+                } else {
+                    j = $("img", c).eq(1).width() + 10
+                }
+                $("body").append('<div class="detail-tip"></div>');
+                if ($(c).hasClass("r-end")) {
+                    $(".detail-tip").html(g).append('<span class="arrow-right"></span>').css("left", i + j - 295).css("top", h);
+                } else {
+                    $(".detail-tip").html(g).append('<span class="arrow-left"></span>').css("left", i + j).css("top", h);
+                }
+                //$(".detail-tip").corner();
+            }, 200)
+        }, function () {
+            if (a) {
+                window.clearTimeout(a)
+            }
+            $(".detail-tip").remove()
+        });
+        if($.cookie("guide") == "1") {
+            $("#ckguide").attr("checked", true);
+        }
+    });
+
+</script>
+
+</head>
+
+<body>
+<div class="guide_tit"><img src="images/pic/index_tit.jpg" /></div>
+<div class="guide_con">
+<ul>
+<li>
+    <div class="detail-frame">
+        <h2><img src="images/pic/1.jpg" />&nbsp;促销</h2>
+	    <p>内置时下最流行促销方案。团购、限时抢购等多种促销活动，销量飙升！订单促销、商品促销、捆绑促销多重促销方式将流量、转化、订单全面锁定！</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('营销推广','promotion/productpromotions.aspx',null);"><img src="images/pic/ico_1.jpg" /></a>
+</li>
+<li>
+     <div class="detail-frame">
+        <h2><img src="images/pic/2.jpg" />&nbsp;批发</h2>
+	    <p>单批、混批、按金额批、按数量批，多种批发规则自由设定满足不同业务形态。</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('营销推广','promotion/orderpromotions.aspx?isWholesale=true',null);"><img src="images/pic/ico_2.jpg" /></a></li>
+<li>
+    <div class="detail-frame">
+        <h2><img src="images/pic/3.jpg" />&nbsp;订单管理</h2>
+        <p>订单单据批量打印，自动填写快递单号，物流信息实时同步。订单效率飞起来，物流信息早知道。</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('订 单','sales/manageorder.aspx',null);"><img src="images/pic/ico_3.jpg" /></a></li>
+<li>
+    <div class="detail-frame">
+            <h2><img src="images/pic/4.jpg" />&nbsp;通淘宝</h2>
+            <p>与淘宝分销店铺商品批量同步，订单批量同步，发货信息同步。不用重复登录多个后台，不用手动二次提交订单。效率翻倍。</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('分销管理','product/taobaonote.aspx',null);"><img src="images/pic/ico_4.jpg" /></a></li>
+<li class="r-end">
+    <div class="detail-frame">
+        <h2><img src="images/pic/5.jpg" />&nbsp;CRM管理</h2>
+	    <p>帮助店主多方位分层管理用户；合理精准的营销活动，加强店铺和会员之间的联系，提高会员忠诚度。</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('CRM管理','member/clientset.aspx',null);"><img src="images/pic/ico_5.jpg" /></a></li>
+<li>
+    <div class="detail-frame">
+            <h2><img src="images/pic/6.jpg" />&nbsp;分销商管理</h2>
+            <p>多分销等级，多产品线，既能合理管理分销商又能满足分销商不同需求。</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('分销管理','distribution/managedistributor.aspx',null);"><img src="images/pic/ico_6.jpg" /></a></li>
+<li>
+    <div class="detail-frame">
+            <h2><img src="images/pic/7.jpg" />&nbsp;连锁加盟管理</h2>
+            <p>一键开通连锁加盟商城，库存、订单同步，统一维护，让分销商专注于卖货。</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('分销管理','distribution/managesites.aspx',null);"><img src="images/pic/ico_7.jpg" /></a></li>
+<li>
+    <div class="detail-frame">
+            <h2><img src="images/pic/8.jpg" />&nbsp;预存款</h2>
+            <p>通过预付款，解决销售账期问题，加速资金回笼。</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('财务管理','member/accountsummarylist.aspx',null);"><img src="images/pic/ico_8.jpg" /></a></li>
+<li>
+    <div class="detail-frame">
+            <h2><img src="images/pic/9.jpg" />&nbsp;支付物流</h2>
+            <p>23种支付手段， 26家物流支持。满足各方面客户的不同购物需求。</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('店铺配置','sales/paymenttypes.aspx',null);"><img src="images/pic/ico_9.jpg" /></a></li>
+<li class="r-end">
+    <div class="detail-frame">
+            <h2><img src="images/pic/10.jpg" />&nbsp;系统安全</h2>
+            <p>管理员权限设定；操作日志记录历史操作记录；数据库完美备份。</p>
+    </div>
+    <a href="javascript:ShowSecondMenuLeft('店铺配置','store/roles.aspx',null);"><img src="images/pic/ico_10.jpg" /></a></li>
+</ul>
+</div>
+
+<div class="guide_buttom">
+<p><em>跟着向导，抢先体验易分销的各大功能吧!</em></p>
+<span><em><a href="readiness.html">开始向导</a></em></span>
+</div>
+ <div class="guide_optionbor">
+<div class="guide_option"><input type="checkbox" onclick="SetGuide(this)" id="ckguide" />下次不再显示此向导</div>
+<div class="guide_close2"><a href="#">关闭</a></div>
+
+</div>
+</body>
+</html>

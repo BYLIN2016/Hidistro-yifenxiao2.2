@@ -1,0 +1,278 @@
+﻿        <div class="tableform">
+         <div class="ratetab">
+            <ul>
+                <li class="selected" onclick="SelectTab(this,1)"><a>基本设置</a></li>
+                <li onclick="SelectTab(this,2)"><a>标题图片</a></li>
+                <li onclick="SelectTab(this,3)"><a>广告图片</a></li>
+            </ul>
+         </div>
+         <div class="clear"></div>
+         <div class="ratebox">
+                 <table id="tab1">
+                    <tr class="tr_header">
+                        <td >商品分类</td><td>商品品牌</td><td>商品标签</td>
+                    </tr>
+                     <tr>
+                        <td><select name="slscategory" id="slscategory" class="selectmult" size="5"><option value="">---请选择---</option></select></td>
+                        <td><select name="slsbrand" id="slsbrand" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                        <td><select name="slstag" id="slstag" size="5" class="selectmult"><option value="">---请选择---</option></select></td>
+                    </tr>
+                    <tr>
+                        <td>楼层标题：<input type="text" id="txtfloortitle" class="input-text" name="txtfloortitle" /></td>
+                        <td>图片规格：<select name="slsthumbil" id="slsthumbil" class="input-select">
+                                    <option value="60">60*60</option>
+                                    <option value="100">100*100</option>
+                                    <option value="160">160*160</option>
+                                    <option value="180">180*180</option>
+                                    <option value="220">220*220</option>
+                                    <option value="310">310*310</option>
+                            </select></td>
+                        <td>商品数量：<input type="text" id="txtfloorMaxNum" class="input-text"  name="txtfloormaxNum" /></td>
+                     </tr>
+                    <tr>
+                        <td>子类数量：<input type="text" id="txtfloorsubNum" class="input-text"  name="txtfloorsubNum" /></td>
+                        <td><input type="checkbox" id="ckmore" name="ckmore" onclick="javascript:CheckMoreLink(this);"/>　是否显示更多链接</td>
+                        <td></td>
+                    </tr>
+                 </table>
+
+                 <table id="tab2" style="display:none">
+                 <tr>
+                    <td>
+                         <div id="title_picture" class="show_img">
+                   <ul><li><a><img  width="60px" height="60px" src="http://images.net.92hidc.net/Storage/none.gif" /><i></i></a></li></ul>
+                 </div>
+                     </td>
+                 </tr>
+                 <tr><td><iframe src="" id="Seltitframe" name="Seltitframe" width="622px" scrolling="no" frameborder="0" style="display: inline; height: 300px;"></iframe></td></tr>
+                 </table>
+
+                 <table id="tab3" style="display:none">
+                 <tr><td>
+                 <div id="banner_picture" class="show_img">
+                   <ul><li><a><img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/><i></i></a></li></ul>
+                 </div></td></tr>
+                 <tr><td><iframe src="" id="Seliframe" name="Seliframe" width="655px" scrolling="no" frameborder="0" style="display: inline; height: 290px;"></iframe></td></tr>
+                 </table>
+         </div>
+    </div>    
+        
+        <script>
+
+        var ProductFloorJson = null;
+        var ismorelink = false;
+        function FormCategoryPath(depath, categoryname) {
+            for (var index = 1; index < depath; index++) {
+                categoryname = "　　" + categoryname;
+            }
+            return categoryname;
+        }
+
+        function loadEditDialogData() {
+            Hidistro_Dialog.dialogContent = $(taboverlaycontent).html();
+            Hidistro_Dialog.dialogShow();
+            Hidistro_Dialog.dialogTitle($(ctrnamediv).html());
+
+            $(".show_img i").bind("click", function () {
+                RemovetempImg(this);
+            });
+
+            $.ajax({
+                url: "Handler/DesigProduct.ashx",
+                async: false,
+                type: "post",
+                data: {
+                    ModelId: "productfloorview"
+                },
+                dataType: "json",
+                success: function (msg) {
+                    if (msg.success) {
+                        ProductFloorJson = msg.Result;
+                        DataBindValue();
+                    } else {
+                        art.dialog({ content: msg.Result, lock: true,icon:"error" });
+                    }
+                },
+                complete: function () {
+                    BindProductFloorEvent();
+                }
+            });
+        }
+
+        //绑定值
+        function DataBindValue() {
+            if (ProductFloorJson.Categorys.length > 0) { //循环商品分类 
+                $("#slscategory").empty();
+                $.each(ProductFloorJson.Categorys, function (index, item) {
+                    $("#slscategory").append("<option value=\"" + item.CategoryId.replace(/\s/g, "") + "\">" + FormCategoryPath(item.Depth, item.Name) + "</option>");
+                });
+                $("#slscategory").prepend("<option value=''>全部</option>");
+                $("#slscategory").get(0).selectedIndex = 0;
+            }
+
+            if (ProductFloorJson.Brands.length > 0) {//品牌绑定
+                $("#slsbrand").empty();
+                $.each(ProductFloorJson.Brands, function (index, item) {
+                    $("#slsbrand").append("<option value=\"" + item.BrandId.replace(/\s/g, "") + "\">" + item.BrandName.replace(/\s/g, "") + "</option>");
+                });
+                $("#slsbrand").prepend("<option value=''>全部</option>");
+                $("#slsbrand").get(0).selectedIndex = 0;
+
+            }
+
+            if (ProductFloorJson.Tags.length > 0) {//自定义标签循环
+                $("#slstag").empty();
+                $.each(ProductFloorJson.Tags, function (index, item) {
+                    $("#slstag").append("<option value=\"" + item.TagID.replace(/\s/g, "") + "\">" + item.TagName.replace(/\s/g, "") + "</option>");
+                });
+                $("#slstag").prepend("<option value=''>全部</option>");
+                $("#slstag").get(0).selectedIndex = 0;
+            }
+        }
+
+
+        //赋值
+        function BindProductFloorEvent() {
+            if (Hidistro_designer.ElementValues != null) {
+                $("#slscategory option[value='" + Hidistro_designer.ElementValues.CategoryId + "']").attr("selected", true);
+                $("#slsbrand option[value='" + Hidistro_designer.ElementValues.BrandId + "']").attr("selected", true);
+                $("#slstag option[value='" + Hidistro_designer.ElementValues.TagId + "']").attr("selected", true);
+
+                $("#txtfloortitle").val(Hidistro_designer.ElementValues.Title);
+                
+                $("#txtfloorMaxNum").val(Hidistro_designer.ElementValues.MaxNum);
+                $("#txtfloorsubNum").val(Hidistro_designer.ElementValues.SubCategoryNum);
+
+                if (Hidistro_designer.ElementValues.AdImageSize != null && Hidistro_designer.ElementValues.AdImageSize != "") {
+                    $("#Seliframe").attr("src", "DialogTemplates/SelectImage.aspx?size=" + Hidistro_designer.ElementValues.AdImageSize + "&type=advertimg");
+                }
+                if (Hidistro_designer.ElementValues.TitleImageSize != null && Hidistro_designer.ElementValues.TitleImageSize != "") {
+                    $("#Seltitframe").attr("src", "DialogTemplates/SelectImage.aspx?size=" + Hidistro_designer.ElementValues.TitleImageSize + "&type=titleimg");
+                }
+
+                if (Hidistro_designer.ElementValues.ImageTitle != "") {
+                    $("#title_picture img:eq(0)").attr("src", Hidistro_designer.ElementValues.ImageTitle);
+                }
+                if (Hidistro_designer.ElementValues.AdImage != "") {
+                    $("#banner_picture img:eq(0)").attr("src", Hidistro_designer.ElementValues.AdImage);
+                }
+                if (Hidistro_designer.ElementValues.IsShowMoreLink=="true") {
+                    $("#ckmore").attr("checked", "true");
+                } else {
+                    $("#ckmore").removeAttr("checked");
+                }
+
+                if (Hidistro_designer.ElementValues.ImageSizeRange != null && Hidistro_designer.ElementValues.ImageSizeRange != "undefined" && Hidistro_designer.ElementValues.ImageSizeRange != "") {
+                    $("#slsthumbil").empty();
+                    var thumbilstr = Hidistro_designer.ElementValues.ImageSizeRange.split(',');
+                    for (var i = 0; i < thumbilstr.length; i++) {
+                        $("#slsthumbil").append("<option value=" + thumbilstr[i] + ">" + thumbilstr[i] + "*"+thumbilstr[i]+"</option>");
+                    }
+                }
+
+                $("#slsthumbil [value='" + Hidistro_designer.ElementValues.ImageSize + "']").attr("selected", true);
+            }
+        }
+
+
+        function SelectTab(obj, suoyin) {
+            $(obj).addClass("selected").siblings().removeClass("selected");
+            $("#tab" + suoyin).css("display", "block").siblings().css("display", "none");
+        }
+
+        //删除图片
+        function RemovetempImg(currentobj) {
+            if ($(currentobj).prev("img").attr("src") != "http://images.net.92hidc.net/Storage/none.gif")
+                $(currentobj).prev("img").attr("src", "http://images.net.92hidc.net/Storage/none.gif");
+        }
+
+        function CheckMoreLink(objmore) {
+            ismorelink = objmore.checked;
+        }
+
+        //保存值
+        function SaveElmentValue() {
+            if ($("#txtfloortitle").val().replace(/\s/g, "") == "" &&$("#title_picture img:eq(0)").attr("src") == "http://images.net.92hidc.net/Storage/none.gif") {
+                Hidistro_Dialog.dialogTip('error', '请上传标题图片或输入楼层标题');
+                return false;    
+            }
+            if ($("#txtfloorMaxNum").val().replace(/\s/g, "") == "") {
+                Hidistro_Dialog.dialogTip('error', '商品数量不允许为空');
+                return false;
+            }
+            if (isNaN($("#txtfloorMaxNum").val().replace(/\s/g, ""))
+            || parseInt($("#txtfloorMaxNum").val().replace(/\s/g, "")) <= 0
+            || parseInt($("#txtfloorMaxNum").val().replace(/\s/g, "")) >100) {
+                Hidistro_Dialog.dialogTip('error', '商品数量必须为1~100的正整数');
+                return false;
+            }
+            if ($("#txtfloorsubNum").val().replace(/\s/g,"")!="" && (isNaN($("#txtfloorsubNum").val().replace(/\s/g, ""))
+            || parseInt($("#txtfloorsubNum").val().replace(/\s/g, "")) < 0
+            || parseInt($("#txtfloorsubNum").val().replace(/\s/g, "")) > 100)) {
+                Hidistro_Dialog.dialogTip('error', '子类显示数量必须为0~100的正整数');
+                return false;
+            }
+            
+            if ($("#slsthumbil option:selected").val() == "") {
+                Hidistro_Dialog.dialogTip('error', '请选择图片规格');
+                return false;
+            }
+         
+
+            var titleimg = "";
+            var bannerimg="";
+            if($("#title_picture img:eq(0)").attr("src")!="http://images.net.92hidc.net/Storage/none.gif"){
+                 titleimg=$("#title_picture img:eq(0)").attr("src");
+             }
+             if ($("#banner_picture img:eq(0)").attr("src") != "http://images.net.92hidc.net/Storage/none.gif") {
+                 bannerimg = $("#banner_picture img:eq(0)").attr("src");
+             }
+
+             var categoryId = "", tagId="",brandId="";
+             if ($("#slscategory").val() != null)
+                 categoryId=$("#slscategory").val();
+
+             if ($("#slstag").val()!= null)
+                 tagId = $("#slstag").val();
+
+             if ($("#slsbrand").val() != null)
+                 brandId = $("#slsbrand").val();
+
+             if (ismorelink && categoryId == "") {
+                 Hidistro_Dialog.dialogTip('error', '当显示更多链接时必须选择一个商品分类');
+                 return false;
+             }
+
+            $.ajax({
+                url: "Handler/DesigProduct.ashx",
+                async: false,
+                type: "post",
+                data: {
+                    ModelId: "editeproductfloor",
+                    Param: "{\"SubjectId\":\"" + Hidistro_designer.CurrentContentID +
+                            "\",\"Title\":\"" + $("#txtfloortitle").val() +
+                            "\",\"ImageTitle\":\"" + titleimg +
+                            "\",\"IsShowMoreLink\":\"" + ismorelink +
+                            "\",\"AdImage\":\"" + bannerimg +
+                            "\",\"CategoryId\":\"" + categoryId +
+                            "\" ,\"TagId\": \"" + tagId +
+                            "\" ,\"BrandId\": \"" + brandId +
+                            "\" ,\"MaxNum\": \"" + $("#txtfloorMaxNum").val() +
+                            "\" ,\"SubCategoryNum\": \"" + $("#txtfloorsubNum").val() +
+                            "\",\"ImageSize\": \"" + $("#slsthumbil").val() + "\"}"
+                },
+                dataType: "json",
+                success: function (msg) {
+                    if (msg.success) {
+                        $("#" + Hidistro_designer.CurrentContentID).replaceWith(msg.Result.ProductFloor);
+                        Hidistro_Dialog.dialogTip("succeed", "商品楼层更新成功");
+                    } else {
+                        Hidistro_Dialog.dialogTip("error", msg.Result);
+                    }
+                },
+                complete: function () {
+                    Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+                }
+            });
+        }
+    </script>

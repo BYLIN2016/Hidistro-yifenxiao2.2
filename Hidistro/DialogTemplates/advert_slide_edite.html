@@ -1,0 +1,254 @@
+﻿<div class="tableform">
+       <table>
+            <tr><td style=" padding-bottom:0px;">
+            <div class="show_img">
+            <ul>
+                <li>
+                <a>
+                    <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                    <i></i></a>
+                     <div><span  class="a_del"  onclick="javascript:SetLink(1)">设置</span></div>
+                </li>
+                <li>
+                   <a>
+                    <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                     
+                 <i></i></a>
+                 <div><span  class="a_del"  onclick="javascript:SetLink(2)">设置</span></div>
+                </li>
+                  <li>
+                  <a>
+                    <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                     <i></i>
+                    </a>
+                      <div>
+                        <span  class="a_del"  onclick="javascript:SetLink(3)">设置</span>
+                     </div>
+                </li>
+                  <li>
+                    <a>
+                        <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                      
+                        <i></i>
+                    </a>
+                      <div>
+                            <span  class="a_del"  onclick="javascript:SetLink(4)">设置</span>
+                        </div>
+                    </li>
+                  <li>
+                    <a>
+                        <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                        
+                        <i></i>
+                    </a>
+                    <div>
+                             <span  class="a_del"  onclick="javascript:SetLink(5)">设置</span>
+                    </div>
+                </li>
+                 <li>
+                    <a>
+                        <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                        <i></i>
+                    </a>
+                     <div>
+                            <span  class="a_del"  onclick="javascript:SetLink(6)">设置</span>
+                    </div>
+                </li>
+                   <li>
+                   <a>
+                        <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                       
+                        <i></i>
+                    </a>
+                     <div>
+                            <span  class="a_del"  onclick="javascript:SetLink(7)">设置</span>
+                     </div>
+                </li>
+                  <li>
+                      <a>
+                         <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                         <i></i>
+                      </a>
+                       <div>
+                             <span  class="a_del"  onclick="javascript:SetLink(8)">设置</span>
+                         </div>
+                </li>
+                  <li>
+                      <a>
+                        <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                        <i></i>
+                      </a>
+                      <div>
+                            <span  class="a_del"  onclick="javascript:SetLink(9)">设置</span>
+                      </div>
+                </li>
+                  <li>
+                  <a>
+                    <img src="http://images.net.92hidc.net/Storage/none.gif"  width="60px" height="60px"/>
+                    <i></i>
+                </a>
+                 <div>
+                         <span  class="a_del"  onclick="javascript:SetLink(10)">设置</span>
+                 </div>
+                </li>
+                </ul>
+            </div></td></tr>
+            <tr><td style="padding-bottom:0px"><iframe id="slideframe" name="slideframe" scrolling="no" frameborder="0" style="display: inline; height: 290px;width:655px"  scrolling="no" frameborder="0" style="display: inline; height: 300px;"></iframe></td></tr>
+      </table>
+      <input type="hidden" id="hdurl1" name="hdurl1" />
+      <input type="hidden" id="hdurl2" name="hdurl2" />
+      <input type="hidden" id="hdurl3" name="hdurl3" />
+      <input type="hidden" id="hdurl4" name="hdurl4"/>
+      <input type="hidden" id="hdurl5" name="hdurl5" />
+      <input type="hidden" id="hdurl6" name="hdurl6" />
+      <input type="hidden" id="hdurl7" name="hdurl7" />
+      <input type="hidden" id="hdurl8" name="hdurl8" />
+      <input type="hidden" id="hdurl9" name="hdurl9"/>
+      <input type="hidden" id="hdurl10" name="hdurl10" />
+</div>
+
+<script>
+    var li_index = 0;
+    function loadEditDialogData() {
+        Hidistro_Dialog.dialogContent = $(taboverlaycontent).html();
+        Hidistro_Dialog.dialogShow();
+        Hidistro_Dialog.dialogTitle($(ctrnamediv).html());
+        BindProductTopEvent();
+
+        $(".show_img i").bind("click", function () {
+            RemovetempImg(this);
+        });
+    }
+
+    function BindProductTopEvent() {
+        if (Hidistro_designer.ElementValues != null) {
+            for (var len = 1; len <= 10; len++) {
+                if (Hidistro_designer.ElementValues["Image" + len] != "") {
+                    $(".show_img img:eq(" + (len - 1 )+ ")").attr("src", Hidistro_designer.ElementValues["Image" + len]);
+                    $("#hdurl" + len).val(Hidistro_designer.ElementValues["Url"+len]);
+                }
+            }
+
+                if (Hidistro_designer.ElementValues.AdImageSize != null && Hidistro_designer.ElementValues.AdImageSize != "") {
+                    $("#slideframe").attr("src", "DialogTemplates/SelectImage.aspx?size=" + Hidistro_designer.ElementValues.AdImageSize + "&type=advertimg");
+                }
+        }
+    }
+
+    function SetLink(currentindex) {
+        li_index = currentindex;
+        var txtvalue = "http://";
+        
+        if ($("#hdurl" + li_index).val().replace(/\s/g, "") != "") {
+            txtvalue = $("#hdurl" + li_index).val().replace(/\s/g, "");
+        }
+
+        var dialoglink = art.dialog({
+            content: '<p>设置图片链接地址</p>'
+    	+ '<input id="txtlinkurl" style="width:15em; padding:4px" value="' + txtvalue + '" />',
+            fixed: true,
+            id: 'Fm7',
+            icon: 'question',
+            okVal: '确定',
+            ok: function () {
+                var input = document.getElementById('txtlinkurl');
+
+                
+                if (li_index <= 0 || li_index > 10) {
+                    Hidistro_Dialog.dialogTip('error', '设置图片链接地址');
+                    return false;
+                }
+                $("#hdurl" + li_index).val(input.value);
+            },
+            cancel: true
+        });
+
+        dialoglink.shake && dialoglink.shake(); // 调用抖动接口
+    }
+
+    function SaveSlideLink() {
+        if ($("#txtslidelink").val().replace(/\s/g, "") == "") {
+            Hidistro_Dialog.dialogTip('error', '请输入要设置链接地址');
+            return false;
+        }
+        if (li_index <= 0 || li_index > 10) {
+            Hidistro_Dialog.dialogTip('error', '设置图片链接地址');
+            return false;
+        }
+        $("#hdurl" + li_index).val($("#txtslidelink").val());
+        $("#tr_link").hide('hide');
+    }
+
+    //删除图片
+    function RemovetempImg(currentobj) {
+        if ($(currentobj).prev("img").attr("src") != "http://images.net.92hidc.net/Storage/none.gif")
+            $(currentobj).prev("img").attr("src", "http://images.net.92hidc.net/Storage/none.gif");
+    }
+
+    function CancelSlideLink() {
+        li_index = 0;
+        $("#txtslidelink").val('');
+        $("#tr_link").hide('hide');
+    }
+
+
+    function SaveElmentValue() {
+        var imgarray = new Array(10);
+        var tag = 0;
+        $(".show_img img").each(function (index, item) {
+            if ($(item).attr("src") != "http://images.net.92hidc.net/Storage/none.gif") {
+                imgarray[index] = $(item).attr("src");
+                tag++;
+            } else {
+                imgarray[index] = "";
+            }
+        });
+
+        if (tag<3) {
+            Hidistro_Dialog.dialogTip('error', '请至少上传3张广告图片');
+            return false;
+        }
+
+        $.ajax({
+            url: "Handler/DesigAdvert.ashx",
+            async: false,
+            type: "post",
+            data: {
+                ModelId: "editeadvertslide",
+                Param: "{\"Id\":\"" + Hidistro_designer.CurrentContentID +
+                            "\",\"Image1\":\"" + imgarray[0] +
+                            "\",\"Image2\":\"" + imgarray[1] +
+                            "\",\"Image3\":\"" + imgarray[2] +
+                            "\",\"Image4\":\"" + imgarray[3] +
+                            "\",\"Image5\":\"" + imgarray[4] +
+                            "\",\"Image6\":\"" + imgarray[5] +
+                            "\",\"Image7\":\"" + imgarray[6] +
+                            "\",\"Image8\":\"" + imgarray[7] +
+                            "\",\"Image9\":\"" + imgarray[8] +
+                            "\",\"Image10\":\"" + imgarray[9] +
+                            "\" ,\"Url1\": \"" + $("#hdurl1").val() +
+                            "\" ,\"Url2\": \"" + $("#hdurl2").val() +
+                            "\" ,\"Url3\": \"" + $("#hdurl3").val() +
+                            "\" ,\"Url4\": \"" + $("#hdurl4").val() +
+                            "\" ,\"Url5\": \"" + $("#hdurl5").val() +
+                            "\" ,\"Url6\": \"" + $("#hdurl6").val() +
+                            "\" ,\"Url7\": \"" + $("#hdurl7").val() +
+                            "\" ,\"Url8\": \"" + $("#hdurl8").val() +
+                            "\" ,\"Url9\": \"" + $("#hdurl9").val() +
+                            "\",\"Url10\": \"" + $("#hdurl10").val() + "\"}"
+            },
+            dataType: "json",
+            success: function (msg) {
+                if (msg.success) {
+                    $("#" + Hidistro_designer.CurrentContentID).replaceWith(msg.Result.AdSlide);
+                    Hidistro_Dialog.dialogTip("succeed", "轮播广告更新成功");
+                } else {
+                    Hidistro_Dialog.dialogTip("error", msg.Result);
+                }
+            },
+            complete: function () {
+                Hidistro_designer.BindSingleEvent(Hidistro_designer.CurrentContentID, true);
+            }
+        });
+    }
+</script>

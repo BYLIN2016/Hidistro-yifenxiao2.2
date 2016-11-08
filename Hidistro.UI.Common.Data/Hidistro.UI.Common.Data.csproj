@@ -1,0 +1,26 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="Local" ProductVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="1BB84AA3-5296-47F1-B429-FE90AFBA37B8">
+    <Build>
+      <Settings ApplicationIcon="" AssemblyKeyContainerName="" AssemblyName="Hidistro.UI.Common.Data" AssemblyOriginatorKeyFile="" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library" PreBuildEvent="" PostBuildEvent="" RootNamespace="Hidistro.UI.Common.Data" RunPostBuildEvent="OnBuildSuccess" StartupObject="">
+        <Config Name="Debug" AllowUnsafeBlocks="false" BaseAddress="285212672" CheckForOverflowUnderflow="false" ConfigurationOverrideFile="" DefineConstants="DEBUG;TRACE" DocumentationFile="" DebugSymbols="true" FileAlignment="4096" IncrementalBuild="false" NoStdLib="false" NoWarn="" Optimize="false" OutputPath="bin\Debug\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="false" BaseAddress="285212672" CheckForOverflowUnderflow="false" ConfigurationOverrideFile="" DefineConstants="TRACE" DocumentationFile="" DebugSymbols="false" FileAlignment="4096" IncrementalBuild="false" NoStdLib="false" NoWarn="" Optimize="true" OutputPath="bin\Release\" RegisterForComInterop="false" RemoveIntegerChecks="false" TreatWarningsAsErrors="false" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="Hidistro.UI.Common.Controls" AssemblyName="Hidistro.UI.Common.Controls" HintPath="..\Hidistro\bin\Hidistro.UI.Common.Controls.dll" />
+        <Reference Name="Microsoft.Practices.EnterpriseLibrary.Data" AssemblyName="Microsoft.Practices.EnterpriseLibrary.Data" HintPath="..\Hidistro\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+        <Reference Name="mscorlib" AssemblyName="mscorlib" HintPath="mscorlib.dll" />
+        <Reference Name="Hidistro.Entities" AssemblyName="Hidistro.Entities" HintPath="..\Hidistro\bin\Hidistro.Entities.dll" />
+        <Reference Name="System.Data" AssemblyName="System.Data" HintPath="System.Data.dll" />
+        <Reference Name="Hidistro.Core" AssemblyName="Hidistro.Core" HintPath="..\Hidistro\bin\Hidistro.Core.dll" />
+        <Reference Name="Hidistro.Membership.Context" AssemblyName="Hidistro.Membership.Context" HintPath="..\Hidistro\bin\Hidistro.Membership.Context.dll" />
+        <Reference Name="Hidistro.Membership.Core" AssemblyName="Hidistro.Membership.Core" HintPath="..\Hidistro\bin\Hidistro.Membership.Core.dll" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="Properties\AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SqlCommonDataProvider.cs" SubType="Code" BuildAction="Compile" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>
